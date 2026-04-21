@@ -5,40 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zona Gamer PS1–PS4</title>
 
-  <!-- Google AdSense -->
+  <!-- FAVICON -->
+  <link rel="icon" href="images/logo.png">
+
+  <!-- AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3237099983613729"
      crossorigin="anonymous"></script>
 
   <style>
     body {
-      font-family: Arial;
       margin: 0;
-      background: #0f172a;
+      font-family: Arial;
+      background: #020617;
       color: white;
     }
+
     header {
-      background: black;
+      background: linear-gradient(90deg, #000, #0f172a);
       padding: 20px;
       text-align: center;
-      font-size: 28px;
+      font-size: 32px;
       color: #22c55e;
       font-weight: bold;
+      border-bottom: 2px solid #22c55e;
     }
+
     .container {
-      max-width: 900px;
+      max-width: 1100px;
       margin: auto;
       padding: 20px;
     }
+
     .card {
+      display: flex;
       background: #020617;
-      padding: 20px;
       margin-bottom: 20px;
       border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #1f2937;
     }
-    img {
-      width: 100%;
-      border-radius: 10px;
+
+    .card img {
+      width: 50%;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+      width: 50%;
+    }
+
+    h2 {
+      color: #22c55e;
+    }
+
+    .btn {
+      display: inline-block;
       margin-top: 10px;
+      padding: 10px 15px;
+      border: 1px solid #22c55e;
+      color: #22c55e;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    .ads {
+      background: #111;
+      padding: 15px;
+      text-align: center;
+      margin: 20px 0;
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -51,13 +87,16 @@
 
 <div class="container">
 
-  <div class="card">
-    <h2>Bienvenido</h2>
-    <p>Blog gamer con análisis, guías y los mejores juegos de PS1, PS2, PS3 y PS4.</p>
+  <!-- BIENVENIDA -->
+  <div class="card" style="display:block; text-align:center;">
+    <div class="card-content" style="width:100%;">
+      <h2>Bienvenido a Zona Gamer</h2>
+      <p>Tu espacio dedicado a los mejores juegos de PlayStation. Análisis, guías y contenido gamer.</p>
+    </div>
   </div>
 
   <!-- ANUNCIO -->
-  <div class="card">
+  <div class="ads">
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-3237099983613729"
@@ -69,60 +108,26 @@
     </script>
   </div>
 
+  <!-- METAL GEAR -->
+  <div class="card">
+    <img src="images/raiden.jpg">
+    <div class="card-content">
+      <h2>Metal Gear Rising: Revengeance</h2>
+      <p><strong>Género:</strong> Acción / Hack and Slash</p>
+      <p>Raiden, un cyborg ninja, lucha en un mundo dominado por guerras privadas. Tras una misión fallida, deberá enfrentarse a enemigos extremadamente poderosos mientras cuestiona su humanidad.</p>
+      <a class="btn">Leer más</a>
+    </div>
+  </div>
+
   <!-- RESIDENT EVIL 4 -->
   <div class="card">
-    <h2>Resident Evil 4</h2>
-    <p><strong>Género:</strong> Acción / Survival Horror</p>
-    <p><strong>Sinopsis:</strong> Leon es enviado a rescatar a la hija del presidente en una aldea europea controlada por una infección llamada Las Plagas. Lo que parece una misión simple se convierte en una lucha por sobrevivir contra aldeanos hostiles, cultos fanáticos y criaturas peligrosas.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Resident_Evil_4.jpg">
-  </div>
-
-  <!-- SILENT HILL 2 -->
-  <div class="card">
-    <h2>Silent Hill 2</h2>
-    <p><strong>Género:</strong> Terror psicológico</p>
-    <p><strong>Sinopsis:</strong> James recibe una carta de su esposa fallecida y viaja a Silent Hill. Allí descubre un pueblo lleno de niebla, criaturas y una verdad que lo obliga a enfrentarse a su pasado.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/SilentHill2.jpg">
-  </div>
-
-  <!-- METAL GEAR RISING -->
-  <div class="card">
-    <h2>Metal Gear Rising: Revengeance</h2>
-    <p><strong>Género:</strong> Acción / Hack and Slash</p>
-    <p><strong>Sinopsis:</strong> Raiden lucha en un mundo dominado por guerras privadas y tecnología militar avanzada, enfrentando enemigos extremadamente poderosos mientras cuestiona su propia humanidad.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Metal_Gear_Rising_Box_Art.jpg">
-  </div>
-
-  <!-- RESIDENT EVIL 2 REMAKE -->
-  <div class="card">
-    <h2>Resident Evil 2 Remake</h2>
-    <p><strong>Género:</strong> Survival Horror</p>
-    <p><strong>Sinopsis:</strong> Leon y Claire quedan atrapados en Raccoon City durante un brote zombie. Mientras intentan escapar, descubren secretos ocultos y enfrentan amenazas como Mr. X.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/en/2/2d/Resident_Evil_2_Remake.jpg">
-  </div>
-
-  <!-- SILENT HILL -->
-  <div class="card">
-    <h2>Silent Hill</h2>
-    <p><strong>Género:</strong> Terror / Survival Horror</p>
-    <p><strong>Sinopsis:</strong> Harry Mason busca a su hija en un pueblo cubierto de niebla donde la realidad se distorsiona y aparecen criaturas aterradoras.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/en/8/8c/Silent_Hill_video_game_cover.jpg">
-  </div>
-
-  <!-- RESIDENT EVIL 3 -->
-  <div class="card">
-    <h2>Resident Evil 3: Nemesis</h2>
-    <p><strong>Género:</strong> Survival Horror</p>
-    <p><strong>Sinopsis:</strong> Jill Valentine intenta escapar de Raccoon City mientras es perseguida por Nemesis, una criatura imparable creada para eliminarla.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Resident_Evil_3_Nemesis_cover.jpg">
-  </div>
-
-  <!-- GOD OF WAR II -->
-  <div class="card">
-    <h2>God of War II</h2>
-    <p><strong>Género:</strong> Acción / Aventura</p>
-    <p><strong>Sinopsis:</strong> Kratos es traicionado por Zeus y comienza una guerra contra los dioses del Olimpo en busca de venganza.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/en/a/a7/God_of_War_2_cover.jpg">
+    <img src="images/re4.jpg">
+    <div class="card-content">
+      <h2>Resident Evil 4</h2>
+      <p><strong>Género:</strong> Acción / Survival Horror</p>
+      <p>Leon Kennedy es enviado a rescatar a Ashley en una aldea europea infestada por una extraña infección. Lo que encuentra supera cualquier pesadilla.</p>
+      <a class="btn">Leer más</a>
+    </div>
   </div>
 
 </div>
