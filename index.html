@@ -13,106 +13,31 @@
      crossorigin="anonymous"></script>
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: #020617;
-      color: white;
-    }
+    body { margin:0; font-family: Arial; background:#020617; color:white; }
+    header { background:#000; padding:20px; display:flex; align-items:center; gap:15px; }
+    header img { width:60px; }
+    header h1 { color:#22c55e; margin:0; }
 
-    header {
-      background: linear-gradient(90deg, #000, #0f172a);
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
+    nav { background:#000; padding:10px; text-align:center; }
+    nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
 
-    header img {
-      width: 60px;
-    }
-
-    header h1 {
-      color: #22c55e;
-      margin: 0;
-    }
-
-    nav {
-      background: #000;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #22c55e;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .hero {
-      background: #0f172a;
-      padding: 30px;
-      border-radius: 15px;
-      margin-bottom: 20px;
-    }
-
-    .hero h2 {
-      color: #22c55e;
-    }
+    .container { max-width:1100px; margin:auto; padding:20px; }
 
     .card {
-      display: flex;
-      background: #020617;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid #1e293b;
+      display:flex;
+      background:#020617;
+      margin-bottom:25px;
+      border-radius:12px;
+      overflow:hidden;
+      border:1px solid #1e293b;
     }
 
-    .card img {
-      width: 50%;
-      object-fit: cover;
-    }
+    .card img { width:50%; object-fit:cover; }
 
-    .card-content {
-      padding: 20px;
-    }
+    .card-content { padding:20px; }
+    .card-content h2 { color:#22c55e; }
 
-    .card-content h2 {
-      color: #22c55e;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      border: 2px solid #22c55e;
-      color: #22c55e;
-      text-decoration: none;
-      border-radius: 8px;
-    }
-
-    .btn:hover {
-      background: #22c55e;
-      color: black;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #000;
-    }
+    footer { text-align:center; padding:20px; background:#000; }
   </style>
 </head>
 
@@ -133,50 +58,89 @@
 
 <div class="container">
 
-  <div class="hero">
-    <h2>Bienvenido a Zona Gamer</h2>
-    <p>Análisis, guías y los mejores juegos de PlayStation.</p>
-  </div>
+<!-- ANUNCIO -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3237099983613729"
+     data-ad-slot="2082305252"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-  <!-- ANUNCIO -->
-  <div style="margin-bottom:20px;">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-3237099983613729"
-         data-ad-slot="2082305252"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
+<!-- METAL GEAR -->
+<div class="card">
+<img src="images/raiden.jpg">
+<div class="card-content">
+<h2>Metal Gear Rising: Revengeance</h2>
+<p><strong>Género:</strong> Acción / Hack and Slash</p>
+<p><strong>Sinopsis:</strong> En un mundo dominado por guerras privadas y avances tecnológicos extremos, Raiden, un cyborg ninja con un pasado marcado por la violencia, trabaja como mercenario protegiendo intereses políticos y corporativos. Sin embargo, tras una misión fallida, se ve arrastrado a un conflicto mucho mayor que pone en riesgo el equilibrio global. A medida que avanza, deberá enfrentarse a enemigos cada vez más poderosos, descubrir conspiraciones ocultas y aceptar su verdadera naturaleza como máquina de combate. Entre combates frenéticos, jefes memorables y una narrativa intensa, el juego mezcla acción pura con una historia profunda sobre identidad, guerra y humanidad.</p>
+</div>
+</div>
 
-  <!-- METAL GEAR -->
-  <div class="card">
-    <img src="images/raiden.jpg">
-    <div class="card-content">
-      <h2>Metal Gear Rising: Revengeance</h2>
-      <p><strong>Género:</strong> Acción / Hack and Slash</p>
-      <p>Raiden, un cyborg ninja, se enfrenta a enemigos extremadamente poderosos en un mundo dominado por guerras privadas y tecnología militar avanzada. Con combates rápidos, espectaculares y llenos de adrenalina, el juego ofrece una experiencia intensa que combina velocidad, precisión y brutalidad.</p>
-      <a class="btn">Leer más</a>
-    </div>
-  </div>
+<!-- RE4 -->
+<div class="card">
+<img src="images/re4.jpg">
+<div class="card-content">
+<h2>Resident Evil 4</h2>
+<p><strong>Género:</strong> Acción / Survival Horror</p>
+<p><strong>Sinopsis:</strong> Leon S. Kennedy, ahora agente del gobierno de los Estados Unidos, es enviado a una remota aldea europea para rescatar a Ashley Graham, la hija del presidente. Lo que comienza como una misión aparentemente sencilla se convierte rápidamente en una pesadilla cuando descubre que los habitantes del lugar no son zombies comunes, sino personas controladas por una extraña infección conocida como Las Plagas. A lo largo de su misión, Leon se enfrentará a cultos fanáticos, criaturas grotescas y enemigos inteligentes que pondrán a prueba su habilidad y resistencia. La tensión constante, los encuentros inesperados y la atmósfera opresiva convierten cada momento en una lucha por sobrevivir.</p>
+</div>
+</div>
 
-  <!-- RESIDENT EVIL 4 -->
-  <div class="card">
-    <img src="images/re4.jpg">
-    <div class="card-content">
-      <h2>Resident Evil 4</h2>
-      <p><strong>Género:</strong> Acción / Survival Horror</p>
-      <p>Leon S. Kennedy es enviado a una aldea europea para rescatar a la hija del presidente. Allí descubre que los habitantes están controlados por una extraña infección llamada Las Plagas. La misión se convierte en una lucha constante por sobrevivir frente a enemigos impredecibles, cultos fanáticos y criaturas cada vez más peligrosas.</p>
-      <a class="btn">Leer más</a>
-    </div>
-  </div>
+<!-- SILENT HILL 2 -->
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/en/9/9a/SilentHill2.jpg">
+<div class="card-content">
+<h2>Silent Hill 2</h2>
+<p><strong>Género:</strong> Terror psicológico</p>
+<p><strong>Sinopsis:</strong> James Sunderland recibe una carta de su esposa fallecida invitándolo a reunirse con ella en Silent Hill. A pesar de saber que es imposible, decide ir en busca de respuestas. Al llegar, se encuentra con un pueblo envuelto en niebla y plagado de criaturas inquietantes que parecen reflejar sus propios miedos y culpas. A medida que avanza, la historia se vuelve cada vez más perturbadora, revelando secretos oscuros de su pasado. Silent Hill no solo es un lugar físico, sino un reflejo psicológico que pone a prueba la mente del protagonista.</p>
+</div>
+</div>
+
+<!-- RE2 REMAKE -->
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/en/2/2d/Resident_Evil_2_Remake.jpg">
+<div class="card-content">
+<h2>Resident Evil 2 Remake</h2>
+<p><strong>Género:</strong> Survival Horror</p>
+<p><strong>Sinopsis:</strong> En medio de un brote biológico que ha devastado Raccoon City, Leon Kennedy y Claire Redfield luchan por sobrevivir mientras descubren la verdad detrás de la infección. Atrapados en la comisaría y otros escenarios peligrosos, deberán enfrentarse a zombies, criaturas mutadas y la constante amenaza de Mr. X, una figura imparable que los persigue sin descanso. La historia combina tensión, misterio y momentos de pura adrenalina.</p>
+</div>
+</div>
+
+<!-- SILENT HILL -->
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/en/8/8c/Silent_Hill_video_game_cover.jpg">
+<div class="card-content">
+<h2>Silent Hill</h2>
+<p><strong>Género:</strong> Terror / Survival Horror</p>
+<p><strong>Sinopsis:</strong> Harry Mason llega a Silent Hill buscando a su hija desaparecida tras un accidente. Lo que encuentra es un pueblo envuelto en niebla y lleno de horrores indescriptibles. A medida que avanza, descubre una historia oscura relacionada con cultos y rituales, mientras lucha por mantener la cordura.</p>
+</div>
+</div>
+
+<!-- RE3 -->
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Resident_Evil_3_Nemesis_cover.jpg">
+<div class="card-content">
+<h2>Resident Evil 3: Nemesis</h2>
+<p><strong>Género:</strong> Survival Horror</p>
+<p><strong>Sinopsis:</strong> Jill Valentine intenta escapar de Raccoon City mientras es perseguida por Nemesis, una criatura imparable diseñada para eliminarla. La constante persecución genera una tensión única, obligando al jugador a tomar decisiones rápidas.</p>
+</div>
+</div>
+
+<!-- GOD OF WAR II -->
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/en/a/a7/God_of_War_2_cover.jpg">
+<div class="card-content">
+<h2>God of War II</h2>
+<p><strong>Género:</strong> Acción / Aventura</p>
+<p><strong>Sinopsis:</strong> Tras ser traicionado por Zeus, Kratos pierde sus poderes y busca venganza contra los dioses del Olimpo. En su viaje se enfrenta a criaturas mitológicas y titanes en una historia épica llena de acción y furia.</p>
+</div>
+</div>
 
 </div>
 
 <footer>
-  © 2026 Zona Gamer PS1–PS4
+© 2026 Zona Gamer PS1–PS4
 </footer>
 
 </body>
