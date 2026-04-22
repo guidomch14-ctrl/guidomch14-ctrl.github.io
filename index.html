@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Zona Gamer PS1–PS4</title>
+<title>Zona Gamer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="icon" href="images/logo.png">
@@ -14,39 +14,32 @@ crossorigin="anonymous"></script>
 body { margin:0; font-family: Arial; background:#020617; color:white; }
 header { background:#000; padding:20px; display:flex; align-items:center; gap:15px; }
 header img { width:60px; }
-header h1 { color:#22c55e; margin:0; }
+header h1 { color:#22c55e; }
 
 nav { background:#000; padding:10px; text-align:center; }
 nav button {
-  color:white;
-  margin:5px;
-  padding:8px 12px;
-  background:#22c55e;
-  border:none;
-  cursor:pointer;
+  margin:5px; padding:8px 12px;
+  background:#22c55e; border:none; color:white; cursor:pointer;
 }
 
 .container { max-width:1100px; margin:auto; padding:20px; }
 
 .card {
-  display:flex;
-  margin-bottom:25px;
+  display:flex; margin-bottom:25px;
   border:1px solid #1e293b;
 }
 
-.card img { width:50%; }
+.card img { width:50%; object-fit:cover; }
 
-.card-content { padding:20px; }
-.card-content h2 { color:#22c55e; }
+.card-content { padding:20px; line-height:1.6; }
 
 footer { text-align:center; padding:20px; background:#000; }
 </style>
 
 <script>
 function filtrar(c){
-let j=document.querySelectorAll('.juego');
-j.forEach(x=>{
-x.style.display=(c==='all'||x.classList.contains(c))?'flex':'none';
+document.querySelectorAll('.juego').forEach(j=>{
+j.style.display=(c==='all'||j.classList.contains(c))?'flex':'none';
 });
 }
 </script>
@@ -70,12 +63,19 @@ x.style.display=(c==='all'||x.classList.contains(c))?'flex':'none';
 
 <div class="container">
 
+<div class="card">
+<div class="card-content">
+<h2>Zona Gamer</h2>
+<p>Zona Gamer es un sitio dedicado a ofrecer contenido detallado sobre videojuegos de distintas generaciones. Aquí encontrarás sinopsis completas, análisis generales y recomendaciones de títulos que marcaron historia. La idea es que cada juego tenga información suficiente para que realmente entiendas de qué trata y si vale la pena jugarlo.</p>
+</div>
+</div>
+
 <!-- METAL GEAR -->
 <div class="card juego ps3 pc">
 <img src="images/raiden.jpg">
 <div class="card-content">
-<h2>Metal Gear Rising</h2>
-<p>Raiden enfrenta guerras tecnológicas en un mundo dominado por cyborgs. La historia combina acción extrema con dilemas sobre identidad y violencia. Cada combate es rápido y brutal, exigiendo reflejos y estrategia. Además, su increíble OST eleva cada pelea a otro nivel, con música intensa que acompaña perfectamente el ritmo del juego. Es una experiencia explosiva de principio a fin.</p>
+<h2>Metal Gear Rising: Revengeance</h2>
+<p>Raiden es un cyborg ninja que vive en un mundo donde las guerras son controladas por corporaciones privadas. A lo largo de su misión, deberá enfrentarse a enemigos cada vez más peligrosos mientras cuestiona su propia humanidad y su pasado como soldado. El sistema de combate es rápido, preciso y extremadamente violento, obligando al jugador a dominar cada mecánica. Además, el juego destaca por su increíble banda sonora (OST), que acompaña cada pelea con música épica que aumenta la intensidad. La combinación de acción, narrativa y música crea una experiencia única e inolvidable.</p>
 </div>
 </div>
 
@@ -84,16 +84,7 @@ x.style.display=(c==='all'||x.classList.contains(c))?'flex':'none';
 <img src="images/re4.jpg">
 <div class="card-content">
 <h2>Resident Evil 4 Remake</h2>
-<p>Leon es enviado a rescatar a la hija del presidente en una aldea dominada por Las Plagas. Lo que encuentra es una pesadilla llena de cultos y criaturas. La tensión es constante y cada enfrentamiento puede ser mortal. El jugador debe administrar recursos y sobrevivir a emboscadas. La historia combina acción con terror de forma brillante.</p>
-</div>
-</div>
-
-<!-- SH2 -->
-<div class="card juego ps4 pc">
-<img src="images/sh2.jpg">
-<div class="card-content">
-<h2>Silent Hill 2 Remake</h2>
-<p>James llega a un pueblo envuelto en niebla tras recibir una carta de su esposa fallecida. Allí enfrenta criaturas que reflejan su mente. La historia es profunda y psicológica. Cada escenario transmite incomodidad y misterio. Es una experiencia emocional única en el género.</p>
+<p>Leon S. Kennedy es enviado a rescatar a la hija del presidente en una remota aldea europea. Lo que parece una misión simple se convierte rápidamente en una pesadilla cuando descubre que los habitantes están infectados por Las Plagas. A medida que avanza, deberá enfrentarse a cultos, criaturas mutadas y situaciones extremadamente peligrosas. La gestión de recursos y la toma de decisiones son clave para sobrevivir. Cada zona presenta nuevos desafíos, manteniendo la tensión constante. Es una experiencia intensa que mezcla acción y terror de manera perfecta.</p>
 </div>
 </div>
 
@@ -102,7 +93,7 @@ x.style.display=(c==='all'||x.classList.contains(c))?'flex':'none';
 <img src="images/re2.jpg">
 <div class="card-content">
 <h2>Resident Evil 2 Remake</h2>
-<p>Leon y Claire sobreviven al caos de Raccoon City. La ciudad está infestada de zombies y peligros constantes. A medida que avanzan descubren conspiraciones de Umbrella. El jugador debe gestionar recursos con cuidado. La tensión aumenta con enemigos como Mr. X.</p>
+<p>En medio de un brote zombie que ha destruido Raccoon City, Leon y Claire deben encontrar la forma de sobrevivir. La ciudad está llena de peligros y cada rincón puede esconder una amenaza. A medida que avanzan, descubren los oscuros secretos de la corporación Umbrella. El jugador debe administrar recursos limitados y resolver situaciones bajo presión constante. La presencia de enemigos como Mr. X aumenta la tensión, ya que puede aparecer en cualquier momento. Es uno de los mejores ejemplos de survival horror moderno.</p>
 </div>
 </div>
 
@@ -111,7 +102,16 @@ x.style.display=(c==='all'||x.classList.contains(c))?'flex':'none';
 <img src="images/sh1.jpg">
 <div class="card-content">
 <h2>Silent Hill</h2>
-<p>Harry busca a su hija en un pueblo lleno de niebla. La realidad se distorsiona constantemente. Criaturas aterradoras aparecen en cada rincón. La historia se revela poco a poco. Es un clásico del terror psicológico.</p>
+<p>Harry Mason llega a Silent Hill en busca de su hija desaparecida tras un accidente. Sin embargo, el pueblo está envuelto en una niebla constante y lleno de criaturas extrañas. A medida que avanza, la realidad comienza a distorsionarse, mostrando versiones cada vez más perturbadoras del entorno. La historia se desarrolla lentamente, revelando secretos oscuros que afectan directamente al protagonista. El terror no solo está en los enemigos, sino en la atmósfera y la narrativa. Es un clásico que definió el género del terror psicológico.</p>
+</div>
+</div>
+
+<!-- SH2 -->
+<div class="card juego ps4 pc">
+<img src="images/sh2.jpg">
+<div class="card-content">
+<h2>Silent Hill 2 Remake</h2>
+<p>James Sunderland recibe una carta de su esposa fallecida y decide viajar a Silent Hill. Allí encuentra un pueblo vacío cubierto de niebla, donde comienzan a aparecer criaturas que reflejan sus propios miedos. La historia se centra en temas emocionales y psicológicos, explorando la culpa y el dolor. Cada encuentro y escenario tiene un significado profundo dentro de la narrativa. A medida que avanza, el jugador descubre la verdad detrás de la carta. Es una experiencia intensa y reflexiva.</p>
 </div>
 </div>
 
@@ -119,8 +119,8 @@ x.style.display=(c==='all'||x.classList.contains(c))?'flex':'none';
 <div class="card juego ps1 pc">
 <img src="images/re3.jpg">
 <div class="card-content">
-<h2>Resident Evil 3</h2>
-<p>Jill intenta escapar mientras Nemesis la persigue. La ciudad está colapsada por el virus. Cada encuentro es peligroso. El jugador debe actuar rápido. La tensión es constante durante todo el juego.</p>
+<h2>Resident Evil 3 Nemesis</h2>
+<p>Jill Valentine intenta escapar de Raccoon City mientras el virus se propaga sin control. La ciudad está completamente devastada y llena de enemigos. Sin embargo, la mayor amenaza es Nemesis, una criatura que la persigue constantemente. El jugador debe reaccionar rápido y administrar recursos para sobrevivir. Cada encuentro con Nemesis genera tensión y obliga a tomar decisiones inmediatas. La experiencia es intensa y llena de momentos impredecibles.</p>
 </div>
 </div>
 
@@ -129,7 +129,7 @@ x.style.display=(c==='all'||x.classList.contains(c))?'flex':'none';
 <img src="images/gow2.jpg">
 <div class="card-content">
 <h2>God of War II</h2>
-<p>Kratos busca venganza tras ser traicionado. Enfrenta dioses y criaturas mitológicas. Cada batalla es épica. La historia gira en torno a la traición. Es una experiencia intensa y cinematográfica.</p>
+<p>Kratos, tras convertirse en dios, es traicionado por Zeus y pierde sus poderes. Decidido a vengarse, inicia un viaje épico lleno de combates contra criaturas mitológicas. A lo largo del juego enfrentará desafíos enormes y enemigos colosales. La narrativa está cargada de violencia, traición y determinación. Cada batalla se siente intensa y cinematográfica. Es considerado uno de los mejores juegos de acción de su época.</p>
 </div>
 </div>
 
@@ -138,7 +138,7 @@ x.style.display=(c==='all'||x.classList.contains(c))?'flex':'none';
 <img src="images/dr2.jpg">
 <div class="card-content">
 <h2>Dead Rising 2</h2>
-<p>Chuck debe sobrevivir en una ciudad infestada de zombies mientras protege a su hija. Enfrenta psicópatas y decisiones difíciles. El caos es constante. Su OST acompaña perfectamente la acción. Mezcla humor oscuro con supervivencia.</p>
+<p>Chuck Greene participa en un programa donde se lucha contra zombies, pero un brote real desata el caos. Mientras intenta sobrevivir, debe proteger a su hija y encontrar medicación para ella. El juego combina acción, exploración y decisiones importantes. A lo largo del camino se enfrenta a psicópatas y hordas de enemigos. Su banda sonora (OST) acompaña perfectamente la acción, generando una mezcla única de tensión y humor oscuro. Es una experiencia diferente dentro del género.</p>
 </div>
 </div>
 
@@ -147,7 +147,7 @@ x.style.display=(c==='all'||x.classList.contains(c))?'flex':'none';
 <img src="images/dbz.jpg">
 <div class="card-content">
 <h2>Dragon Ball FighterZ</h2>
-<p>Combates intensos con personajes icónicos. La historia introduce nuevos enemigos. El sistema de pelea es dinámico. Cada batalla requiere estrategia. Es ideal para fans del anime.</p>
+<p>Los guerreros más poderosos del universo se enfrentan en combates intensos y espectaculares. La historia introduce una nueva amenaza que obliga a los personajes a unirse. El sistema de combate es dinámico y requiere estrategia. Cada pelea es rápida y visualmente impactante. Es un juego que captura perfectamente la esencia del anime. Ideal tanto para fans como para jugadores competitivos.</p>
 </div>
 </div>
 
@@ -156,7 +156,7 @@ x.style.display=(c==='all'||x.classList.contains(c))?'flex':'none';
 <img src="images/black.jpg">
 <div class="card-content">
 <h2>Black</h2>
-<p>Shooter centrado en acción y destrucción. Cada arma se siente potente. Los escenarios son destructibles. El ritmo es constante. Es uno de los mejores FPS de PS2.</p>
+<p>Black es un shooter en primera persona que destaca por su enfoque en la acción explosiva. El jugador revive misiones a través de interrogatorios, revelando poco a poco la historia. Los escenarios son altamente destructibles, lo que aporta realismo a cada combate. Cada arma se siente potente y el sonido es clave en la experiencia. A medida que avanzas, los enfrentamientos se vuelven más intensos. Es un clásico del género.</p>
 </div>
 </div>
 
@@ -165,7 +165,7 @@ x.style.display=(c==='all'||x.classList.contains(c))?'flex':'none';
 <img src="images/coldfear.jpg">
 <div class="card-content">
 <h2>Cold Fear</h2>
-<p>Un guardacostas investiga un barco en medio de una tormenta. Descubre una infección mortal. El entorno es inestable. La tensión es constante. Mezcla acción con terror.</p>
+<p>Tom Hansen es enviado a investigar un barco en medio de una tormenta. Al llegar, descubre que la tripulación ha sido infectada por una entidad desconocida. El entorno es inestable, con olas que afectan el movimiento del personaje. A medida que avanza, la historia revela experimentos oscuros. El jugador debe enfrentarse tanto a enemigos como al entorno. Es una mezcla interesante de acción y terror.</p>
 </div>
 </div>
 
