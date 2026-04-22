@@ -1,167 +1,172 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Zona Gamer PS1–PS4</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Zona Gamer PS1–PS4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="images/logo.png">
+<link rel="icon" type="image/png" href="images/logo.png">
 
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3237099983613729"
-     crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3237099983613729"
+crossorigin="anonymous"></script>
 
-  <style>
-    body { margin:0; font-family: Arial; background:#020617; color:white; }
-    header { background:#000; padding:20px; display:flex; align-items:center; gap:15px; }
-    header img { width:60px; }
-    header h1 { color:#22c55e; margin:0; }
+<style>
+body { margin:0; font-family: Arial; background:#020617; color:white; }
+header { background:#000; padding:20px; display:flex; align-items:center; gap:15px; }
+header img { width:60px; }
+header h1 { color:#22c55e; margin:0; }
 
-    nav { background:#000; padding:10px; text-align:center; }
-    nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
+nav { background:#000; padding:10px; text-align:center; }
+nav button {
+  color:white;
+  margin:0 10px;
+  padding:8px 12px;
+  background:#22c55e;
+  border:none;
+  cursor:pointer;
+  font-weight:bold;
+}
 
-    .container { max-width:1100px; margin:auto; padding:20px; }
+.container { max-width:1100px; margin:auto; padding:20px; }
 
-    .card {
-      display:flex;
-      background:#020617;
-      margin-bottom:25px;
-      border-radius:12px;
-      overflow:hidden;
-      border:1px solid #1e293b;
+.card {
+  display:flex;
+  background:#020617;
+  margin-bottom:25px;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid #1e293b;
+}
+
+.card img { width:50%; object-fit:cover; }
+
+.card-content { padding:20px; }
+.card-content h2 { color:#22c55e; }
+
+footer { text-align:center; padding:20px; background:#000; }
+</style>
+
+<script>
+function filtrar(consola) {
+  let juegos = document.querySelectorAll('.juego');
+
+  juegos.forEach(j => {
+    if (consola === 'all') {
+      j.style.display = 'flex';
+    } else {
+      if (j.classList.contains(consola)) {
+        j.style.display = 'flex';
+      } else {
+        j.style.display = 'none';
+      }
     }
+  });
+}
+</script>
 
-    .card img { width:50%; object-fit:cover; }
-
-    .card-content { padding:20px; }
-    .card-content h2 { color:#22c55e; }
-
-    footer { text-align:center; padding:20px; background:#000; }
-  </style>
 </head>
 
 <body>
 
 <header>
-  <img src="images/logo.png">
-  <h1>Zona Gamer PS1–PS4</h1>
+<img src="images/logo.png">
+<h1>Zona Gamer PS1–PS4</h1>
 </header>
 
 <nav>
-  <a href="#">Inicio</a>
-  <a href="#">PS1</a>
-  <a href="#">PS2</a>
-  <a href="#">PS3</a>
-  <a href="#">PS4</a>
+<button onclick="filtrar('all')">Inicio</button>
+<button onclick="filtrar('ps1')">PS1</button>
+<button onclick="filtrar('ps2')">PS2</button>
+<button onclick="filtrar('ps3')">PS3</button>
+<button onclick="filtrar('ps4')">PS4</button>
 </nav>
 
 <div class="container">
 
+<!-- DESCRIPCIÓN -->
+<div class="card">
+<div class="card-content">
+<h2>¿Qué encontrarás en Zona Gamer?</h2>
+<p>En esta página vas a descubrir juegos que quizás no conocías pero pueden convertirse en tus favoritos. Desde terror psicológico hasta acción intensa, buscamos recomendar experiencias únicas para todos los jugadores.</p>
+</div>
+</div>
+
 <!-- ANUNCIO -->
 <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-3237099983613729"
-     data-ad-slot="2082305252"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+style="display:block"
+data-ad-client="ca-pub-3237099983613729"
+data-ad-slot="2082305252"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-<!-- METAL GEAR -->
-<div class="card">
+<!-- METAL GEAR (PS3) -->
+<div class="card juego ps3">
 <img src="images/raiden.jpg">
 <div class="card-content">
 <h2>Metal Gear Rising: Revengeance</h2>
 <p><strong>Género:</strong> Acción / Hack and Slash</p>
-<p><strong>Desarrolladora:</strong> PlatinumGames</p>
-<p><strong>Fecha de lanzamiento:</strong> 19 de febrero de 2013</p>
-<p><strong>Plataformas:</strong> PS3, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 10–12 horas</p>
-<p><strong>Sinopsis:</strong> Raiden, un cyborg ninja, se enfrenta a un mundo dominado por guerras privadas y tecnología militar avanzada, donde deberá combatir enemigos poderosos y descubrir conspiraciones mientras lucha con su propia identidad.</p>
+<p><strong>Sinopsis:</strong> Raiden lucha en un mundo dominado por guerras privadas y tecnología militar avanzada mientras enfrenta enemigos poderosos y conflictos internos.</p>
 </div>
 </div>
 
-<!-- RE4 REMAKE -->
-<div class="card">
+<!-- RE4 REMAKE (PS4) -->
+<div class="card juego ps4">
 <img src="images/re4.jpg">
 <div class="card-content">
 <h2>Resident Evil 4 Remake</h2>
 <p><strong>Género:</strong> Acción / Survival Horror</p>
-<p><strong>Desarrolladora:</strong> Capcom</p>
-<p><strong>Fecha de lanzamiento:</strong> 24 de marzo de 2023</p>
-<p><strong>Plataformas:</strong> PS4, PS5, Xbox Series X/S, PC</p>
-<p><strong>Duración:</strong> 15–20 horas</p>
-<p><strong>Sinopsis:</strong> Leon S. Kennedy es enviado a rescatar a la hija del presidente en una aldea europea dominada por una infección llamada Las Plagas. Lo que encuentra es un culto oscuro, enemigos inteligentes y una amenaza constante que convierte la misión en una pesadilla.</p>
+<p><strong>Sinopsis:</strong> Leon es enviado a rescatar a la hija del presidente en una aldea dominada por una infección conocida como Las Plagas.</p>
 </div>
 </div>
 
-<!-- SILENT HILL 2 REMAKE -->
-<div class="card">
+<!-- SH2 REMAKE (PS4) -->
+<div class="card juego ps4">
 <img src="images/sh2.jpg">
 <div class="card-content">
 <h2>Silent Hill 2 Remake</h2>
 <p><strong>Género:</strong> Terror psicológico</p>
-<p><strong>Desarrolladora:</strong> Bloober Team</p>
-<p><strong>Fecha de lanzamiento:</strong> 8 de octubre de 2024</p>
-<p><strong>Plataformas:</strong> PS5, PC</p>
-<p><strong>Duración:</strong> 12–16 horas</p>
-<p><strong>Sinopsis:</strong> James Sunderland recibe una misteriosa carta de su esposa fallecida, invitándolo a reunirse con ella en Silent Hill. Allí enfrenta horrores que reflejan su mente y secretos oscuros.</p>
+<p><strong>Sinopsis:</strong> James recibe una carta de su esposa fallecida y se adentra en un pueblo lleno de horrores que reflejan su mente.</p>
 </div>
 </div>
 
-<!-- RE2 REMAKE -->
-<div class="card">
+<!-- RE2 REMAKE (PS4) -->
+<div class="card juego ps4">
 <img src="images/re2.jpg">
 <div class="card-content">
 <h2>Resident Evil 2 Remake</h2>
 <p><strong>Género:</strong> Survival Horror</p>
-<p><strong>Desarrolladora:</strong> Capcom</p>
-<p><strong>Fecha de lanzamiento:</strong> 25 de enero de 2019</p>
-<p><strong>Plataformas:</strong> PS4, Xbox One, PC</p>
-<p><strong>Duración:</strong> 8–12 horas</p>
-<p><strong>Sinopsis:</strong> Leon y Claire luchan por sobrevivir en Raccoon City mientras descubren la verdad detrás de un brote biológico y enfrentan amenazas como Mr. X.</p>
+<p><strong>Sinopsis:</strong> Leon y Claire intentan sobrevivir en Raccoon City mientras descubren la verdad detrás del brote.</p>
 </div>
 </div>
 
-<!-- SILENT HILL -->
-<div class="card">
+<!-- SILENT HILL (PS1) -->
+<div class="card juego ps1">
 <img src="images/sh1.jpg">
 <div class="card-content">
 <h2>Silent Hill</h2>
 <p><strong>Género:</strong> Terror / Survival Horror</p>
-<p><strong>Desarrolladora:</strong> Konami</p>
-<p><strong>Fecha de lanzamiento:</strong> 31 de enero de 1999</p>
-<p><strong>Plataformas:</strong> PS1</p>
-<p><strong>Duración:</strong> 6–8 horas</p>
-<p><strong>Sinopsis:</strong> Harry Mason busca a su hija en un pueblo cubierto de niebla donde la realidad se distorsiona y aparecen criaturas aterradoras.</p>
+<p><strong>Sinopsis:</strong> Harry Mason busca a su hija en un pueblo cubierto de niebla lleno de criaturas y secretos oscuros.</p>
 </div>
 </div>
 
-<!-- RE3 -->
-<div class="card">
+<!-- RE3 (PS1) -->
+<div class="card juego ps1">
 <img src="images/re3.jpg">
 <div class="card-content">
 <h2>Resident Evil 3: Nemesis</h2>
 <p><strong>Género:</strong> Survival Horror</p>
-<p><strong>Desarrolladora:</strong> Capcom</p>
-<p><strong>Fecha de lanzamiento:</strong> 22 de septiembre de 1999</p>
-<p><strong>Plataformas:</strong> PS1, PC, Dreamcast</p>
-<p><strong>Duración:</strong> 6–7 horas</p>
-<p><strong>Sinopsis:</strong> Jill Valentine intenta escapar de Raccoon City mientras es perseguida por Nemesis, una criatura imparable diseñada para eliminarla.</p>
+<p><strong>Sinopsis:</strong> Jill intenta escapar de Raccoon City mientras es perseguida por Nemesis.</p>
 </div>
 </div>
 
-<!-- GOD OF WAR II -->
-<div class="card">
+<!-- GOW2 (PS2) -->
+<div class="card juego ps2">
 <img src="images/gow2.jpg">
 <div class="card-content">
 <h2>God of War II</h2>
 <p><strong>Género:</strong> Acción / Aventura</p>
-<p><strong>Desarrolladora:</strong> Santa Monica Studio</p>
-<p><strong>Fecha de lanzamiento:</strong> 13 de marzo de 2007</p>
-<p><strong>Plataformas:</strong> PS2</p>
-<p><strong>Duración:</strong> 10–12 horas</p>
-<p><strong>Sinopsis:</strong> Kratos es traicionado por Zeus y comienza una guerra contra los dioses del Olimpo en busca de venganza.</p>
+<p><strong>Sinopsis:</strong> Kratos busca venganza contra los dioses del Olimpo.</p>
 </div>
 </div>
 
