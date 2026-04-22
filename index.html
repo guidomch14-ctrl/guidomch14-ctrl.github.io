@@ -5,7 +5,7 @@
 <title>Zona Gamer PS1–PS4</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="icon" href="images/logo.png">
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3237099983613729"
 crossorigin="anonymous"></script>
@@ -24,21 +24,17 @@ nav button {
   background:#22c55e;
   border:none;
   cursor:pointer;
-  font-weight:bold;
 }
 
 .container { max-width:1100px; margin:auto; padding:20px; }
 
 .card {
   display:flex;
-  background:#020617;
   margin-bottom:25px;
-  border-radius:12px;
-  overflow:hidden;
   border:1px solid #1e293b;
 }
 
-.card img { width:50%; object-fit:cover; }
+.card img { width:50%; }
 
 .card-content { padding:20px; }
 .card-content h2 { color:#22c55e; }
@@ -47,25 +43,20 @@ footer { text-align:center; padding:20px; background:#000; }
 </style>
 
 <script>
-function filtrar(consola) {
-  let juegos = document.querySelectorAll('.juego');
-  juegos.forEach(j => {
-    if (consola === 'all') {
-      j.style.display = 'flex';
-    } else {
-      j.style.display = j.classList.contains(consola) ? 'flex' : 'none';
-    }
-  });
+function filtrar(c){
+let j=document.querySelectorAll('.juego');
+j.forEach(x=>{
+x.style.display=(c==='all'||x.classList.contains(c))?'flex':'none';
+});
 }
 </script>
-
 </head>
 
 <body>
 
 <header>
 <img src="images/logo.png">
-<h1>Zona Gamer PS1–PS4</h1>
+<h1>Zona Gamer</h1>
 </header>
 
 <nav>
@@ -79,22 +70,12 @@ function filtrar(consola) {
 
 <div class="container">
 
-<div class="card">
-<div class="card-content">
-<h2>¿Qué encontrarás en Zona Gamer?</h2>
-<p>Zona Gamer es un blog dedicado a analizar juegos clásicos y modernos de distintas plataformas. Aquí encontrarás sinopsis detalladas, información sobre duración, géneros y recomendaciones. El objetivo es ayudarte a descubrir juegos que realmente valgan la pena, desde experiencias de terror hasta acción intensa y combates espectaculares.</p>
-</div>
-</div>
-
 <!-- METAL GEAR -->
 <div class="card juego ps3 pc">
 <img src="images/raiden.jpg">
 <div class="card-content">
-<h2>Metal Gear Rising: Revengeance</h2>
-<p><strong>Género:</strong> Acción</p>
-<p><strong>Plataformas:</strong> PS3, PC</p>
-<p><strong>Duración:</strong> 10–12 horas</p>
-<p><strong>Sinopsis:</strong> Raiden se enfrenta a enemigos extremadamente poderosos en un mundo dominado por guerras tecnológicas. A lo largo de su misión, deberá luchar contra organizaciones privadas y cyborgs avanzados mientras enfrenta su propia naturaleza violenta. Cada combate es intenso y rápido, obligando al jugador a dominar el sistema de combate para sobrevivir.</p>
+<h2>Metal Gear Rising</h2>
+<p>Raiden enfrenta guerras tecnológicas en un mundo dominado por cyborgs. La historia combina acción extrema con dilemas sobre identidad y violencia. Cada combate es rápido y brutal, exigiendo reflejos y estrategia. Además, su increíble OST eleva cada pelea a otro nivel, con música intensa que acompaña perfectamente el ritmo del juego. Es una experiencia explosiva de principio a fin.</p>
 </div>
 </div>
 
@@ -103,10 +84,7 @@ function filtrar(consola) {
 <img src="images/re4.jpg">
 <div class="card-content">
 <h2>Resident Evil 4 Remake</h2>
-<p><strong>Género:</strong> Survival Horror</p>
-<p><strong>Plataformas:</strong> PS4, PC</p>
-<p><strong>Duración:</strong> 15–20 horas</p>
-<p><strong>Sinopsis:</strong> Leon S. Kennedy es enviado a rescatar a la hija del presidente en una aldea europea dominada por una infección llamada Las Plagas. Lo que comienza como una misión de rescate se transforma en una pesadilla donde cada enemigo representa un peligro real. A lo largo del juego, el jugador deberá sobrevivir a emboscadas, gestionar recursos y enfrentarse a criaturas cada vez más peligrosas.</p>
+<p>Leon es enviado a rescatar a la hija del presidente en una aldea dominada por Las Plagas. Lo que encuentra es una pesadilla llena de cultos y criaturas. La tensión es constante y cada enfrentamiento puede ser mortal. El jugador debe administrar recursos y sobrevivir a emboscadas. La historia combina acción con terror de forma brillante.</p>
 </div>
 </div>
 
@@ -115,10 +93,7 @@ function filtrar(consola) {
 <img src="images/sh2.jpg">
 <div class="card-content">
 <h2>Silent Hill 2 Remake</h2>
-<p><strong>Género:</strong> Terror psicológico</p>
-<p><strong>Plataformas:</strong> PS5, PC</p>
-<p><strong>Duración:</strong> 12–16 horas</p>
-<p><strong>Sinopsis:</strong> James recibe una carta de su esposa fallecida y viaja a Silent Hill. Allí descubre un pueblo envuelto en niebla donde las criaturas reflejan su mente. A medida que avanza, la historia se vuelve más oscura y emocional, ofreciendo una experiencia donde el verdadero terror está en la mente del protagonista.</p>
+<p>James llega a un pueblo envuelto en niebla tras recibir una carta de su esposa fallecida. Allí enfrenta criaturas que reflejan su mente. La historia es profunda y psicológica. Cada escenario transmite incomodidad y misterio. Es una experiencia emocional única en el género.</p>
 </div>
 </div>
 
@@ -127,10 +102,7 @@ function filtrar(consola) {
 <img src="images/re2.jpg">
 <div class="card-content">
 <h2>Resident Evil 2 Remake</h2>
-<p><strong>Género:</strong> Survival Horror</p>
-<p><strong>Plataformas:</strong> PS4, PC</p>
-<p><strong>Duración:</strong> 8–12 horas</p>
-<p><strong>Sinopsis:</strong> Leon y Claire deben sobrevivir al brote zombie en Raccoon City. Con recursos limitados y enemigos constantes, el jugador deberá avanzar con cuidado mientras descubre la verdad detrás del desastre.</p>
+<p>Leon y Claire sobreviven al caos de Raccoon City. La ciudad está infestada de zombies y peligros constantes. A medida que avanzan descubren conspiraciones de Umbrella. El jugador debe gestionar recursos con cuidado. La tensión aumenta con enemigos como Mr. X.</p>
 </div>
 </div>
 
@@ -139,10 +111,7 @@ function filtrar(consola) {
 <img src="images/sh1.jpg">
 <div class="card-content">
 <h2>Silent Hill</h2>
-<p><strong>Género:</strong> Terror</p>
-<p><strong>Plataformas:</strong> PS1</p>
-<p><strong>Duración:</strong> 6–8 horas</p>
-<p><strong>Sinopsis:</strong> Harry Mason busca a su hija en un pueblo cubierto de niebla donde la realidad se distorsiona. A medida que avanza, se enfrenta a criaturas aterradoras y descubre secretos oscuros que transforman su búsqueda en una pesadilla.</p>
+<p>Harry busca a su hija en un pueblo lleno de niebla. La realidad se distorsiona constantemente. Criaturas aterradoras aparecen en cada rincón. La historia se revela poco a poco. Es un clásico del terror psicológico.</p>
 </div>
 </div>
 
@@ -150,11 +119,8 @@ function filtrar(consola) {
 <div class="card juego ps1 pc">
 <img src="images/re3.jpg">
 <div class="card-content">
-<h2>Resident Evil 3: Nemesis</h2>
-<p><strong>Género:</strong> Survival Horror</p>
-<p><strong>Plataformas:</strong> PS1, PC</p>
-<p><strong>Duración:</strong> 6–7 horas</p>
-<p><strong>Sinopsis:</strong> Jill intenta escapar de Raccoon City mientras Nemesis la persigue sin descanso. La presión constante hace que cada momento sea tenso y desafiante.</p>
+<h2>Resident Evil 3</h2>
+<p>Jill intenta escapar mientras Nemesis la persigue. La ciudad está colapsada por el virus. Cada encuentro es peligroso. El jugador debe actuar rápido. La tensión es constante durante todo el juego.</p>
 </div>
 </div>
 
@@ -163,22 +129,16 @@ function filtrar(consola) {
 <img src="images/gow2.jpg">
 <div class="card-content">
 <h2>God of War II</h2>
-<p><strong>Género:</strong> Acción</p>
-<p><strong>Plataformas:</strong> PS2</p>
-<p><strong>Duración:</strong> 10–12 horas</p>
-<p><strong>Sinopsis:</strong> Kratos busca venganza contra Zeus tras ser traicionado. En su camino enfrentará dioses y criaturas mitológicas en batallas épicas.</p>
+<p>Kratos busca venganza tras ser traicionado. Enfrenta dioses y criaturas mitológicas. Cada batalla es épica. La historia gira en torno a la traición. Es una experiencia intensa y cinematográfica.</p>
 </div>
 </div>
 
-<!-- DEAD RISING 2 -->
+<!-- DR2 -->
 <div class="card juego ps3 pc">
 <img src="images/dr2.jpg">
 <div class="card-content">
 <h2>Dead Rising 2</h2>
-<p><strong>Género:</strong> Acción / Horror</p>
-<p><strong>Plataformas:</strong> PS3, PC</p>
-<p><strong>Duración:</strong> 10–15 horas</p>
-<p><strong>Sinopsis:</strong> Chuck Greene lucha por sobrevivir en una ciudad infestada de zombies mientras protege a su hija y descubre la verdad detrás del brote.</p>
+<p>Chuck debe sobrevivir en una ciudad infestada de zombies mientras protege a su hija. Enfrenta psicópatas y decisiones difíciles. El caos es constante. Su OST acompaña perfectamente la acción. Mezcla humor oscuro con supervivencia.</p>
 </div>
 </div>
 
@@ -187,10 +147,7 @@ function filtrar(consola) {
 <img src="images/dbz.jpg">
 <div class="card-content">
 <h2>Dragon Ball FighterZ</h2>
-<p><strong>Género:</strong> Lucha</p>
-<p><strong>Plataformas:</strong> PS4, PC</p>
-<p><strong>Duración:</strong> Variable</p>
-<p><strong>Sinopsis:</strong> Combates intensos con los personajes más icónicos del anime, donde la estrategia y la velocidad son clave para ganar.</p>
+<p>Combates intensos con personajes icónicos. La historia introduce nuevos enemigos. El sistema de pelea es dinámico. Cada batalla requiere estrategia. Es ideal para fans del anime.</p>
 </div>
 </div>
 
@@ -199,10 +156,7 @@ function filtrar(consola) {
 <img src="images/black.jpg">
 <div class="card-content">
 <h2>Black</h2>
-<p><strong>Género:</strong> Shooter</p>
-<p><strong>Plataformas:</strong> PS2</p>
-<p><strong>Duración:</strong> 6–8 horas</p>
-<p><strong>Sinopsis:</strong> Un shooter intenso donde cada disparo y explosión se sienten reales, ofreciendo acción constante en cada misión.</p>
+<p>Shooter centrado en acción y destrucción. Cada arma se siente potente. Los escenarios son destructibles. El ritmo es constante. Es uno de los mejores FPS de PS2.</p>
 </div>
 </div>
 
@@ -211,17 +165,14 @@ function filtrar(consola) {
 <img src="images/coldfear.jpg">
 <div class="card-content">
 <h2>Cold Fear</h2>
-<p><strong>Género:</strong> Survival Horror</p>
-<p><strong>Plataformas:</strong> PS2, PC</p>
-<p><strong>Duración:</strong> 6–10 horas</p>
-<p><strong>Sinopsis:</strong> Un guardacostas investiga un barco en medio de una tormenta y descubre una infección mortal que convierte a las personas en criaturas violentas.</p>
+<p>Un guardacostas investiga un barco en medio de una tormenta. Descubre una infección mortal. El entorno es inestable. La tensión es constante. Mezcla acción con terror.</p>
 </div>
 </div>
 
 </div>
 
 <footer>
-© 2026 Zona Gamer PS1–PS4
+© 2026 Zona Gamer
 </footer>
 
 </body>
