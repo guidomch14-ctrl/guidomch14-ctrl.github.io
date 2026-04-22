@@ -49,16 +49,11 @@ footer { text-align:center; padding:20px; background:#000; }
 <script>
 function filtrar(consola) {
   let juegos = document.querySelectorAll('.juego');
-
   juegos.forEach(j => {
     if (consola === 'all') {
       j.style.display = 'flex';
     } else {
-      if (j.classList.contains(consola)) {
-        j.style.display = 'flex';
-      } else {
-        j.style.display = 'none';
-      }
+      j.style.display = j.classList.contains(consola) ? 'flex' : 'none';
     }
   });
 }
@@ -83,11 +78,10 @@ function filtrar(consola) {
 
 <div class="container">
 
-<!-- DESCRIPCIÓN -->
 <div class="card">
 <div class="card-content">
 <h2>¿Qué encontrarás en Zona Gamer?</h2>
-<p>En esta página vas a descubrir juegos que quizás no conocías pero pueden convertirse en tus favoritos. Desde terror psicológico hasta acción intensa, buscamos recomendar experiencias únicas para todos los jugadores.</p>
+<p>Descubrí juegos que quizás no conocías pero pueden convertirse en tus favoritos. Terror, acción y clásicos inolvidables.</p>
 </div>
 </div>
 
@@ -100,72 +94,86 @@ data-ad-format="auto"
 data-full-width-responsive="true"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-<!-- METAL GEAR (PS3) -->
+<!-- METAL GEAR -->
 <div class="card juego ps3">
 <img src="images/raiden.jpg">
 <div class="card-content">
 <h2>Metal Gear Rising: Revengeance</h2>
 <p><strong>Género:</strong> Acción / Hack and Slash</p>
-<p><strong>Sinopsis:</strong> Raiden lucha en un mundo dominado por guerras privadas y tecnología militar avanzada mientras enfrenta enemigos poderosos y conflictos internos.</p>
+<p><strong>Plataformas:</strong> PS3, Xbox 360, PC</p>
+<p><strong>Duración:</strong> 10–12 horas</p>
+<p><strong>Sinopsis:</strong> Raiden enfrenta guerras tecnológicas y enemigos poderosos mientras lucha con su identidad.</p>
 </div>
 </div>
 
-<!-- RE4 REMAKE (PS4) -->
+<!-- RE4 -->
 <div class="card juego ps4">
 <img src="images/re4.jpg">
 <div class="card-content">
 <h2>Resident Evil 4 Remake</h2>
 <p><strong>Género:</strong> Acción / Survival Horror</p>
-<p><strong>Sinopsis:</strong> Leon es enviado a rescatar a la hija del presidente en una aldea dominada por una infección conocida como Las Plagas.</p>
+<p><strong>Plataformas:</strong> PS4, PS5, PC</p>
+<p><strong>Duración:</strong> 15–20 horas</p>
+<p><strong>Sinopsis:</strong> Leon rescata a la hija del presidente en una aldea dominada por Las Plagas.</p>
 </div>
 </div>
 
-<!-- SH2 REMAKE (PS4) -->
+<!-- SH2 -->
 <div class="card juego ps4">
 <img src="images/sh2.jpg">
 <div class="card-content">
 <h2>Silent Hill 2 Remake</h2>
 <p><strong>Género:</strong> Terror psicológico</p>
-<p><strong>Sinopsis:</strong> James recibe una carta de su esposa fallecida y se adentra en un pueblo lleno de horrores que reflejan su mente.</p>
+<p><strong>Plataformas:</strong> PS5, PC</p>
+<p><strong>Duración:</strong> 12–16 horas</p>
+<p><strong>Sinopsis:</strong> James investiga una carta misteriosa en un pueblo lleno de horrores psicológicos.</p>
 </div>
 </div>
 
-<!-- RE2 REMAKE (PS4) -->
+<!-- RE2 -->
 <div class="card juego ps4">
 <img src="images/re2.jpg">
 <div class="card-content">
 <h2>Resident Evil 2 Remake</h2>
 <p><strong>Género:</strong> Survival Horror</p>
-<p><strong>Sinopsis:</strong> Leon y Claire intentan sobrevivir en Raccoon City mientras descubren la verdad detrás del brote.</p>
+<p><strong>Plataformas:</strong> PS4, Xbox One, PC</p>
+<p><strong>Duración:</strong> 8–12 horas</p>
+<p><strong>Sinopsis:</strong> Leon y Claire sobreviven al brote de Raccoon City enfrentando peligros constantes.</p>
 </div>
 </div>
 
-<!-- SILENT HILL (PS1) -->
+<!-- SH1 -->
 <div class="card juego ps1">
 <img src="images/sh1.jpg">
 <div class="card-content">
 <h2>Silent Hill</h2>
 <p><strong>Género:</strong> Terror / Survival Horror</p>
-<p><strong>Sinopsis:</strong> Harry Mason busca a su hija en un pueblo cubierto de niebla lleno de criaturas y secretos oscuros.</p>
+<p><strong>Plataformas:</strong> PS1</p>
+<p><strong>Duración:</strong> 6–8 horas</p>
+<p><strong>Sinopsis:</strong> Harry busca a su hija en un pueblo cubierto de niebla lleno de criaturas.</p>
 </div>
 </div>
 
-<!-- RE3 (PS1) -->
+<!-- RE3 -->
 <div class="card juego ps1">
 <img src="images/re3.jpg">
 <div class="card-content">
 <h2>Resident Evil 3: Nemesis</h2>
 <p><strong>Género:</strong> Survival Horror</p>
-<p><strong>Sinopsis:</strong> Jill intenta escapar de Raccoon City mientras es perseguida por Nemesis.</p>
+<p><strong>Plataformas:</strong> PS1, PC, Dreamcast</p>
+<p><strong>Duración:</strong> 6–7 horas</p>
+<p><strong>Sinopsis:</strong> Jill intenta escapar mientras Nemesis la persigue sin descanso.</p>
 </div>
 </div>
 
-<!-- GOW2 (PS2) -->
+<!-- GOW2 -->
 <div class="card juego ps2">
 <img src="images/gow2.jpg">
 <div class="card-content">
 <h2>God of War II</h2>
 <p><strong>Género:</strong> Acción / Aventura</p>
+<p><strong>Plataformas:</strong> PS2</p>
+<p><strong>Duración:</strong> 10–12 horas</p>
 <p><strong>Sinopsis:</strong> Kratos busca venganza contra los dioses del Olimpo.</p>
 </div>
 </div>
