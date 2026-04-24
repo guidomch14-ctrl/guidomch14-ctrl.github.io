@@ -61,6 +61,11 @@ nav button:hover {
 
 footer { text-align:center; padding:20px; background:#000; }
 </style>
+  .banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 <script>
 function filtrar(c){
@@ -77,6 +82,10 @@ j.style.display=(c==='all'||j.classList.contains(c))?'flex':'none';
 <img src="images/logo.png">
 <h1>Zona Gamer</h1>
 </header>
+
+  <div class="banner">
+  <img src="images/banner.jpg" alt="Zona Gamer Banner">
+</div>
 
 <nav>
 <button onclick="filtrar('all')">Inicio</button>
