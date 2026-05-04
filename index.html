@@ -18,158 +18,171 @@
 crossorigin="anonymous"></script>
 
 <style>
-
-/* BASE */
 body {
-  margin:0;
-  font-family: Arial;
-  background:#020617;
-  color:white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #020617;
+  color: white;
 }
 
 /* HEADER */
 header {
-  background:#000;
-  padding:15px 30px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  background: #050505;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid #1d4ed8;
+  box-shadow: 0 2px 0 rgba(34, 197, 94, 0.18);
 }
 
-.logo {
-  display:flex;
-  align-items:center;
-  gap:10px;
+header img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
 }
 
-.logo img {
-  width:50px;
+header h1 {
+  margin: 0;
+  color: #22c55e;
+  font-size: 30px;
+  letter-spacing: 0.5px;
 }
 
-.logo h1 {
-  color:#22c55e;
-}
-
-/* NAV */
-nav button {
-  margin:5px;
-  padding:8px 12px;
-  background:#111;
-  border:1px solid #22c55e;
-  color:#22c55e;
-  cursor:pointer;
-  border-radius:8px;
-  transition:0.3s;
-}
-
-nav button:hover {
-  background:#22c55e;
-  color:black;
-}
-
-/* 🔥 BANNER */
+/* BANNER */
 .banner {
-  position:relative;
-  width:100%;
-  height:250px;
-  overflow:hidden;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(34, 197, 94, 0.25);
 }
 
 .banner img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:brightness(0.6);
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* TEXTO ENCIMA DEL BANNER */
-.banner-text {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%);
-  text-align:center;
+/* NAV */
+nav {
+  display: flex;
+  gap: 10px;
+  padding: 10px 8px 0 8px;
+  flex-wrap: wrap;
 }
 
-.banner-text h1 {
-  font-size:40px;
-  color:#22c55e;
-  text-shadow:0 0 15px #22c55e;
+nav button {
+  padding: 8px 14px;
+  background: transparent;
+  border: 1px solid #22c55e;
+  color: #22c55e;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.25s;
+  font-weight: bold;
 }
 
-.banner-text p {
-  color:#ccc;
+nav button:hover {
+  background: #22c55e;
+  color: #000;
 }
 
 /* CONTENIDO */
 .container {
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 22px;
+}
+
+.intro {
+  background: #120707;
+  border: 1px solid rgba(34, 197, 94, 0.18);
+  border-radius: 14px;
+  padding: 22px;
+  margin: 18px 0 26px 0;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+}
+
+.intro h2 {
+  color: #22c55e;
+  margin-top: 0;
 }
 
 /* CARDS */
 .card {
-  display:flex;
-  margin-bottom:25px;
-  border:1px solid #1e293b;
-  border-radius:12px;
-  overflow:hidden;
-  background:#020617;
-  transition:0.3s;
+  display: flex;
+  margin-bottom: 25px;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #07070c;
+  transition: 0.3s;
 }
 
 .card:hover {
-  transform:scale(1.02);
-  border-color:#22c55e;
+  transform: scale(1.01);
+  border-color: rgba(34, 197, 94, 0.7);
 }
 
 .card img {
-  width:50%;
-  object-fit:cover;
+  width: 50%;
+  object-fit: cover;
+  display: block;
 }
 
 .card-content {
-  padding:20px;
-  line-height:1.6;
+  width: 50%;
+  padding: 20px;
+  line-height: 1.6;
 }
 
+.card-content h2 {
+  color: #22c55e;
+  margin-top: 0;
+}
+
+.card-content strong {
+  color: #22c55e;
+}
+
+/* FOOTER */
 footer {
-  text-align:center;
-  padding:20px;
-  background:#000;
+  text-align: center;
+  padding: 20px;
+  background: #050505;
+  margin-top: 40px;
+  border-top: 1px solid rgba(34, 197, 94, 0.18);
 }
 
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card img,
+  .card-content {
+    width: 100%;
+  }
+}
 </style>
 
-<script>
-function filtrar(c){
-document.querySelectorAll('.juego').forEach(j=>{
-j.style.display=(c==='all'||j.classList.contains(c))?'flex':'none';
-});
-}
-</script>
-</head>
-
-<body>
-<h1 style="display:none;">
-Mejores juegos de PS1, PS2, PS3, PS4 y PC con análisis y recomendaciones
-</h1>
-
 <header>
-  <div class="logo">
-    <img src="images/logo.png">
-    <h1>Zona Gamer</h1>
-  </div>
+  <img src="images/logo.png" alt="Zona Gamer logo">
+  <h1>Zona Gamer</h1>
+</header>
 
-  <nav>
-    <button onclick="filtrar('all')">Inicio</button>
-    <button onclick="filtrar('ps1')">PS1</button>
-    <button onclick="filtrar('ps2')">PS2</button>
-    <button onclick="filtrar('ps3')">PS3</button>
-    <button onclick="filtrar('ps4')">PS4</button>
-    <button onclick="filtrar('pc')">PC</button>
-  </nav>
+<div class="banner">
+  <img src="images/banner.jpg" alt="Banner Zona Gamer">
+</div>
+
+<nav>
+  <button onclick="filtrar('all')">Inicio</button>
+  <button onclick="filtrar('ps1')">PS1</button>
+  <button onclick="filtrar('ps2')">PS2</button>
+  <button onclick="filtrar('ps3')">PS3</button>
+  <button onclick="filtrar('ps4')">PS4</button>
+  <button onclick="filtrar('pc')">PC</button>
+</nav>
 </header>
 
 <div class="banner">
