@@ -62,24 +62,46 @@ nav button:hover {
 }
 
 /* 🔥 BANNER */
+<style>
+
 .banner {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(to right, #020617, #0b0000);
-  padding:40px;
-  text-align:center;
-  border-bottom:1px solid #22c55e33;
+  padding: 40px;
+  text-align: center;
 }
 
+/* 🔥 TEXTO */
 .banner h1 {
-  color:#22c55e;
-  font-size:40px;
-  text-shadow:0 0 10px #22c55e;
+  color: #22c55e;
+  font-size: 40px;
+  animation: glow 2s infinite alternate;
 }
 
-.banner p {
-  max-width:700px;
-  margin:auto;
-  color:#ccc;
+/* 🔥 EFECTO GLOW */
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #22c55e; }
+  100% { text-shadow: 0 0 20px #22c55e, 0 0 30px #22c55e; }
 }
+
+/* 🔥 PARTÍCULAS */
+.banner::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(34,197,94,0.2) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: moveParticles 10s linear infinite;
+}
+
+@keyframes moveParticles {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100px); }
+}
+
+</style>
 
 /* 🔥 CONTAINER */
 .container {
