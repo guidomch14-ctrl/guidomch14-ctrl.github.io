@@ -176,6 +176,14 @@ footer {
   <div class="banner-text">
 </div>
 
+<script>
+function filtrar(c) {
+  document.querySelectorAll('.juego').forEach(j => {
+    j.style.display = (c === 'all' || j.classList.contains(c)) ? 'flex' : 'none';
+  });
+}
+</script>
+
 <nav>
   <button onclick="filtrar('all')">Inicio</button>
   <button onclick="filtrar('ps1')">PS1</button>
