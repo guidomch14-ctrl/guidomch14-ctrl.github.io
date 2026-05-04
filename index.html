@@ -179,7 +179,13 @@ footer {
 <script>
 function filtrar(c) {
   document.querySelectorAll('.juego').forEach(j => {
-    j.style.display = (c === 'all' || j.classList.contains(c)) ? 'flex' : 'none';
+    if (c === 'all' || j.classList.contains(c)) {
+      j.style.display = 'flex';
+      j.style.opacity = '1';
+    } else {
+      j.style.opacity = '0';
+      setTimeout(() => j.style.display = 'none', 200);
+    }
   });
 }
 </script>
