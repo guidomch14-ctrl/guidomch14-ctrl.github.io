@@ -66,40 +66,101 @@ nav button:hover {
 
 .banner {
   position: relative;
+  width: 100%;
+  height: 420px;
   overflow: hidden;
-  background: linear-gradient(to right, #020617, #0b0000);
-  padding: 40px;
-  text-align: center;
 }
 
-/* 🔥 TEXTO */
-.banner h1 {
-  color: #22c55e;
-  font-size: 40px;
-  animation: glow 2s infinite alternate;
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* 🔥 EFECTO GLOW */
-@keyframes glow {
-  0% { text-shadow: 0 0 5px #22c55e; }
-  100% { text-shadow: 0 0 20px #22c55e, 0 0 30px #22c55e; }
-}
-
-/* 🔥 PARTÍCULAS */
-.banner::before {
-  content: "";
+/* Overlay oscuro + degradado */
+.overlay {
   position: absolute;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(34,197,94,0.2) 1px, transparent 1px);
-  background-size: 40px 40px;
-  animation: moveParticles 10s linear infinite;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.3));
 }
 
-@keyframes moveParticles {
-  from { transform: translateY(0); }
-  to { transform: translateY(-100px); }
+/* Contenido */
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+  max-width: 500px;
 }
+
+.banner-content h2 {
+  font-size: 52px;
+  color: #22c55e;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* BOTONES */
+.banner-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.banner-buttons button {
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.banner-buttons button:first-child {
+  background: #22c55e;
+  color: white;
+}
+
+.banner-buttons .secondary {
+  background: transparent;
+  border: 1px solid #22c55e;
+  color: #22c55e;
+}
+
+.banner-buttons button:hover {
+  transform: scale(1.05);
+}
+
+/* TAGS */
+.banner-tags {
+  margin-top: 15px;
+}
+
+.banner-tags span {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 3px;
+  border: 1px solid #22c55e;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* BARRA INFERIOR */
+.banner-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-size: 14px;
+}
+``
 
 </style>
 
