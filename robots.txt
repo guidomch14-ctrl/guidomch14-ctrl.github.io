@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://guidomch14-ctrl.github.io/sitemap.xml
