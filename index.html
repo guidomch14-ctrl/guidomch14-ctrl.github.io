@@ -1,1384 +1,849 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Mejores Juegos de PS1, PS2, PS3, PS4 y PC | Zona Gamer</title>
-<meta name="description" content="Descubre los mejores juegos de PS1, PS2, PS3, PS4 y PC con sinopsis completas, duración, plataformas y puntuaciones. Guía gamer definitiva.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zona Gamer es una web de videojuegos con recomendaciones, análisis, guías, historia y fichas completas de juegos de PS1, PS2, PS3, PS4, Xbox y PC.">
+  <meta name="keywords" content="videojuegos, juegos recomendados, análisis gamer, guías, resident evil, silent hill, metal gear rising, ps1, ps2, ps3, ps4, pc, xbox">
+  <meta name="author" content="Zona Gamer">
+  <meta name="robots" content="index, follow">
+  <title>Zona Gamer | Recomendaciones, análisis y guías de videojuegos</title>
+  <link rel="icon" href="images/logo.png">
 
-<meta name="keywords" content="juegos ps1, juegos ps2, juegos ps3, juegos ps4, juegos pc, mejores juegos, videojuegos recomendados, guias gaming, resident evil, silent hill, accion, terror, rpg">
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3237099983613729"
+    crossorigin="anonymous"></script>
 
-<meta name="author" content="Zona Gamer">
-
-<meta name="robots" content="index, follow">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="icon" href="images/logo.png">
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3237099983613729"
-crossorigin="anonymous"></script>
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #020617;
-  color: white;
-}
-
-/* HEADER */
-header {
-  background: #050505;
-  padding: 16px 18px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  border-bottom: 1px solid #1d4ed8;
-  box-shadow: 0 2px 0 rgba(34, 197, 94, 0.18);
-}
-
-header img {
-  width: 52px;
-  height: 52px;
-  object-fit: contain;
-}
-
-header h1 {
-  margin: 0;
-  color: #22c55e;
-  font-size: 30px;
-  letter-spacing: 0.5px;
-}
-
-/* BANNER */
-.banner {
-  width: 100%;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(34, 197, 94, 0.25);
-}
-
-.banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* NAV */
-nav {
-  display: flex;
-  gap: 10px;
-  padding: 10px 8px 0 8px;
-  flex-wrap: wrap;
-}
-
-nav button {
-  padding: 8px 14px;
-  background: transparent;
-  border: 1px solid #22c55e;
-  color: #22c55e;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: 0.25s;
-  font-weight: bold;
-}
-
-nav button:hover {
-  background: #22c55e;
-  color: #000;
-}
-
-/* CONTENIDO */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 22px;
-}
-
-.intro {
-  background: #120707;
-  border: 1px solid rgba(34, 197, 94, 0.18);
-  border-radius: 14px;
-  padding: 22px;
-  margin: 18px 0 26px 0;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
-}
-
-.intro h2 {
-  color: #22c55e;
-  margin-top: 0;
-}
-
-/* CARDS */
-.card {
-  display: flex;
-  margin-bottom: 25px;
-  border: 1px solid rgba(255,255,255,0.09);
-  border-radius: 12px;
-  overflow: hidden;
-  background: #07070c;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.01);
-  border-color: rgba(34, 197, 94, 0.7);
-}
-
-.card img {
-  width: 50%;
-  object-fit: cover;
-  display: block;
-}
-
-.card-content {
-  width: 50%;
-  padding: 20px;
-  line-height: 1.6;
-}
-
-.card-content h2 {
-  color: #22c55e;
-  margin-top: 0;
-}
-
-.card-content strong {
-  color: #22c55e;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #050505;
-  margin-top: 40px;
-  border-top: 1px solid rgba(34, 197, 94, 0.18);
-}
-
-/* RESPONSIVE */
-@media (max-width: 800px) {
-  .card {
-    flex-direction: column;
-  }
-
-  .card img,
-  .card-content {
-    width: 100%;
-  }
-}
-</style>
-
-<header>
-  <img src="images/logo.png" alt="Zona Gamer logo">
-  <h1>Zona Gamer</h1>
-</header>
-
-<div class="banner">
-  <img src="images/banner.jpg" alt="Banner Zona Gamer">
-  <div class="banner-text">
-</div>
-
-<script>
-function filtrar(c) {
-  document.querySelectorAll('.juego').forEach(j => {
-    if (c === 'all' || j.classList.contains(c)) {
-      j.style.display = 'flex';
-      j.style.opacity = '1';
-    } else {
-      j.style.opacity = '0';
-      setTimeout(() => j.style.display = 'none', 200);
+  <style>
+    :root {
+      --bg: #020617;
+      --bg-2: #0f172a;
+      --card: #0b1020;
+      --card-2: #111827;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --green: #22c55e;
+      --green-2: #16a34a;
+      --border: rgba(255,255,255,0.10);
+      --shadow: 0 18px 50px rgba(0,0,0,0.35);
+      --radius: 18px;
+      --max: 1180px;
     }
-  });
-}
-</script>
-
-<nav>
-  <button onclick="filtrar('all')">Inicio</button>
-  <button onclick="filtrar('ps1')">PS1</button>
-  <button onclick="filtrar('ps2')">PS2</button>
-  <button onclick="filtrar('ps3')">PS3</button>
-  <button onclick="filtrar('ps4')">PS4</button>
-  <button onclick="filtrar('xbox360')">Xbox 360</button>
-  <button onclick="filtrar('xboxone')">Xbox One</button>
-  <button onclick="filtrar('pc')">PC</button>
-</nav>
-</header>
-
-<h1>Zona Gamer</h1>
-<p>Zona Gamer es un sitio dedicado a ofrecer contenido detallado sobre videojuegos de distintas generaciones. Aquí encontrarás sinopsis completas, análisis generales y recomendaciones de títulos que marcaron historia. La idea es que cada juego tenga información suficiente para que realmente entiendas de qué trata y si vale la pena jugarlo.</p>
-</div>
-</div>
-
-<!-- METAL GEAR -->
-<div class="card juego ps3 pc">
-<img src="images/raiden.jpg">
-<div class="card-content">
-<h2>Metal Gear Rising: Revengeance</h2>
-<p><strong>Plataformas:</strong> PS3, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 6–8 horas</p>
-<p>Raiden es un cyborg ninja que vive en un mundo donde las guerras son controladas por corporaciones privadas. A lo largo de su misión, deberá enfrentarse a enemigos cada vez más peligrosos mientras cuestiona su propia humanidad y su pasado como soldado. El sistema de combate es rápido, preciso y extremadamente violento, obligando al jugador a dominar cada mecánica. Además, el juego destaca por su increíble banda sonora (OST), que acompaña cada pelea con música épica que aumenta la intensidad. La combinación de acción, narrativa y música crea una experiencia única e inolvidable.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 80/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 82/100</p>
-</div>
-</div>
-
-<!-- RE4 -->
-<div class="card juego ps4 pc">
-<img src="images/re4.jpg">
-<div class="card-content">
-<h2>Resident Evil 4 Remake</h2>
-<p><strong>Plataformas:</strong> PS4, PS5, PC, Xbox Series X/S</p>
-<p><strong>Duración:</strong> 12–16 horas</p>
-<p>Leon S. Kennedy es enviado a rescatar a la hija del presidente en una remota aldea europea. Lo que parece una misión simple se convierte rápidamente en una pesadilla cuando descubre que los habitantes están infectados por Las Plagas. A medida que avanza, deberá enfrentarse a cultos, criaturas mutadas y situaciones extremadamente peligrosas. La gestión de recursos y la toma de decisiones son clave para sobrevivir. Cada zona presenta nuevos desafíos, manteniendo la tensión constante. Es una experiencia intensa que mezcla acción y terror de manera perfecta.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 93/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 92/100</p>
-</div>
-</div>
-
-<!-- RE2 -->
-<div class="card juego ps4 pc">
-<img src="images/re2.jpg">
-<div class="card-content">
-<h2>Resident Evil 2 Remake</h2>
-<p><strong>Plataformas:</strong> PS4, PS5, PC, Xbox One, Xbox Series X/S</p>
-<p><strong>Duración:</strong> 8–10 horas</p>
-<p>En medio de un brote zombie que ha destruido Raccoon City, Leon y Claire deben encontrar la forma de sobrevivir. La ciudad está llena de peligros y cada rincón puede esconder una amenaza. A medida que avanzan, descubren los oscuros secretos de la corporación Umbrella. El jugador debe administrar recursos limitados y resolver situaciones bajo presión constante. La presencia de enemigos como Mr. X aumenta la tensión, ya que puede aparecer en cualquier momento. Es uno de los mejores ejemplos de survival horror moderno.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 91/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 90/100</p>
-</div>
-</div>
-
-<!-- SH1 -->
-<div class="card juego ps1">
-<img src="images/sh1.jpg">
-<div class="card-content">
-<h2>Silent Hill</h2>
-<p><strong>Plataformas:</strong> PS1</p>
-<p><strong>Duración:</strong> 6–8 horas</p>
-<p>Harry Mason llega a Silent Hill en busca de su hija desaparecida tras un accidente. Sin embargo, el pueblo está envuelto en una niebla constante y lleno de criaturas extrañas. A medida que avanza, la realidad comienza a distorsionarse, mostrando versiones cada vez más perturbadoras del entorno. La historia se desarrolla lentamente, revelando secretos oscuros que afectan directamente al protagonista. El terror no solo está en los enemigos, sino en la atmósfera y la narrativa. Es un clásico que definió el género del terror psicológico.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 86/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 85/100</p>
-</div>
-</div>
-
-<!-- SH2 -->
-<div class="card juego ps4 pc">
-<img src="images/sh2.jpg">
-<div class="card-content">
-<h2>Silent Hill 2 Remake</h2>
-<p><strong>Plataformas:</strong> PS5, PC</p>
-<p><strong>Duración:</strong> 12–15 horas</p>
-<p>James Sunderland recibe una carta de su esposa fallecida y decide viajar a Silent Hill. Allí encuentra un pueblo vacío cubierto de niebla, donde comienzan a aparecer criaturas que reflejan sus propios miedos. La historia se centra en temas emocionales y psicológicos, explorando la culpa y el dolor. Cada encuentro y escenario tiene un significado profundo dentro de la narrativa. A medida que avanza, el jugador descubre la verdad detrás de la carta. Es una experiencia intensa y reflexiva.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 88/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 87/100</p>
-</div>
-</div>
-
-<!-- RE3 -->
-<div class="card juego ps1 pc">
-<img src="images/re3.jpg">
-<div class="card-content">
-<h2>Resident Evil 3 Nemesis</h2>
-<p><strong>Plataformas:</strong> PS1, PC, GameCube</p>
-<p><strong>Duración:</strong> 6–7 horas</p>
-<p>Jill Valentine intenta escapar de Raccoon City mientras el virus se propaga sin control. La ciudad está completamente devastada y llena de enemigos. Sin embargo, la mayor amenaza es Nemesis, una criatura que la persigue constantemente. El jugador debe reaccionar rápido y administrar recursos para sobrevivir. Cada encuentro con Nemesis genera tensión y obliga a tomar decisiones inmediatas. La experiencia es intensa y llena de momentos impredecibles.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 79/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 80/100</p>
-</div>
-</div>
-
-<!-- GOW2 -->
-<div class="card juego ps2">
-<img src="images/gow2.jpg">
-<div class="card-content">
-<h2>God of War II</h2>
-<p><strong>Plataformas:</strong> PS2, PS3</p>
-<p><strong>Duración:</strong> 10–12 horas</p>
-<p>Kratos, tras convertirse en dios, es traicionado por Zeus y pierde sus poderes. Decidido a vengarse, inicia un viaje épico lleno de combates contra criaturas mitológicas. A lo largo del juego enfrentará desafíos enormes y enemigos colosales. La narrativa está cargada de violencia, traición y determinación. Cada batalla se siente intensa y cinematográfica. Es considerado uno de los mejores juegos de acción de su época.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 93/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 94/100</p>
-</div>
-</div>
-
-<!-- DR2 -->
-<div class="card juego ps3 pc">
-<img src="images/dr2.jpg">
-<div class="card-content">
-<h2>Dead Rising 2</h2>
-<p><strong>Plataformas:</strong> PS3, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 10–15 horas</p>
-<p>Chuck Greene participa en un programa donde se lucha contra zombies, pero un brote real desata el caos. Mientras intenta sobrevivir, debe proteger a su hija y encontrar medicación para ella. El juego combina acción, exploración y decisiones importantes. A lo largo del camino se enfrenta a psicópatas y hordas de enemigos. Su banda sonora (OST) acompaña perfectamente la acción, generando una mezcla única de tensión y humor oscuro. Es una experiencia diferente dentro del género.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 78/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 79/100</p>
-</div>
-</div>
-
-<!-- DBZ -->
-<div class="card juego ps4 pc">
-<img src="images/dbz.jpg">
-<div class="card-content">
-<h2>Dragon Ball FighterZ</h2>
-<p><strong>Plataformas:</strong> PS4, PS5, PC, Xbox One, Xbox Series X/S, Nintendo Switch</p>
-<p><strong>Duración:</strong> 8–12 horas (historia)</p>
-<p>Los guerreros más poderosos del universo se enfrentan en combates intensos y espectaculares. La historia introduce una nueva amenaza que obliga a los personajes a unirse. El sistema de combate es dinámico y requiere estrategia. Cada pelea es rápida y visualmente impactante. Es un juego que captura perfectamente la esencia del anime. Ideal tanto para fans como para jugadores competitivos.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 87/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 86/100</p>
-</div>
-</div>
-
-<!-- BLACK -->
-<div class="card juego ps2">
-<img src="images/black.jpg">
-<div class="card-content">
-<h2>Black</h2>
-<p><strong>Plataformas:</strong> PS2, Xbox</p>
-<p><strong>Duración:</strong> 6–8 horas</p>
-<p>Black es un shooter en primera persona que destaca por su enfoque en la acción explosiva. El jugador revive misiones a través de interrogatorios, revelando poco a poco la historia. Los escenarios son altamente destructibles, lo que aporta realismo a cada combate. Cada arma se siente potente y el sonido es clave en la experiencia. A medida que avanzas, los enfrentamientos se vuelven más intensos. Es un clásico del género.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 80/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 81/100</p>
-</div>
-</div>
-
-<!-- COLD FEAR -->
-<div class="card juego ps2 pc">
-<img src="images/coldfear.jpg">
-<div class="card-content">
-<h2>Cold Fear</h2>
-<p><strong>Plataformas:</strong> PS2, Xbox, PC</p>
-<p><strong>Duración:</strong> 6–8 horas</p>
-<p>Tom Hansen es enviado a investigar un barco en medio de una tormenta. Al llegar, descubre que la tripulación ha sido infectada por una entidad desconocida. El entorno es inestable, con olas que afectan el movimiento del personaje. A medida que avanza, la historia revela experimentos oscuros. El jugador debe enfrentarse tanto a enemigos como al entorno. Es una mezcla interesante de acción y terror.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 66/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 67/100</p>
-</div>
-</div>
-
-  <!-- PERSONA 4 GOLDEN -->
-<div class="card juego pc ps4">
-<img src="images/p4g.jpg">
-<div class="card-content">
-<h2>Persona 4 Golden</h2>
-<p><strong>Género:</strong> RPG / Simulación social</p>
-<p><strong>Plataformas:</strong> PC, PS4, PS Vita</p>
-<p><strong>Duración:</strong> 60–80 horas</p>
-<p><strong>Sinopsis:</strong> En un tranquilo pueblo japonés llamado Inaba, comienzan a ocurrir una serie de misteriosos asesinatos relacionados con un canal de televisión que solo aparece en días de lluvia. El protagonista, junto a un grupo de amigos, descubre que puede entrar a ese mundo oculto donde se enfrentan a criaturas conocidas como Sombras. A medida que investigan los crímenes, también desarrollan vínculos personales que afectan directamente sus habilidades en combate. La historia combina vida escolar, relaciones sociales y elementos sobrenaturales de forma única. Su narrativa profunda y su excelente banda sonora (OST) lo convierten en uno de los RPG más queridos de todos los tiempos.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 93/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 94/100</p>
-</div>
-</div>
-
-<!-- PAYDAY 2 -->
-<div class="card juego pc ps3 ps4">
-<img src="images/payday2.jpg">
-<div class="card-content">
-<h2>Payday 2</h2>
-<p><strong>Género:</strong> Shooter cooperativo / Acción</p>
-<p><strong>Plataformas:</strong> PC, PS3, PS4, Xbox 360, Xbox One</p>
-<p><strong>Duración:</strong> 20+ horas (rejugable)</p>
-<p><strong>Sinopsis:</strong> Payday 2 pone al jugador en la piel de un criminal profesional que participa en robos organizados junto a un equipo. Desde atracos a bancos hasta misiones más complejas, cada golpe requiere planificación, coordinación y ejecución precisa. El juego permite afrontar las misiones de forma sigilosa o completamente agresiva, ofreciendo múltiples estilos de juego. A medida que avanzas, desbloqueas habilidades, armas y mejoras que cambian la forma de jugar. La experiencia se vuelve aún más intensa en modo cooperativo, donde la comunicación es clave para el éxito. Su jugabilidad dinámica y su constante actualización lo mantienen vigente incluso hoy en día.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 79/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 80/100</p>
-</div>
-</div>
-
-  <!-- METRO 2033 -->
-<div class="card juego pc ps3 ps4">
-<img src="images/metro2033.jpg">
-<div class="card-content">
-<h2>Metro 2033</h2>
-<p><strong>Plataformas:</strong> PC, Xbox 360, PS4 (Redux)</p>
-<p><strong>Duración:</strong> 8–12 horas</p>
-<p><strong>Sinopsis:</strong> Tras una guerra nuclear que devastó la superficie de la Tierra, los supervivientes de Moscú se refugian en los túneles del metro, creando una sociedad fragmentada en distintas facciones. Artyom, un joven que nunca ha salido al exterior, se ve envuelto en una misión crucial para advertir a otras estaciones sobre una amenaza desconocida conocida como los “Oscuros”. A medida que avanza por túneles oscuros, infestados de mutantes y peligros humanos, deberá enfrentarse tanto a criaturas deformadas por la radiación como a conflictos entre distintas ideologías. El viaje lo llevará a cuestionar la realidad del mundo en el que vive y descubrir verdades ocultas sobre la humanidad. Con una atmósfera opresiva, escasez de recursos y una narrativa profunda, Metro 2033 ofrece una experiencia intensa donde cada decisión puede significar la vida o la muerte.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 81/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 82/100</p>
-</div>
-</div>
-
-<!-- HADES -->
-<div class="card juego pc ps4">
-<img src="images/hades.jpg">
-<div class="card-content">
-<h2>Hades</h2>
-<p><strong>Plataformas:</strong> PC, PS4, PS5, Xbox One, Xbox Series X/S, Nintendo Switch</p>
-<p><strong>Duración:</strong> 20–30 horas (rejugable)</p>
-<p><strong>Sinopsis:</strong> Hades es un roguelike de acción donde el jugador controla a Zagreus, el hijo de Hades, quien intenta escapar del inframundo para llegar al Olimpo. Cada intento de escape es diferente, ya que los niveles se generan de forma procedural y ofrecen distintos desafíos, enemigos y recompensas. A lo largo de su travesía, Zagreus recibe la ayuda de los dioses del Olimpo, quienes le otorgan poderes especiales que modifican completamente el estilo de juego. Sin embargo, cada derrota lo devuelve al inicio, permitiéndole fortalecer habilidades y desbloquear nuevas mejoras. La narrativa se desarrolla progresivamente con cada intento, profundizando en las relaciones entre personajes y en la historia familiar del protagonista. Con un combate rápido, fluido y altamente estratégico, junto a una banda sonora destacada y un estilo artístico único, Hades logra combinar acción intensa con una narrativa envolvente que invita a jugar una y otra vez.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 93/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 94/100</p>
-</div>
-</div>
-
-  <!-- OUTLAST -->
-<div class="card juego pc ps4">
-<img src="images/outlast.jpg">
-<div class="card-content">
-<h2>Outlast</h2>
-<p><strong>Plataformas:</strong> PC, PS4, Xbox One, Nintendo Switch</p>
-<p><strong>Duración:</strong> 5–7 horas</p>
-<p><strong>Sinopsis:</strong> En Outlast tomas el papel de Miles Upshur, un periodista de investigación que recibe información sobre actividades sospechosas en el hospital psiquiátrico Mount Massive. Al infiltrarse en el lugar, descubre que ha sido tomado por pacientes extremadamente violentos tras experimentos inhumanos. Sin posibilidad de defenderse, el jugador debe sobrevivir utilizando únicamente una cámara con visión nocturna para orientarse en la oscuridad. A medida que avanza, se revelan oscuros secretos relacionados con experimentos mentales y control psicológico. La tensión es constante, ya que cualquier encuentro puede significar la muerte. La combinación de exploración, sigilo y terror psicológico crea una experiencia intensa donde el miedo es el principal enemigo.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 80/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 81/100</p>
-</div>
-</div>
-
-<!-- ROBOCOP ROGUE CITY -->
-<div class="card juego pc ps5">
-<img src="images/robocop.jpg">
-<div class="card-content">
-<h2>RoboCop: Rogue City</h2>
-<p><strong>Plataformas:</strong> PC, PS5, Xbox Series X/S</p>
-<p><strong>Duración:</strong> 10–15 horas</p>
-<p><strong>Sinopsis:</strong> En RoboCop: Rogue City te pones en la piel del icónico policía cibernético en una Detroit dominada por el crimen. Armado con su poderosa Auto-9 y habilidades mejoradas, RoboCop debe imponer la ley en una ciudad donde las bandas criminales y la corrupción están fuera de control. El juego combina acción en primera persona con elementos de investigación, permitiendo al jugador tomar decisiones que afectan el desarrollo de la historia. A lo largo de la campaña, se enfrentarán enemigos cada vez más peligrosos, desde criminales comunes hasta amenazas tecnológicas avanzadas. La narrativa respeta el tono de las películas originales, con una mezcla de acción, crítica social y momentos intensos. Es una experiencia que captura perfectamente la esencia del personaje.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 72/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 73/100</p>
-</div>
-</div>
-
-<!-- GOD HAND -->
-<div class="card juego ps2">
-<img src="images/godhand.jpg">
-<div class="card-content">
-<h2>God Hand</h2>
-<p><strong>Plataformas:</strong> PS2</p>
-<p><strong>Duración:</strong> 8–12 horas</p>
-<p><strong>Sinopsis:</strong> God Hand sigue la historia de Gene, un luchador que posee un brazo con poderes sobrenaturales conocido como la “Mano de Dios”. Tras ser perseguido por una organización demoníaca que busca controlar ese poder, deberá enfrentarse a enemigos cada vez más absurdos y peligrosos. El juego destaca por su sistema de combate profundo, donde el jugador puede personalizar ataques y combos a su gusto. La dificultad es elevada, obligando a dominar mecánicas como esquivas y contraataques. Además, el tono del juego mezcla acción intensa con humor exagerado y situaciones ridículas. Con un estilo único y desafiante, God Hand se convirtió en un título de culto dentro de los juegos de acción.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 73/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 75/100</p>
-</div>
-</div>
-
-  <!-- THE EVIL WITHIN -->
-<div class="card juego pc ps3 ps4">
-<img src="images/evilwithin.jpg">
-<div class="card-content">
-<h2>The Evil Within</h2>
-<p><strong>Plataformas:</strong> PC, PS3, PS4, Xbox 360, Xbox One</p>
-<p><strong>Duración:</strong> 12–15 horas</p>
-<p><strong>Sinopsis:</strong> The Evil Within sigue al detective Sebastian Castellanos, quien tras investigar una escena de crimen masivo es arrastrado a una realidad distorsionada llena de horrores inimaginables. En este mundo retorcido, deberá enfrentarse a criaturas grotescas, trampas mortales y escenarios que cambian constantemente, desafiando su percepción de la realidad. A medida que avanza, la historia revela experimentos psicológicos y una mente perturbada detrás de todo lo que ocurre. La supervivencia depende de la gestión de recursos limitados, el sigilo y la toma de decisiones bajo presión. Cada encuentro puede ser letal, obligando al jugador a adaptarse constantemente. Con una atmósfera opresiva y una narrativa compleja, el juego ofrece una experiencia intensa que combina terror psicológico con acción.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 75/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 76/100</p>
-</div>
-</div>
-
-<!-- SPEC OPS THE LINE -->
-<div class="card juego pc ps3">
-<img src="images/specops.jpg">
-<div class="card-content">
-<h2>Spec Ops: The Line</h2>
-<p><strong>Plataformas:</strong> PC, PS3, Xbox 360</p>
-<p><strong>Duración:</strong> 6–8 horas</p>
-<p><strong>Sinopsis:</strong> Spec Ops: The Line sigue al capitán Martin Walker y su escuadrón en una misión para investigar una Dubái devastada por tormentas de arena. Lo que comienza como una operación de reconocimiento se transforma rápidamente en una pesadilla moral y psicológica. A medida que avanzan, los soldados se ven obligados a tomar decisiones difíciles que afectan tanto a civiles como a su propia cordura. El juego cuestiona constantemente la naturaleza de la guerra y el impacto de la violencia, rompiendo con los clichés del género shooter. La narrativa se vuelve cada vez más oscura, mostrando las consecuencias reales de las acciones del jugador. Es una experiencia intensa que va más allá de la acción, explorando temas profundos y perturbadores.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 76/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 78/100</p>
-</div>
-</div>
-
-  <!-- MORTAL KOMBAT 9 -->
-<div class="card juego ps3 pc">
-<img src="images/mk9.jpg">
-<div class="card-content">
-<h2>Mortal Kombat (2011)</h2>
-<p><strong>Plataformas:</strong> PS3, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 6–8 horas (modo historia)</p>
-<p><strong>Sinopsis:</strong> Mortal Kombat (2011), también conocido como MK9, reinicia la línea temporal de la saga tras los eventos apocalípticos del futuro. Raiden, al borde de la derrota, envía un mensaje a su yo del pasado para intentar cambiar el curso de los acontecimientos. A partir de ahí, la historia recorre los eventos de los primeros juegos, pero con cambios importantes que alteran el destino de muchos personajes. El modo historia es uno de los más completos en juegos de lucha, combinando combates intensos con narrativa cinematográfica. El sistema de combate mantiene la esencia clásica, pero introduce mecánicas modernas que lo hacen más dinámico y accesible. Con fatalities brutales, gran variedad de personajes y contenido desbloqueable, es uno de los títulos más importantes de la franquicia.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 84/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 85/100</p>
-</div>
-</div>
-
-<!-- 007 FROM RUSSIA WITH LOVE -->
-<div class="card juego ps2">
-<img src="images/007.jpg">
-<div class="card-content">
-<h2>007: From Russia with Love</h2>
-<p><strong>Plataformas:</strong> PS2, Xbox, GameCube, PSP</p>
-<p><strong>Duración:</strong> 8–10 horas</p>
-<p><strong>Sinopsis:</strong> Basado en la clásica película de James Bond, el juego pone al jugador en la piel del agente 007 en una misión que lo lleva a enfrentarse a organizaciones criminales internacionales. A lo largo de la campaña, Bond deberá infiltrarse en bases enemigas, participar en tiroteos intensos y utilizar una variedad de gadgets característicos de la saga. La historia combina elementos del film original con nuevas situaciones diseñadas para el videojuego, ampliando la experiencia. El juego mezcla acción en tercera persona con momentos de conducción y sigilo, ofreciendo variedad en la jugabilidad. Además, cuenta con la participación del actor original, lo que le da un toque auténtico. Es una experiencia clásica de acción y espionaje dentro del mundo de Bond.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 73/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 74/100</p>
-</div>
-</div>
-
-  <!-- BEN 10 PROTECTOR OF EARTH -->
-<div class="card juego ps2 ps3 psp">
-<img src="images/ben10.jpg">
-<div class="card-content">
-<h2>Ben 10: Protector of Earth</h2>
-<p><strong>Plataformas:</strong> PS2, PSP, Nintendo DS, Wii</p>
-<p><strong>Duración:</strong> 6–8 horas</p>
-<p><strong>Sinopsis:</strong> En Ben 10: Protector of Earth, el joven Ben Tennyson se embarca en una aventura para recuperar los fragmentos del Omnitrix, que han sido dispersados por el villano Vilgax. Sin su dispositivo completamente funcional, Ben deberá viajar por distintas ciudades enfrentándose a enemigos clásicos de la serie mientras recupera poco a poco sus habilidades alienígenas. A lo largo del juego, el jugador puede transformarse en varias criaturas icónicas, cada una con habilidades únicas que permiten superar obstáculos y combatir enemigos. La historia mantiene el tono de la serie animada, combinando acción, humor y momentos intensos. Con mecánicas simples pero entretenidas, es una experiencia ideal para fans del personaje y para quienes buscan un juego de acción accesible.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 62/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 63/100</p>
-</div>
-</div>
-
-<!-- SILENT HILL 4 THE ROOM -->
-<div class="card juego ps2 pc">
-<img src="images/sh4.jpg">
-<div class="card-content">
-<h2>Silent Hill 4: The Room</h2>
-<p><strong>Plataformas:</strong> PS2, Xbox, PC</p>
-<p><strong>Duración:</strong> 10–12 horas</p>
-<p><strong>Sinopsis:</strong> Silent Hill 4: The Room presenta una historia diferente dentro de la saga, centrada en Henry Townshend, un hombre que despierta atrapado en su propio apartamento sin poder salir. Pronto descubre un misterioso agujero en la pared que lo conecta con mundos extraños y perturbadores. A medida que explora estos escenarios, se enfrenta a criaturas inquietantes y a una narrativa cargada de simbolismo psicológico. El apartamento, que al principio parece seguro, comienza a volverse cada vez más peligroso, generando una sensación constante de incomodidad. La historia profundiza en temas de aislamiento, obsesión y terror psicológico, diferenciándose de otros títulos de la franquicia. Con una atmósfera opresiva y mecánicas únicas, es una entrega distinta pero memorable dentro de Silent Hill.</p>
-
-<p><strong>Puntuación Metacritic:</strong> 76/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 75/100</p>
-</div>
-</div>
-
-  <!-- ALIEN ISOLATION -->
-<div class="card juego pc ps3 ps4">
-<img src="images/alien.jpg">
-<div class="card-content">
-<h2>Alien: Isolation</h2>
-<p><strong>Plataformas:</strong> PC, PS3, PS4, Xbox 360, Xbox One, Nintendo Switch</p>
-<p><strong>Duración:</strong> 15–20 horas</p>
-<p><strong>Sinopsis:</strong> Alien: Isolation sigue la historia de Amanda Ripley, quien emprende un viaje para descubrir la verdad detrás de la desaparición de su madre. La investigación la lleva a la estación espacial Sevastopol, un lugar abandonado donde algo ha salido terriblemente mal. A diferencia de otros juegos del género, aquí no hay combate directo constante: el jugador debe sobrevivir ocultándose, improvisando y utilizando el entorno para evitar a un Xenomorfo que aprende de tus movimientos. La inteligencia artificial del enemigo hace que cada encuentro sea impredecible y extremadamente tenso. A medida que avanzas, también deberás enfrentarte a humanos desesperados y androides hostiles. La atmósfera opresiva, el sonido y el diseño del entorno recrean perfectamente el terror de la película original, convirtiéndolo en una de las experiencias más intensas del survival horror moderno.</p>
-<p><strong>Puntuación Metacritic:</strong> 81/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 82/100</p>
-</div>
-</div>
-
-<!-- THE SUFFERING -->
-<div class="card juego ps2 pc xbox">
-<img src="images/suffering.jpg">
-<div class="card-content">
-<h2>The Suffering</h2>
-<p><strong>Plataformas:</strong> PS2, Xbox, PC</p>
-<p><strong>Duración:</strong> 8–10 horas</p>
-<p><strong>Sinopsis:</strong> The Suffering pone al jugador en la piel de Torque, un prisionero condenado a muerte que es enviado a una cárcel ubicada en una isla con un pasado oscuro. Poco después de su llegada, una serie de criaturas grotescas comienzan a atacar el lugar, desatando el caos total. A medida que avanza, Torque comienza a experimentar visiones y fragmentos de su pasado, revelando poco a poco los eventos que lo llevaron a su condena. El juego mezcla acción y terror psicológico, con decisiones morales que afectan el desarrollo de la historia y el final. Las criaturas que aparecen están inspiradas en métodos de ejecución reales, lo que refuerza el tono perturbador del juego. La atmósfera, junto con la narrativa, crea una experiencia intensa donde la línea entre la culpa, la redención y la locura se vuelve cada vez más difusa.</p>
-<p><strong>Puntuación Metacritic:</strong> 77/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 78/100</p>
-</div>
-</div>
-
-<!-- SOMA -->
-<div class="card juego pc ps4">
-<img src="images/soma.jpg">
-<div class="card-content">
-<h2>SOMA</h2>
-<p><strong>Plataformas:</strong> PC, PS4, Xbox One</p>
-<p><strong>Duración:</strong> 8–10 horas</p>
-<p><strong>Sinopsis:</strong> SOMA es una experiencia de terror psicológico que va mucho más allá del miedo tradicional. El jugador controla a Simon Jarrett, quien tras un experimento médico despierta en una instalación submarina completamente abandonada. Allí descubre que la humanidad está al borde de la extinción y que las máquinas han desarrollado comportamientos inquietantes. A medida que explora el complejo, se enfrenta a criaturas perturbadoras y a situaciones que cuestionan la identidad, la conciencia y lo que significa ser humano. La narrativa es el punto fuerte del juego, planteando dilemas filosóficos profundos mientras el jugador avanza. No se trata solo de sobrevivir, sino de entender la realidad en la que se encuentra. La combinación de atmósfera, historia y tensión constante convierte a SOMA en una experiencia única dentro del género.</p>
-<p><strong>Puntuación Metacritic:</strong> 84/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 85/100</p>
-</div>
-</div>
-
-<!-- BIOSHOCK INFINITE -->
-<div class="card juego pc ps3 ps4">
-<img src="images/bioshock.jpg">
-<div class="card-content">
-<h2>BioShock Infinite</h2>
-<p><strong>Plataformas:</strong> PC, PS3, PS4, Xbox 360, Xbox One</p>
-<p><strong>Duración:</strong> 10–12 horas</p>
-<p><strong>Sinopsis:</strong> BioShock Infinite transporta al jugador a Columbia, una ciudad flotante que parece perfecta a simple vista pero que esconde una sociedad profundamente dividida y peligrosa. El protagonista, Booker DeWitt, es enviado a rescatar a Elizabeth, una joven con habilidades misteriosas que resultan clave para comprender la realidad de ese mundo. A medida que avanzan, la relación entre ambos personajes se vuelve el eje central de la historia. El juego combina acción en primera persona con una narrativa compleja que aborda temas como el destino, las realidades alternativas y las decisiones humanas. Cada enfrentamiento está acompañado por poderes especiales y un diseño visual impresionante. A medida que se acerca el final, la historia toma giros inesperados que dejan una fuerte impresión en el jugador, convirtiéndolo en uno de los títulos más memorables de su generación.</p>
-<p><strong>Puntuación Metacritic:</strong> 94/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 93/100</p>
-</div>
-</div>
-
-  <!-- CRY OF FEAR -->
-<div class="card juego pc">
-<img src="images/cryoffear.jpg">
-<div class="card-content">
-<h2>Cry of Fear</h2>
-<p><strong>Plataformas:</strong> PC</p>
-<p><strong>Duración:</strong> 6–8 horas</p>
-<p><strong>Sinopsis:</strong> Cry of Fear sigue la historia de Simon, un joven que despierta herido en una ciudad oscura y aparentemente abandonada. A medida que intenta encontrar una salida, se ve envuelto en una pesadilla donde la realidad y la mente comienzan a mezclarse. El juego combina exploración, combate limitado y gestión de recursos, obligando al jugador a tomar decisiones constantes bajo presión. Las criaturas que aparecen representan miedos internos y traumas psicológicos del protagonista. La narrativa se vuelve cada vez más compleja, revelando temas como la depresión, la soledad y la desesperación. Con múltiples finales y una atmósfera extremadamente opresiva, Cry of Fear se convierte en una experiencia intensa que va más allá del terror convencional.</p>
-<p><strong>Puntuación Metacritic:</strong> N/A</p>
-<p><strong>Puntuación OpenCritic:</strong> N/A</p>
-</div>
-</div>
-
-<!-- THE DARKNESS II -->
-<div class="card juego pc ps3">
-<img src="images/darkness2.jpg">
-<div class="card-content">
-<h2>The Darkness II</h2>
-<p><strong>Plataformas:</strong> PC, PS3, Xbox 360</p>
-<p><strong>Duración:</strong> 6–8 horas</p>
-<p><strong>Sinopsis:</strong> The Darkness II continúa la historia de Jackie Estacado, quien ahora controla completamente un poder demoníaco conocido como “La Oscuridad”. Mientras intenta llevar una vida aparentemente normal, una nueva organización comienza a perseguirlo con el objetivo de arrebatarle ese poder. El juego combina disparos en primera persona con habilidades sobrenaturales, permitiendo al jugador atacar con armas y tentáculos demoníacos al mismo tiempo. A medida que avanza, la historia explora la mente del protagonista, mostrando visiones que cuestionan qué es real y qué no. El estilo visual tipo cómic y la violencia estilizada le dan una identidad única. La mezcla de acción intensa y narrativa psicológica lo convierten en una experiencia diferente dentro del género.</p>
-<p><strong>Puntuación Metacritic:</strong> 83/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 82/100</p>
-</div>
-</div>
-
-<!-- HEAVY RAIN -->
-<div class="card juego ps3 ps4 pc">
-<img src="images/heavyrain.jpg">
-<div class="card-content">
-<h2>Heavy Rain</h2>
-<p><strong>Plataformas:</strong> PS3, PS4, PC</p>
-<p><strong>Duración:</strong> 10–12 horas</p>
-<p><strong>Sinopsis:</strong> Heavy Rain es una experiencia narrativa donde el jugador controla a varios personajes involucrados en la búsqueda del “Asesino del Origami”, un criminal que secuestra niños y deja pistas en forma de figuras de papel. A lo largo de la historia, cada decisión afecta el desarrollo de los eventos, pudiendo cambiar completamente el destino de los personajes. La jugabilidad se basa en acciones contextuales, exploración e interacción con el entorno, poniendo el foco en la historia y las emociones. A medida que avanza, la tensión aumenta y las situaciones se vuelven cada vez más desesperadas. El juego aborda temas como la pérdida, la culpa y el sacrificio, creando una experiencia intensa y muy personal. Cada elección importa, y no todos los personajes sobrevivirán.</p>
-<p><strong>Puntuación Metacritic:</strong> 87/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 85/100</p>
-</div>
-</div>
-
-<!-- BURNOUT 3 -->
-<div class="card juego ps2 xbox">
-<img src="images/burnout3.jpg">
-<div class="card-content">
-<h2>Burnout 3: Takedown</h2>
-<p><strong>Plataformas:</strong> PS2, Xbox</p>
-<p><strong>Duración:</strong> 12–15 horas</p>
-<p><strong>Sinopsis:</strong> Burnout 3: Takedown es un juego de carreras arcade que lleva la velocidad y la destrucción al extremo. A diferencia de otros juegos del género, aquí no solo importa llegar primero, sino también eliminar a tus oponentes del camino mediante choques espectaculares. El sistema “Takedown” recompensa al jugador por conducir agresivamente, incentivando maniobras arriesgadas y accidentes a alta velocidad. Los modos de juego incluyen carreras, desafíos y el icónico modo Crash, donde el objetivo es causar el mayor daño posible. La sensación de velocidad, junto con una banda sonora energética, crea una experiencia intensa y adictiva. Es considerado uno de los mejores juegos de conducción arcade de todos los tiempos.</p>
-<p><strong>Puntuación Metacritic:</strong> 94/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 93/100</p>
-</div>
-</div>
-
-  <!-- PIRATES OF THE CARIBBEAN -->
-<div class="card juego ps2">
-<img src="images/pirates.jpg">
-<div class="card-content">
-<h2>Pirates of the Caribbean: At World’s End</h2>
-<p><strong>Plataformas:</strong> PS2, PS3, PC, PSP</p>
-<p><strong>Duración:</strong> 8–10 horas</p>
-<p><strong>Sinopsis:</strong> Basado en los eventos de la película, el juego sigue las aventuras del Capitán Jack Sparrow, Will Turner y Elizabeth Swann en medio de una guerra entre piratas y la Compañía de las Indias Orientales. A lo largo de la historia, el jugador se enfrenta a combates intensos con espadas, exploración de entornos marítimos y enfrentamientos contra enemigos sobrenaturales. Cada personaje tiene su propio estilo de combate, lo que aporta variedad a la jugabilidad. A medida que avanzas, te encontrarás con situaciones icónicas de la saga y momentos llenos de acción. Aunque es una adaptación, logra capturar bien la esencia de la aventura pirata.</p>
-<p><strong>Puntuación Metacritic:</strong> 55/100</p>
-<p><strong>Puntuación OpenCritic:</strong> N/A</p>
-</div>
-</div>
-
-<!-- DANTES INFERNO -->
-<div class="card juego ps3">
-<img src="images/dante.jpg">
-<div class="card-content">
-<h2>Dante’s Inferno</h2>
-<p><strong>Plataformas:</strong> PS3, Xbox 360, PSP</p>
-<p><strong>Duración:</strong> 10–12 horas</p>
-<p><strong>Sinopsis:</strong> Inspirado en la obra clásica de Dante Alighieri, el juego sigue a Dante en su descenso al Infierno para rescatar el alma de Beatriz. A lo largo del viaje, atraviesa los distintos círculos del infierno, cada uno representando pecados y castigos específicos. El combate es brutal y constante, enfrentando a criaturas demoníacas mientras el protagonista obtiene nuevas habilidades. Además de la acción, la historia explora temas como la culpa, el castigo y la redención. Su ambientación oscura y perturbadora lo convierte en una experiencia intensa y memorable.</p>
-<p><strong>Puntuación Metacritic:</strong> 75/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 74/100</p>
-</div>
-</div>
-
-<!-- UNCHARTED 2 -->
-<div class="card juego ps3">
-<img src="images/uncharted2.jpg">
-<div class="card-content">
-<h2>Uncharted 2: Among Thieves</h2>
-<p><strong>Plataformas:</strong> PS3, PS4</p>
-<p><strong>Duración:</strong> 10–12 horas</p>
-<p><strong>Sinopsis:</strong> Nathan Drake regresa en una aventura alrededor del mundo en busca de un artefacto legendario vinculado a Marco Polo. A lo largo del viaje, deberá enfrentarse a mercenarios, explorar ruinas antiguas y sobrevivir a situaciones extremas. La historia combina acción, exploración y narrativa cinematográfica, con personajes bien desarrollados y momentos memorables. Cada escenario está diseñado con gran detalle, ofreciendo una experiencia fluida y dinámica. Es considerado uno de los mejores juegos de su generación por su equilibrio entre jugabilidad y narrativa.</p>
-<p><strong>Puntuación Metacritic:</strong> 96/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 95/100</p>
-</div>
-</div>
-
-<!-- FAR CRY 3 -->
-<div class="card juego pc ps3 ps4">
-<img src="images/farcry3.jpg">
-<div class="card-content">
-<h2>Far Cry 3</h2>
-<p><strong>Plataformas:</strong> PC, PS3, PS4, Xbox 360</p>
-<p><strong>Duración:</strong> 15–20 horas</p>
-<p><strong>Sinopsis:</strong> Far Cry 3 sigue la historia de Jason Brody, un joven atrapado en una isla dominada por piratas y criminales. Lo que comienza como una lucha por sobrevivir se transforma en un viaje hacia la locura y la violencia. A medida que avanza, el jugador desarrolla habilidades de combate, caza y sigilo para enfrentarse a enemigos cada vez más peligrosos. La isla ofrece libertad total para explorar, permitiendo múltiples enfoques en cada situación. Su villano, Vaas, se convirtió en uno de los más icónicos del gaming. La historia y la jugabilidad se combinan para ofrecer una experiencia intensa y memorable.</p>
-<p><strong>Puntuación Metacritic:</strong> 91/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 90/100</p>
-</div>
-</div>
-
-<!-- TOMB RAIDER -->
-<div class="card juego ps3 pc">
-<img src="images/tombraider.jpg">
-<div class="card-content">
-<h2>Tomb Raider (2013)</h2>
-<p><strong>Plataformas:</strong> PS3, PS4, PC, Xbox 360, Xbox One</p>
-<p><strong>Duración:</strong> 12–15 horas</p>
-<p><strong>Sinopsis:</strong> Este reboot presenta los orígenes de Lara Croft, quien tras un naufragio queda atrapada en una isla hostil. Sin experiencia previa, deberá aprender a sobrevivir enfrentando enemigos humanos y peligros naturales. A medida que avanza, Lara evoluciona tanto física como mentalmente, convirtiéndose en la aventurera que todos conocen. El juego combina exploración, combate y resolución de puzzles en un entorno abierto y detallado. La historia se centra en la supervivencia, el crecimiento personal y la lucha constante por mantenerse con vida.</p>
-<p><strong>Puntuación Metacritic:</strong> 86/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 87/100</p>
-</div>
-</div>
-
-  <!-- HOTLINE MIAMI -->
-<div class="card juego pc ps3 ps4">
-<img src="images/hotlinemiami.jpg">
-<div class="card-content">
-<h2>Hotline Miami</h2>
-<p><strong>Plataformas:</strong> PC, PS3, PS4, PS Vita, Nintendo Switch</p>
-<p><strong>Duración:</strong> 5–7 horas</p>
-<p><strong>Sinopsis:</strong> Hotline Miami es un juego de acción extremadamente violento ambientado en una versión alternativa de Miami en los años 80. El jugador controla a un personaje que recibe misteriosas llamadas telefónicas que lo llevan a cometer masacres contra mafias locales. La jugabilidad es rápida, precisa y letal: un solo error puede significar la muerte, lo que obliga a memorizar patrones y reaccionar al instante. A medida que avanza, la narrativa se vuelve cada vez más confusa y psicológica, cuestionando la realidad y la identidad del protagonista. Su estilo visual retro, junto a una banda sonora (OST) icónica, crean una experiencia intensa y adictiva. Es un juego que combina acción pura con una historia que deja muchas interpretaciones.</p>
-<p><strong>Puntuación Metacritic:</strong> 85/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 86/100</p>
-</div>
-</div>
-
-<!-- PAPERS PLEASE -->
-<div class="card juego pc">
-<img src="images/papersplease.jpg">
-<div class="card-content">
-<h2>Papers, Please</h2>
-<p><strong>Plataformas:</strong> PC, PS4, PS Vita, Nintendo Switch, Mobile</p>
-<p><strong>Duración:</strong> 6–8 horas</p>
-<p><strong>Sinopsis:</strong> Papers, Please coloca al jugador en el rol de un inspector de inmigración en un estado ficticio totalitario. Tu trabajo consiste en revisar documentos y decidir quién puede entrar al país y quién no. A simple vista parece una tarea rutinaria, pero rápidamente se convierte en una experiencia moral compleja. Cada decisión puede afectar la vida de las personas y también la de tu propia familia, ya que dependes del salario para sobrevivir. A medida que avanzan los días, aparecen nuevas reglas, amenazas y situaciones difíciles que pondrán a prueba tus valores. El juego logra generar tensión sin necesidad de acción, apoyándose en la toma de decisiones. Es una experiencia única que mezcla jugabilidad simple con una narrativa profunda y crítica.</p>
-<p><strong>Puntuación Metacritic:</strong> 85/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 86/100</p>
-</div>
-</div>
-
-<!-- DIABLO 3 -->
-<div class="card juego pc ps3 ps4">
-<img src="images/diablo3.jpg">
-<div class="card-content">
-<h2>Diablo III</h2>
-<p><strong>Plataformas:</strong> PC, PS3, PS4, Xbox 360, Xbox One, Nintendo Switch</p>
-<p><strong>Duración:</strong> 20–30 horas (historia)</p>
-<p><strong>Sinopsis:</strong> Diablo III es un RPG de acción que lleva al jugador de regreso al oscuro mundo de Santuario, donde una nueva amenaza demoníaca pone en peligro a toda la humanidad. A través de distintas clases de personajes, cada una con habilidades únicas, el jugador deberá enfrentarse a hordas de enemigos, explorar mazmorras y conseguir equipamiento cada vez más poderoso. La jugabilidad es rápida y adictiva, centrada en el combate constante y la mejora progresiva del personaje. A medida que avanza la historia, se revelan conflictos entre ángeles y demonios que afectan el destino del mundo. El sistema de loot y la rejugabilidad hacen que siempre haya algo nuevo por descubrir. Es una experiencia clásica del género adaptada a un público moderno.</p>
-<p><strong>Puntuación Metacritic:</strong> 88/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 88/100</p>
-</div>
-</div>
-
-<!-- WOLFENSTEIN -->
-<div class="card juego pc ps4">
-<img src="images/wolfenstein.jpg">
-<div class="card-content">
-<h2>Wolfenstein II: The New Colossus</h2>
-<p><strong>Plataformas:</strong> PC, PS4, Xbox One, Nintendo Switch</p>
-<p><strong>Duración:</strong> 10–12 horas</p>
-<p><strong>Sinopsis:</strong> Wolfenstein II: The New Colossus continúa la historia de B.J. Blazkowicz en una línea temporal donde el régimen nazi domina gran parte del mundo. Gravemente herido pero decidido a seguir luchando, el protagonista lidera una resistencia en territorio estadounidense. El juego combina acción en primera persona con una narrativa intensa y cargada de momentos impactantes. A lo largo de la campaña, el jugador se enfrenta a enemigos fuertemente armados, utilizando un amplio arsenal y distintas estrategias. La historia profundiza en los personajes, mostrando sus motivaciones y conflictos en un mundo devastado. Con un ritmo constante y escenas memorables, ofrece una experiencia que mezcla acción brutal con narrativa cinematográfica.</p>
-<p><strong>Puntuación Metacritic:</strong> 87/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 86/100</p>
-</div>
-</div>
-
-<!-- RESISTANCE -->
-<div class="card juego ps3">
-<img src="images/resistance.jpg">
-<div class="card-content">
-<h2>Resistance: Fall of Man</h2>
-<p><strong>Plataformas:</strong> PS3</p>
-<p><strong>Duración:</strong> 8–10 horas</p>
-<p><strong>Sinopsis:</strong> Ambientado en una línea temporal alternativa, Resistance: Fall of Man presenta una invasión alienígena que arrasa Europa. El jugador controla a Nathan Hale, un soldado que se enfrenta a una amenaza conocida como los Chimera. A lo largo de la campaña, deberá utilizar un arsenal variado para combatir enemigos cada vez más peligrosos. El juego combina acción intensa con una atmósfera oscura y desesperante. A medida que avanza la historia, se revelan detalles sobre la infección que afecta a los humanos. Es uno de los shooters más representativos de los inicios de PS3.</p>
-<p><strong>Puntuación Metacritic:</strong> 86/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 85/100</p>
-</div>
-</div>
-
-<!-- CRASH TEAM RACING -->
-<div class="card juego ps1 ps4">
-<img src="images/ctr.jpg">
-<div class="card-content">
-<h2>Crash Team Racing</h2>
-<p><strong>Plataformas:</strong> PS1, PS4 (Nitro-Fueled)</p>
-<p><strong>Duración:</strong> 10–15 horas</p>
-<p><strong>Sinopsis:</strong> Crash Team Racing es un juego de carreras arcade protagonizado por los personajes del universo de Crash Bandicoot. A lo largo del modo aventura, los jugadores compiten en distintas pistas mientras enfrentan a jefes para salvar el planeta de una amenaza extraterrestre. La jugabilidad se basa en derrapes, uso de potenciadores y atajos, lo que requiere habilidad para dominar cada circuito. Su sistema de control es más técnico de lo que parece, ofreciendo profundidad para jugadores competitivos. Además del modo historia, cuenta con carreras rápidas y desafíos que aumentan la rejugabilidad. Es considerado uno de los mejores juegos de kart de su generación.</p>
-<p><strong>Puntuación Metacritic:</strong> 88/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 87/100</p>
-</div>
-</div>
-
-<!-- SHADOW OF WAR -->
-<div class="card juego pc ps4">
-<img src="images/shadowofwar.jpg">
-<div class="card-content">
-<h2>Middle-earth: Shadow of War</h2>
-<p><strong>Plataformas:</strong> PC, PS4, Xbox One</p>
-<p><strong>Duración:</strong> 20–30 horas</p>
-<p><strong>Sinopsis:</strong> Shadow of War continúa la historia de Talion y el espíritu de Celebrimbor en su lucha contra las fuerzas de Sauron. Utilizando el poder de un nuevo anillo, el protagonista busca formar su propio ejército para enfrentar a los orcos en la Tierra Media. El sistema Némesis se expande, permitiendo que cada enemigo tenga personalidad, evolucione y recuerde encuentros previos. El juego combina combate, sigilo y estrategia en un mundo abierto lleno de fortalezas que conquistar. A medida que avanza la historia, se desarrollan conflictos internos entre los personajes. Es una experiencia completa que mezcla acción con elementos estratégicos.</p>
-<p><strong>Puntuación Metacritic:</strong> 82/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 80/100</p>
-</div>
-</div>
-
-  <!-- HITMAN BLOOD MONEY -->
-<div class="card juego pc ps2 ps3">
-<img src="images/hitman.jpg">
-<div class="card-content">
-<h2>Hitman: Blood Money</h2>
-<p><strong>Plataformas:</strong> PC, PS2, PS3, Xbox, Xbox 360</p>
-<p><strong>Duración:</strong> 10–12 horas</p>
-<p><strong>Sinopsis:</strong> Hitman: Blood Money sigue al Agente 47 en una serie de misiones donde el sigilo, la planificación y la ejecución perfecta son clave. Cada nivel ofrece múltiples formas de eliminar objetivos, permitiendo al jugador elegir entre enfoques silenciosos o más directos. A medida que avanza, la historia revela una conspiración entre asesinos que pone en peligro al protagonista. El sistema de reputación y las recompensas permiten mejorar equipo y estrategias. La libertad que ofrece en cada misión lo convierte en uno de los juegos más completos del género de sigilo. Es considerado uno de los mejores títulos de la saga.</p>
-<p><strong>Puntuación Metacritic:</strong> 82/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 83/100</p>
-</div>
-</div>
-
-<!-- MANHUNT -->
-<div class="card juego ps2 pc">
-<img src="images/manhunt.jpg">
-<div class="card-content">
-<h2>Manhunt</h2>
-<p><strong>Plataformas:</strong> PS2, Xbox, PC</p>
-<p><strong>Duración:</strong> 8–10 horas</p>
-<p><strong>Sinopsis:</strong> Manhunt coloca al jugador en la piel de James Earl Cash, un hombre obligado a participar en una serie de ejecuciones grabadas por un director obsesionado con la violencia. El juego se centra en el sigilo, obligando a eliminar enemigos sin ser visto para sobrevivir. Su tono oscuro, violento y perturbador lo convirtió en uno de los títulos más controversiales de su época. A medida que avanzas, la tensión aumenta y la historia revela la manipulación detrás de todo. La ambientación opresiva y la sensación constante de peligro crean una experiencia única. Es un juego que dejó huella tanto por su jugabilidad como por su impacto cultural.</p>
-<p><strong>Puntuación Metacritic:</strong> 76/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 75/100</p>
-</div>
-</div>
-
-<!-- CUPHEAD -->
-<div class="card juego pc ps4">
-<img src="images/cuphead.jpg">
-<div class="card-content">
-<h2>Cuphead</h2>
-<p><strong>Plataformas:</strong> PC, PS4, Xbox One, Nintendo Switch</p>
-<p><strong>Duración:</strong> 10–15 horas</p>
-<p><strong>Sinopsis:</strong> Cuphead es un juego de acción y plataformas inspirado en los dibujos animados de los años 30. El jugador controla a Cuphead y su hermano Mugman, quienes deben enfrentar a distintos jefes para saldar una deuda con el diablo. La jugabilidad se centra en combates intensos y desafiantes donde la precisión es fundamental. Cada enemigo presenta patrones únicos que deben aprenderse para avanzar. Su estilo visual dibujado a mano y su música jazz le dan una identidad inconfundible. Es una experiencia difícil pero extremadamente satisfactoria.</p>
-<p><strong>Puntuación Metacritic:</strong> 88/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 89/100</p>
-</div>
-</div>
-
-<!-- SIFU -->
-<div class="card juego pc ps4">
-<img src="images/sifu.jpg">
-<div class="card-content">
-<h2>Sifu</h2>
-<p><strong>Plataformas:</strong> PC, PS4, PS5, Nintendo Switch</p>
-<p><strong>Duración:</strong> 8–12 horas</p>
-<p><strong>Sinopsis:</strong> Sifu es un juego de acción centrado en el combate cuerpo a cuerpo, donde el jugador busca venganza contra un grupo de asesinos responsables de la muerte de su familia. La mecánica principal gira en torno al envejecimiento: cada vez que mueres, el personaje revive pero envejece, volviéndose más fuerte pero con menos resistencia. Esto obliga a mejorar constantemente y aprender de los errores. El sistema de combate es profundo, rápido y requiere precisión. A medida que avanzas, los enfrentamientos se vuelven más exigentes. Es una experiencia desafiante que recompensa la habilidad del jugador.</p>
-<p><strong>Puntuación Metacritic:</strong> 81/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 82/100</p>
-</div>
-</div>
-
-  <!-- THE WALKING DEAD -->
-<div class="card juego pc ps3 ps4">
-<img src="images/twd.jpg">
-<div class="card-content">
-<h2>The Walking Dead: Season 1</h2>
-<p><strong>Plataformas:</strong> PC, PS3, PS4, Xbox 360, Xbox One, Mobile</p>
-<p><strong>Duración:</strong> 10–12 horas</p>
-<p><strong>Sinopsis:</strong> The Walking Dead: Season 1 sigue la historia de Lee Everett, un hombre que encuentra una segunda oportunidad en medio de un apocalipsis zombie al cuidar de una niña llamada Clementine. A lo largo de episodios cargados de tensión, el jugador debe tomar decisiones que afectan directamente la historia y el destino de los personajes. No hay elecciones correctas, solo consecuencias. La narrativa se centra en las relaciones humanas, la supervivencia y los sacrificios necesarios en un mundo devastado. Cada decisión tiene peso emocional, generando momentos difíciles de olvidar. Es una de las experiencias narrativas más impactantes del gaming.</p>
-<p><strong>Puntuación Metacritic:</strong> 89/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 90/100</p>
-</div>
-</div>
-
-<!-- THE WOLF AMONG US -->
-<div class="card juego pc ps3 ps4">
-<img src="images/wolf.jpg">
-<div class="card-content">
-<h2>The Wolf Among Us</h2>
-<p><strong>Plataformas:</strong> PC, PS3, PS4, Xbox 360, Xbox One</p>
-<p><strong>Duración:</strong> 8–10 horas</p>
-<p><strong>Sinopsis:</strong> The Wolf Among Us se desarrolla en un mundo donde personajes de cuentos viven ocultos entre humanos. El jugador controla a Bigby Wolf, quien investiga una serie de asesinatos brutales. La historia avanza a través de decisiones que afectan relaciones y eventos futuros. Su estilo noir, diálogos intensos y personajes complejos crean una narrativa atrapante. Cada episodio deja al jugador con dudas y tensión constante. Es una experiencia centrada en la historia y las decisiones.</p>
-<p><strong>Puntuación Metacritic:</strong> 85/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 86/100</p>
-</div>
-</div>
-
-<!-- BINDING OF ISAAC -->
-<div class="card juego pc ps4">
-<img src="images/isaac.jpg">
-<div class="card-content">
-<h2>The Binding of Isaac: Rebirth</h2>
-<p><strong>Plataformas:</strong> PC, PS4, PS Vita, Nintendo Switch, Xbox One</p>
-<p><strong>Duración:</strong> 30+ horas (rejugable)</p>
-<p><strong>Sinopsis:</strong> The Binding of Isaac: Rebirth es un roguelike donde el jugador controla a Isaac, un niño que escapa al sótano de su casa para huir de su madre. Cada partida es diferente, con niveles generados de forma procedural y cientos de objetos que modifican la jugabilidad. A medida que avanzas, te enfrentas a enemigos grotescos y jefes desafiantes. La historia se presenta de forma simbólica, tocando temas oscuros y religiosos. La dificultad y la rejugabilidad lo convierten en un juego altamente adictivo. Es uno de los indies más influyentes de su género.</p>
-<p><strong>Puntuación Metacritic:</strong> 86/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 87/100</p>
-</div>
-</div>
-
-<!-- DYING LIGHT -->
-<div class="card juego pc ps4">
-<img src="images/dyinglight.jpg">
-<div class="card-content">
-<h2>Dying Light</h2>
-<p><strong>Plataformas:</strong> PC, PS4, Xbox One</p>
-<p><strong>Duración:</strong> 15–20 horas</p>
-<p><strong>Sinopsis:</strong> Dying Light combina supervivencia zombie con parkour en un mundo abierto. El jugador controla a Kyle Crane, quien debe infiltrarse en una ciudad infectada mientras intenta sobrevivir. Durante el día, los enemigos son manejables, pero por la noche se vuelven extremadamente peligrosos. El sistema de movimiento permite recorrer la ciudad con fluidez, añadiendo dinamismo al combate y la exploración. A medida que avanzas, mejoras habilidades y armas para enfrentar amenazas mayores. La tensión constante y la libertad de juego crean una experiencia intensa y entretenida.</p>
-<p><strong>Puntuación Metacritic:</strong> 74/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 75/100</p>
-</div>
-</div>
-
-<!-- DMC DEVIL MAY CRY -->
-<div class="card juego pc ps3 ps4">
-<img src="images/dmc.jpg">
-<div class="card-content">
-<h2>DmC: Devil May Cry</h2>
-<p><strong>Plataformas:</strong> PC, PS3, PS4, Xbox 360, Xbox One</p>
-<p><strong>Duración:</strong> 10–12 horas</p>
-<p><strong>Sinopsis:</strong> DmC: Devil May Cry reinventa la historia de Dante en un mundo más oscuro y moderno. El protagonista es un cazador de demonios que descubre su verdadero origen mientras enfrenta fuerzas sobrenaturales. El combate es rápido y estilizado, permitiendo encadenar combos espectaculares con distintas armas. A medida que avanza, la historia presenta una crítica al control y la manipulación en la sociedad. Su estilo visual y ritmo lo diferencian de otros juegos de acción. Es una reinterpretación que aporta una nueva visión al personaje.</p>
-<p><strong>Puntuación Metacritic:</strong> 85/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 84/100</p>
-</div>
-</div>
-
-<!-- DEVIL MAY CRY 3 -->
-<div class="card juego ps2 pc">
-<img src="images/dmc3.jpg">
-<div class="card-content">
-<h2>Devil May Cry 3</h2>
-<p><strong>Plataformas:</strong> PS2, PC, PS3, PS4</p>
-<p><strong>Duración:</strong> 10–12 horas</p>
-<p><strong>Sinopsis:</strong> Devil May Cry 3 es una precuela que muestra los orígenes de Dante y su rivalidad con su hermano Vergil. El juego destaca por su sistema de combate profundo, permitiendo cambiar estilos y ejecutar combos complejos. La dificultad es elevada, obligando al jugador a dominar las mecánicas. A lo largo de la historia, se desarrollan los personajes y sus motivaciones. La mezcla de acción intensa, música y narrativa lo convierte en uno de los mejores hack and slash de su época. Es un título clave dentro de la saga.</p>
-<p><strong>Puntuación Metacritic:</strong> 84/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 85/100</p>
-</div>
-</div>
-
-  <!-- BLOODBORNE -->
-<div class="card juego ps4">
-<img src="images/bloodborne.jpg">
-<div class="card-content">
-<h2>Bloodborne</h2>
-<p><strong>Plataformas:</strong> PS4</p>
-<p><strong>Duración:</strong> 25–35 horas</p>
-<p><strong>Sinopsis:</strong> Bloodborne es un juego de acción y RPG ambientado en la oscura ciudad de Yharnam, donde una extraña enfermedad transforma a sus habitantes en criaturas monstruosas. El jugador asume el rol de un cazador que debe explorar este mundo decadente en busca de respuestas. A diferencia de otros juegos del género, el combate es más agresivo, premiando la ofensiva constante. La historia se presenta de forma indirecta, revelando secretos a través del entorno y los encuentros. A medida que avanzas, el horror se vuelve cada vez más cósmico y perturbador. Es una experiencia desafiante y atmosférica que dejó una gran marca en la industria.</p>
-<p><strong>Puntuación Metacritic:</strong> 92/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 91/100</p>
-</div>
-</div>
-
-<!-- SEKIRO -->
-<div class="card juego pc ps4">
-<img src="images/sekiro.jpg">
-<div class="card-content">
-<h2>Sekiro: Shadows Die Twice</h2>
-<p><strong>Plataformas:</strong> PC, PS4, Xbox One</p>
-<p><strong>Duración:</strong> 25–30 horas</p>
-<p><strong>Sinopsis:</strong> Sekiro sigue la historia de un shinobi conocido como "Lobo", cuya misión es proteger a su joven señor en un Japón feudal lleno de conflictos. Tras perderlo, inicia un camino de venganza que lo llevará a enfrentarse a enemigos poderosos. El combate se centra en la precisión, los reflejos y el uso de la postura para romper la defensa del enemigo. A diferencia de otros títulos del género, aquí no hay tanta personalización, sino dominio de habilidades. La dificultad es elevada y cada combate requiere concentración total. Es una experiencia intensa y muy gratificante.</p>
-<p><strong>Puntuación Metacritic:</strong> 90/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 90/100</p>
-</div>
-</div>
-
-<!-- GOD OF WAR 3 -->
-<div class="card juego ps3 ps4">
-<img src="images/gow3.jpg">
-<div class="card-content">
-<h2>God of War III</h2>
-<p><strong>Plataformas:</strong> PS3, PS4</p>
-<p><strong>Duración:</strong> 10–12 horas</p>
-<p><strong>Sinopsis:</strong> God of War III continúa la historia de Kratos en su venganza contra los dioses del Olimpo. Tras los eventos anteriores, inicia una guerra total contra Zeus y los demás dioses. El juego destaca por sus combates brutales, escenarios épicos y enemigos colosales. Cada enfrentamiento está cargado de intensidad y espectáculo. A medida que avanza, la historia muestra las consecuencias de la ira de Kratos. Es uno de los juegos más impactantes de acción de su generación.</p>
-<p><strong>Puntuación Metacritic:</strong> 92/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 91/100</p>
-</div>
-</div>
-
-<!-- PROTOTYPE -->
-<div class="card juego pc ps3">
-<img src="images/prototype.jpg">
-<div class="card-content">
-<h2>Prototype</h2>
-<p><strong>Plataformas:</strong> PC, PS3, Xbox 360</p>
-<p><strong>Duración:</strong> 12–15 horas</p>
-<p><strong>Sinopsis:</strong> Prototype sigue a Alex Mercer, un hombre con habilidades mutantes que busca descubrir la verdad detrás de su pasado. Ambientado en una ciudad infectada por un virus, el jugador puede transformarse, absorber enemigos y utilizar poderes destructivos. La libertad de movimiento y combate permite enfrentamientos caóticos y espectaculares. A medida que avanza la historia, se revelan conspiraciones y experimentos biológicos. El juego ofrece un enfoque más libre y agresivo en comparación con otros títulos del género. Es una experiencia de acción desenfrenada.</p>
-<p><strong>Puntuación Metacritic:</strong> 79/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 80/100</p>
-</div>
-</div>
-
-<!-- UNTIL DAWN -->
-<div class="card juego ps4">
-<img src="images/untildawn.jpg">
-<div class="card-content">
-<h2>Until Dawn</h2>
-<p><strong>Plataformas:</strong> PS4</p>
-<p><strong>Duración:</strong> 8–10 horas</p>
-<p><strong>Sinopsis:</strong> Until Dawn es un juego narrativo de terror donde un grupo de jóvenes queda atrapado en una montaña mientras algo los acecha. El jugador controla a distintos personajes, tomando decisiones que determinan quién vive y quién muere. Cada elección tiene consecuencias, creando múltiples finales posibles. La historia combina elementos clásicos del terror con giros inesperados. La tensión se mantiene constante a través de eventos interactivos y decisiones rápidas. Es una experiencia cinematográfica donde cada partida puede ser diferente.</p>
-<p><strong>Puntuación Metacritic:</strong> 79/100</p>
-<p><strong>Puntuación OpenCritic:</strong> 80/100</p>
-</div>
-</div>
-
-  <!-- FALLOUT 3 -->
-<div class="card juego ps3 pc">
-<img src="images/fallout3.jpg" alt="Fallout 3 gameplay mundo post apocaliptico">
-<div class="card-content">
-<h2>Fallout 3 - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS3, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 25–40 horas</p>
-<p><strong>Metacritic:</strong> 93 | <strong>IGN:</strong> 9.6</p>
-<p>Fallout 3 transporta al jugador a un mundo devastado por una guerra nuclear, donde la humanidad lucha por sobrevivir en lo que queda de Washington D.C. El protagonista crece dentro de un refugio subterráneo, pero tras una serie de eventos se ve obligado a salir al exterior, enfrentándose a un entorno hostil lleno de radiación, mutantes y facciones peligrosas. A lo largo de su viaje, deberá tomar decisiones que afectan directamente el desarrollo de la historia y el destino de otros personajes. El sistema de combate combina acción en tiempo real con el sistema V.A.T.S, permitiendo ataques estratégicos. La exploración es clave, ya que cada lugar esconde historias, secretos y peligros. Su narrativa profunda y libertad de elección lo convierten en uno de los RPG más influyentes de su generación.</p>
-</div>
-</div>
-
-<!-- METAL SLUG -->
-<div class="card juego ps1 ps2 pc">
-<img src="images/metalslug.jpg" alt="Metal Slug gameplay run and gun clasico arcade">
-<div class="card-content">
-<h2>Metal Slug - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> Arcade, PS1, PS2, PC, varias</p>
-<p><strong>Duración:</strong> 1–2 horas</p>
-<p><strong>Metacritic:</strong> 89 | <strong>IGN:</strong> 9.0</p>
-<p>Metal Slug es un clásico run and gun que destaca por su acción frenética y estilo artístico único. El jugador controla soldados que deben avanzar a través de niveles llenos de enemigos, vehículos y jefes gigantes. La jugabilidad es simple pero desafiante, obligando a reaccionar rápidamente ante hordas de enemigos. A lo largo del juego se pueden utilizar distintos vehículos, incluyendo tanques icónicos que aportan variedad al combate. El humor y la exageración forman parte de su identidad, con animaciones detalladas y situaciones absurdas. Es una experiencia corta pero intensa, ideal para partidas rápidas y rejugables.</p>
-</div>
-</div>
-
-<!-- DOOM ETERNAL -->
-<div class="card juego ps4 pc">
-<img src="images/doom.jpg" alt="Doom Eternal gameplay demonios accion intensa">
-<div class="card-content">
-<h2>Doom Eternal - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS4, PS5, Xbox One, Xbox Series X/S, PC, Switch</p>
-<p><strong>Duración:</strong> 12–15 horas</p>
-<p><strong>Metacritic:</strong> 88 | <strong>IGN:</strong> 9.0</p>
-<p>Doom Eternal lleva la acción al extremo con un combate rápido, brutal y altamente técnico. El jugador controla al Doom Slayer, enfrentándose a hordas de demonios en escenarios dinámicos. Cada enemigo requiere una estrategia específica, obligando a utilizar todo el arsenal disponible. La movilidad es clave, con saltos, dash y plataformas que mantienen el ritmo constante. Además, la gestión de recursos como munición y vida se integra directamente en el combate. La banda sonora potencia la intensidad de cada enfrentamiento. Es uno de los shooters más frenéticos y exigentes de los últimos años.</p>
-</div>
-</div>
-
-<!-- TITANFALL 2 -->
-<div class="card juego ps4 pc">
-<img src="images/titanfall2.jpg" alt="Titanfall 2 gameplay titanes y parkour">
-<div class="card-content">
-<h2>Titanfall 2 - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS4, Xbox One, PC</p>
-<p><strong>Duración:</strong> 6–8 horas</p>
-<p><strong>Metacritic:</strong> 89 | <strong>IGN:</strong> 9.0</p>
-<p>Titanfall 2 combina acción en primera persona con mecánicas de parkour y combates con mechas gigantes conocidos como Titanes. La campaña sigue la historia de Jack Cooper y su relación con el Titán BT, creando una narrativa sorprendentemente emocional. Cada misión introduce nuevas mecánicas, manteniendo la experiencia fresca en todo momento. El movimiento fluido permite correr por paredes y encadenar habilidades con gran libertad. Los combates alternan entre enfrentamientos rápidos como piloto y batallas pesadas dentro del Titán. Es considerado uno de los mejores shooters modernos por su diseño y variedad.</p>
-</div>
-</div>
-
-<!-- KILLING FLOOR 2 -->
-<div class="card juego ps4 pc">
-<img src="images/killingfloor2.jpg" alt="Killing Floor 2 hordas de enemigos cooperativo">
-<div class="card-content">
-<h2>Killing Floor 2 - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS4, PC</p>
-<p><strong>Duración:</strong> 15–30 horas</p>
-<p><strong>Metacritic:</strong> 75 | <strong>IGN:</strong> 8.0</p>
-<p>Killing Floor 2 es un shooter cooperativo en primera persona centrado en sobrevivir oleadas de enemigos conocidos como Zeds. Con un enfoque en la acción intensa y el trabajo en equipo, el juego ofrece una gran variedad de armas y clases para adaptarse a distintos estilos de combate. Su sistema de desmembramiento y efectos visuales lo hacen especialmente visceral. Cada partida se vuelve más difícil a medida que avanzan las rondas, obligando a coordinar estrategias con otros jugadores. Es una experiencia ideal para jugar con amigos y disfrutar de acción sin pausa.</p>
-</div>
-</div>
-
-<!-- MARVEL VS CAPCOM 3 -->
-<div class="card juego ps3 xbox pc">
-<img src="images/marvelvscapcom3.jpg" alt="Marvel vs Capcom 3 pelea superheroes">
-<div class="card-content">
-<h2>Marvel vs Capcom 3 - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS3, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 10–20 horas</p>
-<p><strong>Metacritic:</strong> 80 | <strong>IGN:</strong> 8.5</p>
-<p>Marvel vs Capcom 3 es un juego de lucha que reúne personajes icónicos de ambas franquicias en combates rápidos y espectaculares. El sistema de equipos de tres luchadores permite realizar combos aéreos y ataques combinados con gran fluidez. Su estilo visual colorido y dinámico resalta la esencia de los cómics. Aunque es accesible para nuevos jugadores, también ofrece profundidad para quienes buscan dominar sus mecánicas. Es una experiencia caótica y entretenida, ideal para partidas rápidas y competitivas.</p>
-</div>
-</div>
-
-<!-- INJUSTICE -->
-<div class="card juego ps3 ps4 pc">
-<img src="images/injustice.jpg" alt="Injustice pelea superheroes DC">
-<div class="card-content">
-<h2>Injustice: Gods Among Us - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS3, PS4, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 8–12 horas</p>
-<p><strong>Metacritic:</strong> 81 | <strong>IGN:</strong> 8.2</p>
-<p>Injustice presenta combates entre los personajes más icónicos de DC en una historia donde Superman se convierte en un tirano tras una tragedia. El juego combina mecánicas de lucha con escenarios interactivos y habilidades únicas para cada personaje. Su modo historia destaca por su narrativa cinematográfica, algo poco común en el género. Además, incluye contenido desbloqueable y modos adicionales que amplían la experiencia. Es un título ideal tanto para fans de los cómics como de los juegos de pelea.</p>
-</div>
-</div>
-
-<!-- BATMAN ARKHAM CITY -->
-<div class="card juego ps3 ps4 pc">
-<img src="images/arkhamcity.jpg" alt="Batman Arkham City mundo abierto Gotham">
-<div class="card-content">
-<h2>Batman: Arkham City - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS3, PS4, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 12–20 horas</p>
-<p><strong>Metacritic:</strong> 96 | <strong>IGN:</strong> 9.5</p>
-<p>Batman: Arkham City expande la fórmula de su predecesor llevando al jugador a una Gotham convertida en prisión abierta. Controlando a Batman, se exploran múltiples historias que involucran a villanos icónicos como Joker, Two-Face y Penguin. El sistema de combate es fluido y permite encadenar ataques con gran precisión, mientras que el sigilo juega un papel clave en muchas misiones. Su mundo abierto, narrativa y ambientación lo convierten en uno de los mejores juegos de superhéroes jamás creados.</p>
-</div>
-</div>
-
-<!-- DETROIT BECOME HUMAN -->
-<div class="card juego ps4 pc">
-<img src="images/detroit.jpg" alt="Detroit Become Human decisiones androides historia">
-<div class="card-content">
-<h2>Detroit: Become Human - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS4, PC</p>
-<p><strong>Duración:</strong> 10–15 horas</p>
-<p><strong>Metacritic:</strong> 78 | <strong>IGN:</strong> 8.0</p>
-<p>Detroit: Become Human es una aventura narrativa donde cada decisión impacta directamente en el desarrollo de la historia. Ambientado en un futuro cercano, sigue a tres androides que comienzan a desarrollar emociones y cuestionar su existencia. El juego se centra en elecciones morales, múltiples finales y una narrativa ramificada que cambia en cada partida. Su enfoque cinematográfico y la calidad de sus actuaciones lo convierten en una experiencia inmersiva. Es ideal para quienes buscan una historia profunda más que acción tradicional.</p>
-</div>
-</div>
-
-<!-- DISHONORED -->
-<div class="card juego ps3 ps4 pc">
-<img src="images/dishonored.jpg" alt="Dishonored sigilo poderes sobrenaturales">
-<div class="card-content">
-<h2>Dishonored - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS3, PS4, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 10–15 horas</p>
-<p><strong>Metacritic:</strong> 91 | <strong>IGN:</strong> 9.2</p>
-<p>Dishonored es un juego de acción y sigilo en primera persona donde el jugador controla a Corvo Attano, un guardaespaldas acusado injustamente. Ambientado en una ciudad steampunk afectada por la peste, el juego ofrece libertad total para completar misiones, ya sea de forma sigilosa o violenta. Sus poderes sobrenaturales permiten manipular el entorno y eliminar enemigos de formas creativas. Las decisiones del jugador afectan directamente el mundo y el final de la historia. Es una experiencia inmersiva con gran rejugabilidad.</p>
-</div>
-</div>
-
-<!-- SOUTH PARK -->
-<div class="card juego ps3 ps4 pc">
-<img src="images/southpark.jpg" alt="South Park Stick of Truth humor RPG">
-<div class="card-content">
-<h2>South Park: The Stick of Truth - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS3, PS4, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 12–15 horas</p>
-<p><strong>Metacritic:</strong> 85 | <strong>IGN:</strong> 9.0</p>
-<p>South Park: The Stick of Truth es un RPG que recrea fielmente el estilo de la serie animada, combinando humor irreverente con mecánicas de rol clásicas. El jugador crea su propio personaje y se une a una absurda guerra entre niños que juegan a ser fantasía medieval. El sistema de combate por turnos es simple pero entretenido, mientras que la narrativa está llena de referencias y situaciones absurdas. Es una experiencia única que captura perfectamente la esencia de South Park.</p>
-</div>
-</div>
-
-<!-- ASSASSINS CREED 2 -->
-<div class="card juego ps3 ps4 pc">
-<img src="images/ac2.jpg" alt="Assassins Creed 2 Ezio Italia renacimiento">
-<div class="card-content">
-<h2>Assassin's Creed 2 - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS3, PS4, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 15–25 horas</p>
-<p><strong>Metacritic:</strong> 90 | <strong>IGN:</strong> 9.2</p>
-<p>Assassin's Creed 2 mejora la fórmula original introduciendo a Ezio Auditore, un joven que busca venganza en la Italia del Renacimiento. El juego combina parkour, combate y sigilo en un mundo abierto lleno de ciudades históricas como Florencia y Venecia. La historia mezcla ficción con eventos reales, creando una narrativa atrapante. Además, incluye mejoras en jugabilidad y variedad de misiones. Es considerado uno de los mejores títulos de la saga.</p>
-</div>
-</div>
-
-<!-- GUITAR HERO 3 -->
-<div class="card juego ps3 pc">
-<img src="images/guitarhero3.jpg" alt="Guitar Hero 3 juego musical guitarra">
-<div class="card-content">
-<h2>Guitar Hero 3: Legends of Rock - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS2, PS3, Xbox 360, PC, Wii</p>
-<p><strong>Duración:</strong> 10–20 horas</p>
-<p><strong>Metacritic:</strong> 84 | <strong>IGN:</strong> 9.1</p>
-<p>Guitar Hero 3 es un juego musical donde el jugador simula tocar la guitarra siguiendo el ritmo de canciones icónicas del rock. Con una curva de dificultad progresiva, el juego desafía reflejos y coordinación. Incluye una gran variedad de temas de bandas reconocidas y batallas contra jefes. Su modo carrera y multijugador lo hacen altamente rejugable. Es uno de los títulos más representativos del género musical.</p>
-</div>
-</div>
-
-<!-- CALL OF DUTY BLACK OPS 2 -->
-<div class="card juego ps3 ps4 pc">
-<img src="images/bo2.jpg" alt="Call of Duty Black Ops 2 guerra futurista">
-<div class="card-content">
-<h2>Call of Duty: Black Ops 2 - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS3, Xbox 360, PC, Wii U</p>
-<p><strong>Duración:</strong> 6–8 horas</p>
-<p><strong>Metacritic:</strong> 83 | <strong>IGN:</strong> 9.3</p>
-<p>Call of Duty: Black Ops 2 presenta una historia que alterna entre el pasado y el futuro, mostrando conflictos geopolíticos y tecnológicos. Introduce decisiones que afectan el desarrollo de la campaña, algo poco común en la saga. Además de su modo historia, destaca por su multijugador competitivo y el modo Zombies, que se convirtió en un favorito de los fans. Su variedad de contenido lo hace uno de los títulos más completos de la franquicia.</p>
-</div>
-</div>
-
-<!-- NEED FOR SPEED MOST WANTED -->
-<div class="card juego ps2 ps3 pc">
-<img src="images/nfsmw.jpg" alt="Need for Speed Most Wanted persecuciones policia carreras">
-<div class="card-content">
-<h2>Need for Speed: Most Wanted - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS2, PS3, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 15–25 horas</p>
-<p><strong>Metacritic:</strong> 83 | <strong>IGN:</strong> 9.5</p>
-<p>Need for Speed: Most Wanted combina carreras ilegales con intensas persecuciones policiales. El jugador debe escalar en la lista negra de corredores derrotando rivales y evitando a la policía en un mundo abierto. Su sistema de mejoras y personalización permite adaptar los autos al estilo de juego. Las persecuciones son el punto fuerte, con mecánicas dinámicas y mucha adrenalina. Es uno de los títulos más recordados de la saga por su equilibrio entre conducción arcade y desafío.</p>
-</div>
-</div>
-
-<!-- NEED FOR SPEED CARBON -->
-<div class="card juego ps2 ps3 pc">
-<img src="images/nfscarbon.jpg" alt="Need for Speed Carbon carreras nocturnas ciudades">
-<div class="card-content">
-<h2>Need for Speed: Carbon - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS2, PS3, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 10–20 horas</p>
-<p><strong>Metacritic:</strong> 73 | <strong>IGN:</strong> 8.2</p>
-<p>Need for Speed: Carbon continúa la historia de Most Wanted, enfocándose en carreras nocturnas y el control de territorios en la ciudad. Introduce el sistema de equipos, donde cada compañero aporta habilidades específicas durante las carreras. Las carreras en cañones agregan tensión con riesgos de caída. Aunque más corto que su predecesor, mantiene la esencia arcade y la personalización de vehículos. Es una entrega sólida dentro de la franquicia.</p>
-</div>
-</div>
-
-<!-- MORTAL KOMBAT SHAOLIN MONKS -->
-<div class="card juego ps2">
-<img src="images/shaolinmonks.jpg" alt="Mortal Kombat Shaolin Monks aventura accion cooperativo">
-<div class="card-content">
-<h2>Mortal Kombat: Shaolin Monks - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS2, Xbox</p>
-<p><strong>Duración:</strong> 8–12 horas</p>
-<p><strong>Metacritic:</strong> 78 | <strong>IGN:</strong> 8.5</p>
-<p>Mortal Kombat: Shaolin Monks es un spin-off de acción y aventura que se aleja del formato clásico de lucha. Controlando a Liu Kang o Kung Lao, el jugador recorre distintos escenarios enfrentando enemigos en combates dinámicos. Incluye modo cooperativo, lo que mejora la experiencia al jugar con otro jugador. Mantiene la esencia de la saga con fatalities y violencia característica. Es uno de los títulos más queridos por su enfoque distinto y jugabilidad entretenida.</p>
-</div>
-</div>
-
-<!-- SHADOW OF ROME -->
-<div class="card juego ps2">
-<img src="images/shadowofrome.jpg" alt="Shadow of Rome gladiadores accion sigilo roma">
-<div class="card-content">
-<h2>Shadow of Rome - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS2</p>
-<p><strong>Duración:</strong> 10–15 horas</p>
-<p><strong>Metacritic:</strong> 80 | <strong>IGN:</strong> 8.1</p>
-<p>Shadow of Rome es un juego de acción ambientado en la antigua Roma, combinando combates brutales de gladiadores con secciones de sigilo. La historia sigue una conspiración tras el asesinato de Julio César. Los combates destacan por su violencia y variedad de armas, mientras que las misiones de sigilo ofrecen un ritmo diferente. Su ambientación histórica y narrativa lo convierten en una experiencia única dentro del catálogo de PS2.</p>
-</div>
-</div>
-
-<!-- RESIDENT EVIL 7 -->
-<div class="card juego ps4 pc">
-<img src="images/re7.jpg" alt="Resident Evil 7 terror casa Baker primera persona">
-<div class="card-content">
-<h2>Resident Evil 7: Biohazard - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS4, Xbox One, PC</p>
-<p><strong>Duración:</strong> 9–12 horas</p>
-<p><strong>Metacritic:</strong> 86 | <strong>IGN:</strong> 7.7</p>
-<p>Resident Evil 7 marca un cambio en la saga al adoptar la perspectiva en primera persona y un enfoque más centrado en el terror. El jugador controla a Ethan Winters mientras busca a su esposa en una casa infestada por la familia Baker. La ambientación es opresiva y el ritmo más lento, priorizando la exploración y la tensión. Recupera la esencia del survival horror clásico con recursos limitados y enemigos impredecibles. Es un reinicio moderno que revitalizó la franquicia.</p>
-</div>
-</div>
-
-<!-- MAFIA II -->
-<div class="card juego ps3 ps4 pc">
-<img src="images/mafia2.jpg" alt="Mafia 2 ciudad crimen historia Vito Scaletta">
-<div class="card-content">
-<h2>Mafia II - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS3, PS4, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 10–15 horas</p>
-<p><strong>Metacritic:</strong> 77 | <strong>IGN:</strong> 8.5</p>
-<p>Mafia II es un juego de acción en mundo abierto centrado en la historia de Vito Scaletta, un inmigrante que se ve envuelto en el mundo del crimen organizado. Ambientado entre los años 40 y 50, el juego destaca por su narrativa cinematográfica y su ambientación detallada. A diferencia de otros mundos abiertos, se enfoca más en contar una historia lineal que en actividades secundarias. Las misiones incluyen tiroteos, persecuciones y momentos clave dentro de la mafia. Es una experiencia muy inmersiva para quienes buscan una historia fuerte.</p>
-</div>
-</div>
-
-<!-- RED DEAD REDEMPTION 2 -->
-<div class="card juego ps4 pc">
-<img src="images/rdr2.jpg" alt="Red Dead Redemption 2 mundo abierto vaqueros Arthur Morgan">
-<div class="card-content">
-<h2>Red Dead Redemption 2 - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS4, Xbox One, PC</p>
-<p><strong>Duración:</strong> 40–60 horas</p>
-<p><strong>Metacritic:</strong> 97 | <strong>IGN:</strong> 10</p>
-<p>Red Dead Redemption 2 es una precuela que profundiza en la historia de la banda de Van der Linde, centrada en Arthur Morgan. Ambientado en un vasto mundo abierto, el juego ofrece una experiencia extremadamente detallada, con ecosistemas dinámicos, personajes complejos y una narrativa emocional. Cada decisión y acción impacta en el desarrollo de la historia y en la relación con otros personajes. Su ritmo más pausado permite sumergirse completamente en el mundo del Viejo Oeste. Es considerado uno de los videojuegos más ambiciosos y mejor construidos de todos los tiempos.</p>
-</div>
-</div>
-
-<!-- STALKER 2 -->
-<div class="card juego pc xbox">
-<img src="images/stalker2.jpg" alt="STALKER 2 mundo abierto zona chernobyl supervivencia">
-<div class="card-content">
-<h2>S.T.A.L.K.E.R. 2: Heart of Chornobyl - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PC, Xbox Series X/S</p>
-<p><strong>Duración:</strong> 30–50 horas</p>
-<p><strong>Metacritic:</strong> N/A | <strong>IGN:</strong> N/A</p>
-<p>S.T.A.L.K.E.R. 2: Heart of Chornobyl es un juego de mundo abierto que combina supervivencia, exploración y terror en una versión ficticia de la Zona de exclusión de Chernóbil. El jugador se enfrenta a anomalías, criaturas mutantes y facciones hostiles mientras intenta sobrevivir en un entorno impredecible. La experiencia se centra en la inmersión, con decisiones que afectan la historia y múltiples finales posibles. Su atmósfera oscura y realista lo distingue de otros juegos del género. Es una evolución moderna de la saga, con gráficos avanzados y un enfoque profundo en la narrativa y la supervivencia.</p>
-</div>
-</div>
-
-<!-- SPYRO 3 -->
-<div class="card juego ps1">
-<img src="images/spyro3.jpg" alt="Spyro 3 Year of the Dragon plataformas dragón aventura">
-<div class="card-content">
-<h2>Spyro 3: Year of the Dragon - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS1</p>
-<p><strong>Duración:</strong> 10–15 horas</p>
-<p><strong>Metacritic:</strong> 91 | <strong>IGN:</strong> 9.0</p>
-<p>Spyro 3: Year of the Dragon es un juego de plataformas donde el dragón Spyro debe rescatar huevos robados por una hechicera. A lo largo de distintos mundos, el jugador explora, resuelve desafíos y desbloquea nuevos personajes jugables con habilidades únicas. Su estilo colorido, música y variedad de niveles lo convierten en uno de los mejores títulos de la saga. La jugabilidad es accesible pero con suficiente contenido para mantener el interés. Es un clásico inolvidable de PlayStation.</p>
-</div>
-</div>
-
-<!-- FEAR 2 -->
-<div class="card juego ps3 pc">
-<img src="images/fear2.jpg" alt="FEAR 2 terror shooter Alma sobrenatural">
-<div class="card-content">
-<h2>F.E.A.R. 2: Project Origin - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS3, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 6–8 horas</p>
-<p><strong>Metacritic:</strong> 79 | <strong>IGN:</strong> 7.9</p>
-<p>F.E.A.R. 2 combina acción en primera persona con elementos de terror psicológico. El jugador se enfrenta a enemigos armados mientras experimenta fenómenos sobrenaturales relacionados con Alma, una entidad inquietante. El juego destaca por su atmósfera tensa, momentos de susto y combates intensos con cámara lenta. Su historia continúa los eventos del primer juego, profundizando en el origen del horror. Es una experiencia que mezcla disparos y miedo de forma efectiva.</p>
-</div>
-</div>
-
-<!-- INFAMOUS 2 -->
-<div class="card juego ps3">
-<img src="images/infamous2.jpg" alt="Infamous 2 poderes eléctricos mundo abierto Cole MacGrath">
-<div class="card-content">
-<h2>inFAMOUS 2 - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS3</p>
-<p><strong>Duración:</strong> 12–20 horas</p>
-<p><strong>Metacritic:</strong> 83 | <strong>IGN:</strong> 8.5</p>
-<p>inFAMOUS 2 continúa la historia de Cole MacGrath, un hombre con poderes eléctricos que debe decidir el destino de la humanidad. Ambientado en una ciudad abierta, el jugador puede elegir entre acciones heroicas o destructivas, afectando la historia y el entorno. El combate combina habilidades eléctricas con movilidad ágil por los escenarios. La narrativa y el sistema de karma aportan profundidad a la experiencia. Es una mejora sólida respecto a su predecesor.</p>
-</div>
-</div>
-
-<!-- METAL GEAR SOLID 2 -->
-<div class="card juego ps2">
-<img src="images/mgs2.jpg" alt="Metal Gear Solid 2 sigilo espionaje Raiden Snake">
-<div class="card-content">
-<h2>Metal Gear Solid 2: Sons of Liberty - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS2, PS3, PC</p>
-<p><strong>Duración:</strong> 12–15 horas</p>
-<p><strong>Metacritic:</strong> 96 | <strong>IGN:</strong> 9.6</p>
-<p>Metal Gear Solid 2 es un juego de sigilo centrado en conspiraciones políticas y manipulación de la información. La historia sigue tanto a Solid Snake como a Raiden en una misión compleja llena de giros inesperados. Su jugabilidad se basa en evitar el combate directo utilizando el entorno y herramientas de espionaje. Destaca por su narrativa adelantada a su época y sus temas filosóficos. Es uno de los títulos más influyentes en la historia de los videojuegos.</p>
-</div>
-</div>
-
-<!-- NARUTO STORM 3 -->
-<div class="card juego ps3 xbox360 pc">
-<img src="images/naruto_storm3.jpg" alt="Naruto Ultimate Ninja Storm 3 combate anime ninjas">
-<div class="card-content">
-<h2>Naruto Shippuden: Ultimate Ninja Storm 3 - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS3, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 12–15 horas</p>
-<p><strong>Metacritic:</strong> 77 | <strong>IGN:</strong> 7.8</p>
-<p>Ultimate Ninja Storm 3 continúa la historia de Naruto Shippuden, abarcando la Cuarta Gran Guerra Ninja. El juego combina combates dinámicos con escenas cinematográficas que recrean momentos clave del anime. Permite controlar a múltiples personajes con habilidades únicas y ataques especiales espectaculares. Su sistema de combate es rápido y accesible, pero con suficiente profundidad para los fans. Es uno de los títulos más completos de la saga Storm.</p>
-</div>
-</div>
-
-<!-- BATTLEFIELD 3 -->
-<div class="card juego ps3 xbox360 pc">
-<img src="images/battlefield3.jpg" alt="Battlefield 3 guerra moderna shooter militar">
-<div class="card-content">
-<h2>Battlefield 3 - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS3, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 6–8 horas</p>
-<p><strong>Metacritic:</strong> 85 | <strong>IGN:</strong> 9.0</p>
-<p>Battlefield 3 es un shooter en primera persona ambientado en conflictos militares modernos. La campaña sigue a distintos soldados en misiones intensas alrededor del mundo. Destaca por su realismo visual, destrucción de escenarios y sonido inmersivo. Aunque su fuerte es el multijugador, la campaña ofrece momentos espectaculares y bien dirigidos. Es uno de los FPS más influyentes de su generación.</p>
-</div>
-</div>
-
-<!-- DRAGON BALL RAGING BLAST 2 -->
-<div class="card juego ps3 xbox360">
-<img src="images/ragingblast2.jpg" alt="Dragon Ball Raging Blast 2 peleas anime Goku Vegeta">
-<div class="card-content">
-<h2>Dragon Ball: Raging Blast 2 - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS3, Xbox 360</p>
-<p><strong>Duración:</strong> 10–20 horas</p>
-<p><strong>Metacritic:</strong> 72 | <strong>IGN:</strong> 7.5</p>
-<p>Raging Blast 2 ofrece combates en 3D con una gran variedad de personajes del universo Dragon Ball. El juego se centra en enfrentamientos rápidos y destructivos, con escenarios que pueden ser completamente destruidos. Incluye modos de juego desafiantes y contenido adicional como animaciones especiales. Su estilo visual respeta fielmente el anime. Es una opción sólida para fans de las peleas estilo arena.</p>
-</div>
-</div>
-
-<!-- SLEEPING DOGS -->
-<div class="card juego ps3 xbox360 pc">
-<img src="images/sleepingdogs.jpg" alt="Sleeping Dogs mundo abierto Hong Kong acción crimen">
-<div class="card-content">
-<h2>Sleeping Dogs - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS3, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 15–25 horas</p>
-<p><strong>Metacritic:</strong> 83 | <strong>IGN:</strong> 8.5</p>
-<p>Sleeping Dogs es un juego de mundo abierto ambientado en Hong Kong, donde el jugador controla a un policía infiltrado en la mafia. La historia combina acción, traición y decisiones difíciles. El combate cuerpo a cuerpo es uno de sus puntos fuertes, inspirado en artes marciales. También incluye persecuciones, misiones secundarias y una ciudad vibrante para explorar. Es considerado una joya infravalorada del género.</p>
-</div>
-</div>
-
-<!-- BORDERLANDS 2 -->
-<div class="card juego ps3 xbox360 pc">
-<img src="images/borderlands2.jpg" alt="Borderlands 2 shooter looter mundo abierto cooperativo">
-<div class="card-content">
-<h2>Borderlands 2 - Análisis, duración y plataformas</h2>
-<p><strong>Plataformas:</strong> PS3, Xbox 360, PC</p>
-<p><strong>Duración:</strong> 30–50 horas</p>
-<p><strong>Metacritic:</strong> 91 | <strong>IGN:</strong> 9.0</p>
-<p>Borderlands 2 mezcla acción en primera persona con elementos de RPG y loot. Ambientado en el planeta Pandora, el jugador debe enfrentarse al villano Handsome Jack mientras busca tesoros y mejora su equipamiento. Destaca por su estilo visual tipo cómic y su humor único. El juego ofrece una gran cantidad de armas y contenido, especialmente en cooperativo. Es uno de los mejores looter shooters de todos los tiempos.</p>
-</div>
-</div>
-
-</div>
-
-<footer>
-© 2026 Zona Gamer |
-<a href="privacidad.html">Política de Privacidad</a> |
-<a href="contacto.html">Contacto</a>
-</footer>
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(34,197,94,0.12), transparent 30%),
+        linear-gradient(180deg, #020617 0%, #0b1224 100%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .topbar {
+      background: rgba(0,0,0,0.72);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .topbar-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 220px;
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #000;
+      border: 1px solid rgba(34,197,94,0.25);
+      padding: 4px;
+    }
+
+    .brand h1 {
+      font-size: 1.55rem;
+      color: var(--green);
+      line-height: 1.1;
+    }
+
+    .brand p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .nav a,
+    .nav button {
+      border: 1px solid rgba(34,197,94,0.4);
+      background: rgba(15,23,42,0.7);
+      color: var(--text);
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s ease;
+      font-size: 0.93rem;
+    }
+
+    .nav a:hover,
+    .nav button:hover {
+      transform: translateY(-1px);
+      border-color: var(--green);
+      color: #fff;
+      box-shadow: 0 0 0 3px rgba(34,197,94,0.10);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 520px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(2,6,23,0.25), rgba(2,6,23,0.88)),
+        url('images/banner.jpg') center/cover no-repeat;
+      transform: scale(1.03);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max);
+      width: 100%;
+      padding: 64px 20px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(34,197,94,0.12);
+      color: #bbf7d0;
+      border: 1px solid rgba(34,197,94,0.25);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .hero h2 {
+      font-size: clamp(2.3rem, 6vw, 4.7rem);
+      line-height: 1.05;
+      max-width: 980px;
+      margin: 0 auto;
+      text-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .hero p {
+      max-width: 860px;
+      margin: 18px auto 0;
+      color: #dbeafe;
+      font-size: 1.08rem;
+      background: rgba(0,0,0,0.30);
+      padding: 16px 18px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    .cta {
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: 0.25s ease;
+      border: 1px solid transparent;
+    }
+
+    .cta.primary {
+      background: linear-gradient(135deg, var(--green), var(--green-2));
+      color: #04110a;
+    }
+
+    .cta.secondary {
+      background: rgba(15,23,42,0.8);
+      border-color: rgba(255,255,255,0.12);
+      color: #fff;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 20px 56px;
+    }
+
+    .section {
+      margin-top: 28px;
+      background: rgba(2,6,23,0.72);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .section-head {
+      padding: 22px 22px 0;
+    }
+
+    .section h3 {
+      color: var(--green);
+      font-size: clamp(1.45rem, 3vw, 2.2rem);
+      margin-bottom: 10px;
+    }
+
+    .section p.lead {
+      color: var(--muted);
+      max-width: 980px;
+      margin-bottom: 20px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      padding: 0 22px 22px;
+    }
+
+    .stat {
+      background: rgba(17,24,39,0.85);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.25rem;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 18px;
+      padding: 0 22px 22px;
+    }
+
+    .game-card {
+      background: linear-gradient(180deg, rgba(17,24,39,0.95), rgba(8,12,24,0.95));
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: 0.28s ease;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .game-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(34,197,94,0.45);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.34);
+    }
+
+    .cover {
+      aspect-ratio: 16 / 9;
+      background: #0b1224;
+      overflow: hidden;
+    }
+
+    .cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .game-body {
+      padding: 18px;
+      display: grid;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .game-title {
+      color: #fff;
+      font-size: 1.35rem;
+      line-height: 1.2;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 2px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(34,197,94,0.10);
+      border: 1px solid rgba(34,197,94,0.22);
+      color: #d1fae5;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .game-body p {
+      color: #d1d5db;
+    }
+
+    .game-body strong {
+      color: #86efac;
+    }
+
+    .review-box {
+      margin: 0 22px 22px;
+      padding: 18px;
+      border-radius: 16px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(34,197,94,0.18);
+      color: #dbeafe;
+    }
+
+    .ad-box {
+      margin: 0 22px 22px;
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px dashed rgba(255,255,255,0.13);
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 14px;
+      padding: 0 22px 22px;
+    }
+
+    .feature {
+      background: rgba(17,24,39,0.88);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .feature h4 {
+      color: #fff;
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+
+    .feature p {
+      color: var(--muted);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 18px;
+      padding: 0 22px 22px;
+    }
+
+    .panel {
+      background: rgba(17,24,39,0.86);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .panel h4 {
+      color: var(--green);
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+
+    .panel ul {
+      padding-left: 18px;
+      color: #d1d5db;
+    }
+
+    .panel li {
+      margin-bottom: 8px;
+    }
+
+    .link-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .link-list a {
+      display: block;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: rgba(2,6,23,0.7);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: 0.25s ease;
+    }
+
+    .link-list a:hover {
+      border-color: rgba(34,197,94,0.45);
+      transform: translateX(2px);
+    }
+
+    .footer {
+      margin-top: 36px;
+      border-top: 1px solid var(--border);
+      background: rgba(0,0,0,0.80);
+    }
+
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 26px 20px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr 0.7fr;
+      gap: 18px;
+    }
+
+    .footer h5 {
+      color: var(--green);
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .footer p,
+    .footer a {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+
+    .copyright {
+      padding: 14px 20px 24px;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .two-col,
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .topbar-inner {
+        justify-content: center;
+      }
+
+      .brand {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .nav {
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: 460px;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .section-head,
+      .stats,
+      .grid,
+      .feature-list,
+      .two-col,
+      .review-box,
+      .ad-box {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .section-head {
+        padding-top: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo de Zona Gamer">
+        <div>
+          <h1>Zona Gamer</h1>
+          <p>Recomendaciones, análisis y guías de videojuegos</p>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#destacados">Destacados</a>
+        <a href="#guia">Guía</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-inner">
+      <span class="hero-badge">Gaming • Análisis • Recomendaciones</span>
+      <h2>Una web hecha para descubrir juegos, entenderlos mejor y elegir qué jugar después</h2>
+      <p>
+        Zona Gamer reúne recomendaciones de títulos clásicos y modernos para PS1, PS2, PS3, PS4, Xbox y PC. La idea es simple: mostrarte juegos que valen la pena, explicados con contexto, duración, plataformas y una reseña clara para cada uno.
+      </p>
+      <div class="cta-row">
+        <a class="cta primary" href="#catalogo">Ver catálogo</a>
+        <a class="cta secondary" href="#guia">Leer la guía</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="section" id="sobre">
+      <div class="section-head">
+        <h3>Sobre la web</h3>
+        <p class="lead">
+          Esta página está pensada como una base editorial real: portada, recomendaciones, secciones útiles y espacio para seguir creciendo con artículos largos. Para AdSense, una web así se ve más completa porque no depende de una sola lista corta, sino de contenido organizado y útil.
+        </p>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>PS1 a PC</strong>
+          <span>Cubrimos varias generaciones y plataformas.</span>
+        </div>
+        <div class="stat">
+          <strong>Textos largos</strong>
+          <span>Más contexto, menos relleno vacío.</span>
+        </div>
+        <div class="stat">
+          <strong>SEO básico</strong>
+          <span>Títulos claros, descripciones y estructura.</span>
+        </div>
+        <div class="stat">
+          <strong>Diseño limpio</strong>
+          <span>Más profesional y fácil de navegar.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="guia">
+      <div class="section-head">
+        <h3>Cómo está organizada la web</h3>
+        <p class="lead">
+          La idea no es solo mostrar juegos en una lista. Cada tarjeta puede funcionar como punto de entrada a una ficha completa más adelante. Así la portada recomienda, pero también invita a leer contenido más profundo.
+        </p>
+      </div>
+
+      <div class="feature-list">
+        <article class="feature">
+          <h4>1. Recomendaciones</h4>
+          <p>Una lista curada de juegos por plataforma o género, para que el visitante encuentre rápido algo que le interese.</p>
+        </article>
+        <article class="feature">
+          <h4>2. Fichas completas</h4>
+          <p>Cada juego puede tener su propia página con historia, gameplay, duración, personajes, curiosidades y opinión.</p>
+        </article>
+        <article class="feature">
+          <h4>3. Páginas legales</h4>
+          <p>Política de privacidad, contacto y sobre la web ayudan mucho a que el sitio se vea serio y completo.</p>
+        </article>
+        <article class="feature">
+          <h4>4. Crecimiento real</h4>
+          <p>Mientras más contenido original agregues, mejor para usuarios, buscadores y futuras revisiones de AdSense.</p>
+        </article>
+      </div>
+
+      <div class="ad-box">
+        <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-3237099983613729"
+          data-ad-slot="2082305252"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </section>
+
+    <section class="section" id="catalogo">
+      <div class="section-head">
+        <h3>Catálogo destacado</h3>
+        <p class="lead">
+          Esta selección mezcla clásicos, juegos de terror, acción, rol y títulos narrativos. El texto de cada tarjeta está pensado para que la portada ya tenga valor por sí misma, sin depender de una sola línea por juego.
+        </p>
+      </div>
+
+      <div class="grid">
+        <article class="game-card">
+          <div class="cover"><img src="images/re4.jpg" alt="Resident Evil 4 Remake"></div>
+          <div class="game-body">
+            <h4 class="game-title">Resident Evil 4 Remake</h4>
+            <div class="meta">
+              <span class="pill">PS4 / PS5 / PC</span>
+              <span class="pill">12–16 horas</span>
+              <span class="pill">Acción y terror</span>
+            </div>
+            <p>
+              Leon S. Kennedy vuelve en una misión que empieza como rescate y termina como supervivencia total. Es uno de los mejores ejemplos de cómo mezclar acción, gestión de recursos y tensión constante.
+            </p>
+            <p><strong>Puntuación:</strong> 93/100</p>
+          </div>
+        </article>
+
+        <article class="game-card">
+          <div class="cover"><img src="images/sh2.jpg" alt="Silent Hill 2 Remake"></div>
+          <div class="game-body">
+            <h4 class="game-title">Silent Hill 2 Remake</h4>
+            <div class="meta">
+              <span class="pill">PS5 / PC</span>
+              <span class="pill">12–15 horas</span>
+              <span class="pill">Terror psicológico</span>
+            </div>
+            <p>
+              James Sunderland entra en un pueblo envuelto en niebla para buscar respuestas sobre una carta imposible. El juego destaca por su atmósfera, simbolismo y una historia que pesa de principio a fin.
+            </p>
+            <p><strong>Puntuación:</strong> 88/100</p>
+          </div>
+        </article>
+
+        <article class="game-card">
+          <div class="cover"><img src="images/raiden.jpg" alt="Metal Gear Rising Revengeance"></div>
+          <div class="game-body">
+            <h4 class="game-title">Metal Gear Rising: Revengeance</h4>
+            <div class="meta">
+              <span class="pill">PS3 / Xbox 360 / PC</span>
+              <span class="pill">6–8 horas</span>
+              <span class="pill">Hack and slash</span>
+            </div>
+            <p>
+              Raiden vuelve como un cyborg ninja en un juego de ritmo explosivo, combates precisos y una banda sonora que eleva cada pelea. Es directo, intenso y muy rejugable.
+            </p>
+            <p><strong>Puntuación:</strong> 80/100</p>
+          </div>
+        </article>
+
+        <article class="game-card">
+          <div class="cover"><img src="images/fallout3.jpg" alt="Fallout 3"></div>
+          <div class="game-body">
+            <h4 class="game-title">Fallout 3</h4>
+            <div class="meta">
+              <span class="pill">PS3 / Xbox 360 / PC</span>
+              <span class="pill">25–40 horas</span>
+              <span class="pill">RPG / mundo abierto</span>
+            </div>
+            <p>
+              Una aventura en un mundo destruido por la guerra nuclear, donde cada rincón cuenta algo y cada decisión puede cambiar la experiencia. Ideal para quien busca exploración y libertad.
+            </p>
+            <p><strong>Puntuación:</strong> 93/100</p>
+          </div>
+        </article>
+
+        <article class="game-card">
+          <div class="cover"><img src="images/hades.jpg" alt="Hades"></div>
+          <div class="game-body">
+            <h4 class="game-title">Hades</h4>
+            <div class="meta">
+              <span class="pill">PC / PS4 / Switch</span>
+              <span class="pill">20–30 horas</span>
+              <span class="pill">Roguelike</span>
+            </div>
+            <p>
+              Zagreus intenta salir del inframundo en una aventura que cambia en cada partida. Su combate es rápido, su progreso constante y su narrativa se va armando intento tras intento.
+            </p>
+            <p><strong>Puntuación:</strong> 93/100</p>
+          </div>
+        </article>
+
+        <article class="game-card">
+          <div class="cover"><img src="images/bloodborne.jpg" alt="Bloodborne"></div>
+          <div class="game-body">
+            <h4 class="game-title">Bloodborne</h4>
+            <div class="meta">
+              <span class="pill">PS4</span>
+              <span class="pill">25–35 horas</span>
+              <span class="pill">Soulslike</span>
+            </div>
+            <p>
+              Una ciudad enferma, criaturas horribles y un cazador que debe sobrevivir a todo eso con combate agresivo y una ambientación inolvidable. Uno de los títulos más admirados de FromSoftware.
+            </p>
+            <p><strong>Puntuación:</strong> 92/100</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="opiniones">
+      <div class="section-head">
+        <h3>Qué hace buena a una recomendación</h3>
+        <p class="lead">
+          Para que esta web tenga más valor, cada juego no debería aparecer solo como una ficha corta. Lo ideal es explicar por qué vale la pena, para qué tipo de jugador es, cuánto dura y qué la hace especial frente a otros títulos parecidos.
+        </p>
+      </div>
+
+      <div class="two-col">
+        <div class="panel">
+          <h4>Lo que conviene incluir en cada juego</h4>
+          <ul>
+            <li>Resumen de la historia con lenguaje propio.</li>
+            <li>Explicación breve del gameplay.</li>
+            <li>Duración aproximada y rejugabilidad.</li>
+            <li>Plataformas donde salió.</li>
+            <li>Qué lo hace especial.</li>
+            <li>Para qué tipo de jugador lo recomendarías.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h4>Secciones que suman mucho</h4>
+          <div class="link-list">
+            <a href="#contacto">Contacto</a>
+            <a href="privacidad.html">Política de privacidad</a>
+            <a href="sobre.html">Sobre Zona Gamer</a>
+            <a href="juegos.html">Ver más juegos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="section-head">
+        <h3>Contacto</h3>
+        <p class="lead">
+          Esta sección sirve para que la web no parezca incompleta. Podés poner un correo de contacto real, redes sociales o un formulario cuando quieras ampliar el sitio.
+        </p>
+      </div>
+
+      <div class="review-box">
+        <p><strong>Email:</strong> tucorreo@tudominio.com</p>
+        <p><strong>Objetivo:</strong> publicar recomendaciones, guías y análisis de videojuegos con información clara y original.</p>
+        <p><strong>Idea del sitio:</strong> crecer por páginas, no solo por una lista principal. Así el contenido se vuelve más útil para usuarios y buscadores.</p>
+      </div>
+    </section>
+
+    <section class="section" id="extra">
+      <div class="section-head">
+        <h3>Próximos pasos recomendados</h3>
+        <p class="lead">
+          Esta portada ya queda mucho más sólida. Lo siguiente más importante es crear páginas aparte para tus juegos favoritos. Eso hace que la web pase de ser una lista bonita a un sitio con contenido real y escalable.
+        </p>
+      </div>
+
+      <div class="feature-list">
+        <article class="feature">
+          <h4>Crear fichas individuales</h4>
+          <p>Una página para Resident Evil 4, otra para Silent Hill 2, otra para Metal Gear Rising y así con tus favoritos.</p>
+        </article>
+        <article class="feature">
+          <h4>Agregar artículos largos</h4>
+          <p>Historia completa, personajes, enemigos, curiosidades y análisis personal en cada post.</p>
+        </article>
+        <article class="feature">
+          <h4>Sumar páginas legales</h4>
+          <p>Privacidad, contacto y sobre la web no deberían faltar en un sitio que busca aprobación de AdSense.</p>
+        </article>
+        <article class="feature">
+          <h4>Mantener diseño limpio</h4>
+          <p>Una web ordenada, rápida y fácil de leer siempre transmite más confianza.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h5>Zona Gamer</h5>
+        <p>
+          Web dedicada a videojuegos, recomendaciones y análisis. Pensada para crecer con contenido original, útil y bien organizado.
+        </p>
+      </div>
+      <div>
+        <h5>Páginas</h5>
+        <p><a href="#inicio">Inicio</a></p>
+        <p><a href="#catalogo">Catálogo</a></p>
+        <p><a href="#contacto">Contacto</a></p>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <p><a href="privacidad.html">Política de privacidad</a></p>
+        <p><a href="sobre.html">Sobre Zona Gamer</a></p>
+        <p><a href="contacto.html">Contacto</a></p>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 Zona Gamer. Todos los derechos reservados.
+    </div>
+  </footer>
 </body>
 </html>
