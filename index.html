@@ -832,9 +832,10 @@ function filtrar(c) {
       <p>
         El noble deformado que custodia el castillo y sirve como uno de los jefes más recordados del juego.
       </p>
-    
+
 </div>
 
+      
 </div>
           
 </aside>
@@ -842,6 +843,48 @@ function filtrar(c) {
 </div>
 
 </section>>
+
+<style>
+
+.character-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
+
+.character-card{
+  background:#05070f;
+  border-radius:16px;
+  overflow:hidden;
+  transition:.3s;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.character-card:hover{
+  transform:translateY(-8px);
+  border-color:#22c55e;
+  box-shadow:0 0 20px rgba(34,197,94,.3);
+}
+
+.character-card img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+}
+
+.character-card h3{
+  color:#22c55e;
+  padding:18px 18px 0;
+  margin:0;
+}
+
+.character-card p{
+  padding:0 18px 20px;
+  font-size:15px;
+  color:#ddd;
+}
+</style>
 
 <!-- RE2 -->
 <div class="card juego ps4 pc">
