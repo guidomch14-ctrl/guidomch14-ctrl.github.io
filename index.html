@@ -1,1888 +1,1249 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Zona Gamer | Mejores Juegos de PS1, PS2, PS3, PS4 y PC</title>
-
-<meta name="description" content="Zona Gamer reúne los mejores videojuegos de PS1, PS2, PS3, PS4, Xbox y PC. Historias completas, personajes, gameplay y análisis gamer.">
-
-<meta name="keywords" content="resident evil 4 remake, metal gear rising, juegos ps1, juegos ps2, juegos pc, videojuegos">
-
-<meta name="robots" content="index, follow">
-
-<link rel="icon" href="images/logo.webp" loading="lazy">
-
-<!-- ADSENSE -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3237099983613729"
-crossorigin="anonymous"></script>
-
-<style>
-
-/* =========================
-RESET
-========================= */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:Arial,sans-serif;
-background:#050505;
-color:white;
-line-height:1.6;
-}
-
-/* =========================
-HEADER
-========================= */
-
-header{
-background:#090909;
-border-bottom:2px solid #16a34a;
-padding:14px 20px;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-.topbar{
-max-width:1300px;
-margin:auto;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:14px;
-}
-
-.logo img{
-width:52px;
-height:52px;
-object-fit:contain;
-}
-
-.logo h1{
-font-size:30px;
-color:#22c55e;
-letter-spacing:1px;
-}
-
-/* =========================
-NAV
-========================= */
-
-nav{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-}
-
-nav button{
-background:#101010;
-border:1px solid #22c55e;
-color:#22c55e;
-padding:10px 16px;
-border-radius:10px;
-cursor:pointer;
-font-weight:bold;
-transition:.25s;
-}
-
-nav button:hover{
-background:#22c55e;
-color:black;
-}
-
-/* =========================
-BANNER
-========================= */
-
-.hero{
-position:relative;
-height:420px;
-overflow:hidden;
-}
-
-.hero img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-filter:brightness(.45);
-}
-
-.hero-overlay{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:20px;
-}
-
-.hero-content{
-max-width:900px;
-}
-
-.hero-content h2{
-font-size:60px;
-margin-bottom:18px;
-color:#22c55e;
-text-shadow:0 0 20px rgba(34,197,94,.5);
-}
-
-.hero-content p{
-font-size:20px;
-color:#ddd;
-}
-
-/* =========================
-MAIN
-========================= */
-
-.container{
-max-width:1250px;
-margin:auto;
-padding:40px 20px;
-}
-
-/* =========================
-INTRO
-========================= */
-
-.intro{
-background:#0c0c0c;
-border:1px solid rgba(34,197,94,.2);
-border-radius:20px;
-padding:30px;
-margin-bottom:45px;
-}
-
-.intro h2{
-font-size:36px;
-margin-bottom:15px;
-color:#22c55e;
-}
-
-.intro p{
-color:#ccc;
-font-size:18px;
-}
-
-/* =========================
-CARDS
-========================= */
-
-.card{
-display:flex;
-background:#0b0b0b;
-border:1px solid rgba(255,255,255,.08);
-border-radius:22px;
-overflow:hidden;
-margin-bottom:40px;
-transition:.25s;
-}
-
-.card:hover {
-transform: translateY(-3px);
-}
-border-color:#22c55e;
-box-shadow:0 0 30px rgba(34,197,94,.15);
-}
-
-/* IMAGEN */
-
-.card-image{
-width:45%;
-position:relative;
-}
-
-.card-image img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-}
-
-/* INFO */
-
-.card-content{
-width:55%;
-padding:35px;
-}
-
-.game-tag{
-display:inline-block;
-padding:6px 12px;
-border-radius:999px;
-background:#22c55e;
-color:black;
-font-weight:bold;
-margin-bottom:18px;
-font-size:13px;
-}
-
-.card-content h2{
-font-size:38px;
-margin-bottom:18px;
-color:#22c55e;
-}
-
-.meta{
-display:flex;
-flex-wrap:wrap;
-gap:14px;
-margin-bottom:22px;
-}
-
-.meta span{
-background:#111;
-padding:8px 14px;
-border-radius:10px;
-font-size:14px;
-border:1px solid rgba(255,255,255,.08);
-}
-
-.card-content p{
-color:#d6d6d6;
-font-size:17px;
-margin-bottom:22px;
-}
-
-/* BOTONES */
-
-.buttons{
-display:flex;
-gap:14px;
-flex-wrap:wrap;
-margin-top:25px;
-}
-
-.btn{
-padding:12px 22px;
-border-radius:12px;
-text-decoration:none;
-font-weight:bold;
-transition:.25s;
-display:inline-block;
-}
-
-.btn-primary{
-background:#22c55e;
-color:black;
-}
-
-.btn-primary:hover{
-background:#16a34a;
-}
-
-.btn-secondary{
-border:1px solid #22c55e;
-color:#22c55e;
-}
-
-.btn-secondary:hover{
-background:#22c55e;
-color:black;
-}
-
-/* PERSONAJES */
-
-.characters{
-margin-top:30px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-gap:16px;
-}
-
-.character{
-background:#101010;
-border-radius:16px;
-overflow:hidden;
-text-align:center;
-border:1px solid rgba(255,255,255,.06);
-transition:.25s;
-}
-
-.character:hover{
-transform:translateY(-3px);
-border-color:#22c55e;
-}
-
-.character img{
-width:100%;
-height:180px;
-object-fit:cover;
-display:block;
-}
-
-.character h4{
-padding:14px 10px;
-font-size:15px;
-}
-
-/* FOOTER */
-
-footer{
-margin-top:60px;
-background:#080808;
-padding:30px;
-text-align:center;
-border-top:1px solid rgba(255,255,255,.08);
-}
-
-footer p{
-color:#999;
-}
-
-/* =========================
-RESPONSIVE
-========================= */
-
-@media(max-width:980px){
-
-.card{
-flex-direction:column;
-}
-
-.card-image,
-.card-content{
-width:100%;
-}
-
-.hero{
-height:300px;
-}
-
-.hero-content h2{
-font-size:40px;
-}
-
-}
-
-@media(max-width:600px){
-
-.hero-content h2{
-font-size:30px;
-}
-
-.hero-content p{
-font-size:16px;
-}
-
-.card-content{
-padding:22px;
-}
-
-.card-content h2{
-font-size:28px;
-}
-
-nav{
-justify-content:center;
-}
-
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Zona Gamer reúne videojuegos de PS1, PS2, PS3, PS4 y PC con recomendaciones, historias, personajes, gameplay y análisis." />
+  <meta name="keywords" content="resident evil 4 remake, resident evil 2 remake, metal gear rising, juegos ps1, juegos ps2, juegos ps3, juegos ps4, juegos pc" />
+  <meta name="robots" content="index, follow" />
+  <title>Zona Gamer | Mejores juegos de PS1, PS2, PS3, PS4 y PC</title>
+  <link rel="icon" href="images/logo.webp" />
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3237099983613729" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050505;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #090909;
+      border-bottom: 2px solid #16a34a;
+    }
+
+    .topbar {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
+
+    .logo h1 {
+      font-size: 30px;
+      color: #22c55e;
+      letter-spacing: 0.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav button {
+      background: #101010;
+      border: 1px solid #22c55e;
+      color: #22c55e;
+      padding: 10px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    nav button:hover {
+      background: #22c55e;
+      color: #000;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 420px;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to top, rgba(5,5,5,0.9), rgba(5,5,5,0.2)),
+        url('images/banner.webp') center/cover no-repeat;
+    }
+
+    .hero-overlay {
+      position: relative;
+      min-height: 420px;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 980px;
+    }
+
+    .hero-content h2 {
+      font-size: clamp(2rem, 6vw, 4rem);
+      color: #22c55e;
+      margin-bottom: 14px;
+      text-shadow: 0 0 18px rgba(34,197,94,0.35);
+    }
+
+    .hero-content p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: #e5e7eb;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .intro {
+      background: #0c0c0c;
+      border: 1px solid rgba(34,197,94,0.18);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 36px;
+    }
+
+    .intro h2 {
+      color: #22c55e;
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      margin-bottom: 12px;
+    }
+
+    .intro p {
+      color: #d1d5db;
+      font-size: 1rem;
+      max-width: 1000px;
+    }
+
+    .card {
+      display: flex;
+      background: #0b0b0b;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      overflow: hidden;
+      margin-bottom: 34px;
+    }
+
+    .card-image {
+      width: 42%;
+      background: #000;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-content {
+      width: 58%;
+      padding: 30px;
+    }
+
+    .game-tag {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #22c55e;
+      color: #000;
+      font-weight: 700;
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+
+    .card-content h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      color: #22c55e;
+      margin-bottom: 14px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .meta span {
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: #e5e7eb;
+    }
+
+    .card-content p {
+      color: #d6d6d6;
+      margin-bottom: 14px;
+      font-size: 1rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 18px 0 24px;
+    }
+
+    .btn {
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      display: inline-block;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #22c55e;
+      color: #000;
+    }
+
+    .btn-primary:hover {
+      background: #16a34a;
+    }
+
+    .btn-secondary {
+      border: 1px solid #22c55e;
+      color: #22c55e;
+      background: transparent;
+    }
+
+    .btn-secondary:hover {
+      background: #22c55e;
+      color: #000;
+    }
+
+    .characters {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .character {
+      background: #101010;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .character img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+    }
+
+    .character h4 {
+      padding: 12px 10px 14px;
+      color: #fff;
+      font-size: 0.95rem;
+    }
+
+    .extra-box {
+      margin-top: 22px;
+      padding: 20px;
+      background: #101010;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .extra-box h3 {
+      color: #22c55e;
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+    }
+
+    .extra-box p {
+      color: #d6d6d6;
+      margin-bottom: 12px;
+    }
+
+    .game-page {
+      background: #05070f;
+      color: #fff;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.08);
+      overflow: hidden;
+      margin-bottom: 34px;
+    }
+
+    .game-hero {
+      position: relative;
+      min-height: 640px;
+      overflow: hidden;
+    }
+
+    .game-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.42);
+    }
+
+    .game-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(5,7,15,0.95), rgba(5,7,15,0.15));
+    }
+
+    .hero-overlay-2 {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .hero-overlay-2 .hero-copy {
+      max-width: 980px;
+    }
+
+    .hero-overlay-2 h2 {
+      font-size: clamp(2.2rem, 6vw, 4.4rem);
+      line-height: 1;
+      margin-bottom: 16px;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .hero-overlay-2 p {
+      font-size: clamp(1rem, 2vw, 1.35rem);
+      color: #e5e7eb;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-buttons {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-buttons a {
+      padding: 12px 18px;
+      border: 1px solid #22c55e;
+      border-radius: 12px;
+      color: #22c55e;
+      font-weight: 700;
+      background: rgba(0,0,0,0.35);
+      transition: 0.2s ease;
+    }
+
+    .hero-buttons a:hover {
+      background: #22c55e;
+      color: #000;
+    }
+
+    .game-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 20px 40px;
+    }
+
+    .info-box,
+    .content-box,
+    .score-card,
+    .characters-card {
+      background: #0a1020;
+      border: 1px solid rgba(34,197,94,0.18);
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .info-box h2,
+    .content-box h2,
+    .score-card h3,
+    .characters-card h3 {
+      color: #22c55e;
+      margin-bottom: 16px;
+      font-size: clamp(1.3rem, 3vw, 2rem);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .info-grid div {
+      background: #05070f;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 14px;
+      color: #e5e7eb;
+    }
+
+    .story-box p,
+    .content-box p {
+      color: #d6d6d6;
+      line-height: 1.85;
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .game-main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+    }
+
+    .game-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .score {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .score:last-child {
+      border-bottom: 0;
+    }
+
+    .score span {
+      color: #ccc;
+    }
+
+    .score strong {
+      color: #22c55e;
+      font-size: 1.15rem;
+    }
+
+    .characters-card ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .characters-card li {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: #ddd;
+    }
+
+    .characters-card li:last-child {
+      border-bottom: 0;
+    }
+
+    .game-extra {
+      display: grid;
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .character-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .character-card {
+      background: #05070f;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .character-card img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+    }
+
+    .character-card h3 {
+      color: #22c55e;
+      padding: 14px 14px 0;
+      font-size: 1rem;
+    }
+
+    .character-card p {
+      padding: 8px 14px 16px;
+      color: #d6d6d6;
+      font-size: 0.95rem;
+    }
+
+    .boss-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .boss {
+      background: #05070f;
+      border-left: 4px solid #22c55e;
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .boss h3 {
+      color: #22c55e;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .boss p {
+      color: #d6d6d6;
+    }
+
+    .video-container {
+      margin-top: 18px;
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .footer {
+      margin-top: 50px;
+      background: #080808;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 20px;
+      text-align: center;
+    }
+
+    .footer p,
+    .footer a {
+      color: #a3a3a3;
+      font-size: 0.95rem;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 1000px) {
+      .card {
+        flex-direction: column;
+      }
+
+      .card-image,
+      .card-content {
+        width: 100%;
+      }
+
+      .game-main {
+        grid-template-columns: 1fr;
+      }
+
+      .game-hero {
+        min-height: 520px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .topbar {
+        justify-content: center;
+      }
+
+      .logo {
+        width: 100%;
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: 320px;
+      }
+
+      .hero-overlay {
+        min-height: 320px;
+      }
+
+      .game-hero {
+        min-height: 420px;
+      }
+
+      .container,
+      .game-container {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .card-content {
+        padding: 22px;
+      }
+
+      .btn,
+      .hero-buttons a {
+        width: 100%;
+        text-align: center;
+      }
+
+      .buttons,
+      .hero-buttons {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
-
 <body>
-
-<!-- HEADER -->
-
-<header>
-
-<div class="topbar">
-
-<div class="logo">
-<img src="images/logo.webp" alt="Zona Gamer">
-<h1>Zona Gamer</h1>
-</div>
-
-<nav>
-<button onclick="filtrar('all')">Inicio</button>
-<button onclick="filtrar('ps1')">PS1</button>
-<button onclick="filtrar('ps2')">PS2</button>
-<button onclick="filtrar('ps3')">PS3</button>
-<button onclick="filtrar('ps4')">PS4</button>
-<button onclick="filtrar('pc')">PC</button>
-</nav>
-
-</div>
-
-</header>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<img 
-src="images/banner.webp" 
-alt="Zona Gamer Banner"
-width="1280"
-height="720"
-fetchpriority="high">
-
-<div class="hero-overlay">
-
-<div class="hero-content">
-<h2>Bienvenido a Zona Gamer</h2>
-
-<p>
-Descubre historias, personajes, análisis y gameplay de los videojuegos más icónicos de todas las generaciones.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- MAIN -->
-
-<div class="container">
-
-<!-- INTRO -->
-
-<section class="intro">
-
-<h2>Los mejores videojuegos reunidos en un solo lugar</h2>
-
-<p>
-Zona Gamer es una página creada para fans de los videojuegos clásicos y modernos. 
-Aquí encontrarás información completa de cada juego, incluyendo historia, personajes, plataformas, duración, soundtrack y mucho más.
-</p>
-
-</div>
-
-</div>
-
-<!-- METAL GEAR RISING -->
-<section class="game-page">
-
-<div class="game-hero">
-  <img src="images/mgr-banner.webp" loading="lazy" alt="Metal Gear Rising Revengeance Banner">
-
-  <div class="hero-overlay">
-    <h1>Metal Gear Rising: Revengeance</h1>
-    <p>
-      La guerra se volvió un negocio. Los soldados ahora son armas vivientes.
-      Y Raiden está atrapado entre su humanidad y el monstruo que intentó dejar atrás.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#historia">Historia</a>
-      <a href="#personajes">Personajes</a>
-      <a href="#gameplay">Gameplay</a>
-      <a href="#villanos">Villanos</a>
-      <a href="#ost">OST</a>
+  <header>
+    <div class="topbar">
+      <div class="logo">
+        <img src="images/logo.webp" alt="Zona Gamer" width="128" height="128" />
+        <h1>Zona Gamer</h1>
+      </div>
+      <nav aria-label="Navegación principal">
+        <button onclick="filtrar('all')">Inicio</button>
+        <button onclick="filtrar('ps1')">PS1</button>
+        <button onclick="filtrar('ps2')">PS2</button>
+        <button onclick="filtrar('ps3')">PS3</button>
+        <button onclick="filtrar('ps4')">PS4</button>
+        <button onclick="filtrar('pc')">PC</button>
+      </nav>
     </div>
-  </div>
-</div>
-
-<div class="game-container">
-
-<!-- INFO -->
-<section class="info-box">
-  <h2>Información General</h2>
-
-  <div class="info-grid">
-    <div><strong>Desarrollador:</strong> PlatinumGames</div>
-    <div><strong>Publisher:</strong> Konami</div>
-    <div><strong>Lanzamiento:</strong> 2013</div>
-    <div><strong>Plataformas:</strong> PS3, Xbox 360, PC</div>
-    <div><strong>Género:</strong> Hack and Slash / Acción</div>
-    <div><strong>Duración:</strong> 6-8 horas</div>
-    <div><strong>Metacritic:</strong> 80/100</div>
-    <div><strong>OpenCritic:</strong> 82/100</div>
-  </div>
-</section>
-
-<!-- HISTORIA -->
-<section id="historia" class="content-box">
-  <h2>Historia Completa</h2>
-
-  <p>
-    La historia ocurre años después de los eventos de Metal Gear Solid 4.
-    El mundo cambió completamente: las guerras ya no son controladas por gobiernos,
-    sino por compañías militares privadas conocidas como PMC.
-  </p>
-
-  <p>
-    Raiden trabaja protegiendo al primer ministro africano N'mani, pero durante la misión
-    aparece una organización terrorista liderada por el misterioso Samuel Rodrigues,
-    conocido como Jetstream Sam.
-  </p>
-
-  <p>
-    Raiden es derrotado brutalmente. Pierde un ojo, su brazo izquierdo y casi muere.
-    Luego es reconstruido con un cuerpo cyborg mucho más avanzado.
-  </p>
-
-  <p>
-    Desde ese momento inicia una misión para descubrir quién controla realmente las guerras.
-    Lo que parecía una simple venganza termina revelando experimentos con niños soldados,
-    manipulación política y un plan para crear una nueva economía basada en conflicto permanente.
-  </p>
-
-  <p>
-    Durante el viaje, Raiden debe aceptar su pasado como “Jack el Destripador”,
-    la personalidad violenta que intentó reprimir durante años.
-  </p>
-
-  <p>
-    El juego mezcla acción exagerada, filosofía política, crítica al capitalismo militar
-    y momentos completamente absurdos que terminaron convirtiéndose en memes legendarios.
-  </p>
-</section>
-
-<!-- GAMEPLAY -->
-<section id="gameplay" class="content-box">
-  <h2>Gameplay</h2>
-
-  <p>
-    Metal Gear Rising tiene uno de los sistemas de combate más rápidos y violentos
-    de la generación PS3/Xbox 360.
-  </p>
-
-  <p>
-    El jugador controla a Raiden usando una katana de alta frecuencia capaz de cortar
-    prácticamente cualquier objeto del escenario.
-  </p>
-
-  <p>
-    La mecánica principal es Blade Mode, un sistema que permite ralentizar el tiempo
-    y cortar enemigos manualmente en cualquier dirección.
-  </p>
-
-  <p>
-    El combate recompensa reflejos rápidos, parrys precisos y agresividad constante.
-    Cada jefe introduce nuevas mecánicas y exige dominar el sistema.
-  </p>
-
-  <div class="video-container">
-    <iframe width="100%" height="500"
-    src="https://www.youtube.com/embed/WM33Hr94SKw"
-    title="Metal Gear Rising Gameplay"
-    frameborder="0"
-    allowfullscreen></iframe>
-  </div>
-</section>
-
-<!-- PERSONAJES -->
-<section id="personajes" class="content-box">
-  <h2>Personajes Principales</h2>
-
-  <div class="character-grid">
-
-    <div class="character-card">
-      <img src="images/raiden-character.jpg" alt="Raiden" width="800" height="450" loading="lazy" decoding="async">
-      <h3>Raiden</h3>
-      <p>
-        Ex niño soldado conocido como Jack el Destripador.
-        Intentó dejar atrás su pasado, pero termina aceptando
-        su naturaleza violenta para detener a Desperado.
-      </p>
-    </div>
-
-    <div class="character-card">
-      <img src="images/sam.jpg" alt="Jetstream Sam" width="800" height="450" loading="lazy" decoding="async">
-      <h3>Jetstream Sam</h3>
-      <p>
-        Espadachín brasileño extremadamente habilidoso.
-        Rival y espejo de Raiden. Su filosofía y estilo
-        lo convirtieron en uno de los personajes más queridos.
-      </p>
-    </div>
-
-    <div class="character-card">
-      <img src="images/bladewolf.jpg" alt="Blade Wolf" width="800" height="450" loading="lazy" decoding="async">
-      <h3>Blade Wolf</h3>
-      <p>
-        Inteligencia artificial militar con apariencia de lobo.
-        Cuestiona constantemente qué significa tener libre voluntad.
-      </p>
-    </div>
-
-    <div class="character-card">
-      <img src="images/doktor.jpg" alt="Doktor" width="800" height="450" loading="lazy" decoding="async">
-      <h3>Doktor</h3>
-      <p>
-        Científico encargado del soporte técnico de Raiden.
-        Aporta humor y explicaciones sobre tecnología cyborg.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- VILLANOS -->
-<section id="villanos" class="content-box">
-  <h2>Villanos y Jefes</h2>
-
-  <div class="boss-list">
-
-    <div class="boss">
-      <h3>Metal Gear RAY</h3>
-      <p>
-        El primer jefe del juego. Una batalla gigantesca que sirve como introducción
-        al nivel de destrucción que tendrá toda la aventura.
-      </p>
-    </div>
-
-    <div class="boss">
-      <h3>Mistral</h3>
-      <p>
-        Cyborg francesa especialista en armas múltiples y control de pequeños robots.
-      </p>
-    </div>
-
-    <div class="boss">
-      <h3>Monsoon</h3>
-      <p>
-        Uno de los personajes más filosóficos del juego.
-        Puede separar su cuerpo magnéticamente y habla sobre memes e ideologías.
-      </p>
-    </div>
-
-    <div class="boss">
-      <h3>Sundowner</h3>
-      <p>
-        Un monstruo obsesionado con la guerra.
-        Representa la corrupción total de la industria militar.
-      </p>
-    </div>
-
-    <div class="boss">
-      <h3>Senator Armstrong</h3>
-      <p>
-        El antagonista final.
-        Un político absurdamente poderoso físicamente gracias a nanotecnología.
-        Su pelea final es considerada una de las más épicas de los videojuegos.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- OST -->
-<section id="ost" class="content-box">
-  <h2>Banda Sonora (OST)</h2>
-
-  <p>
-    La OST de Metal Gear Rising es una de las más icónicas de la historia gaming.
-    Cada jefe tiene una canción propia con letras que representan su personalidad.
-  </p>
-
-  <p>
-    La música cambia dinámicamente durante las peleas,
-    aumentando la intensidad cuando el combate llega a su punto máximo.
-  </p>
-
-  <ul class="ost-list">
-    <li>Rules of Nature</li>
-    <li>The Only Thing I Know For Real</li>
-    <li>Red Sun</li>
-    <li>The Stains of Time</li>
-    <li>Collective Consciousness</li>
-    <li>It Has To Be This Way</li>
-  </ul>
-</section>
-
-</div>
-
-</div>
-
-</section>>
-
-<style>
-
-/* GAME PAGE */
-
-.game-page{
-  background:#05070f;
-  color:white;
-}
-
-/* HERO */
-
-.game-hero{
-  position:relative;
-  width:100%;
-  height:700px;
-  overflow:hidden;
-}
-
-.game-hero img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:brightness(40%);
-}
-
-.hero-overlay{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  text-align:center;
-  width:90%;
-  max-width:1000px;
-}
-
-.hero-overlay h1{
-  font-size:70px;
-  margin-bottom:20px;
-  color:#22c55e;
-  text-shadow:0 0 20px #22c55e;
-}
-
-.hero-overlay p{
-  font-size:22px;
-  line-height:1.7;
-  color:#ddd;
-}
-
-.hero-buttons{
-  margin-top:35px;
-  display:flex;
-  gap:15px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-.hero-buttons a{
-  padding:14px 26px;
-  border:1px solid #22c55e;
-  color:#22c55e;
-  text-decoration:none;
-  border-radius:10px;
-  transition:.3s;
-  font-weight:bold;
-}
-
-.hero-buttons a:hover{
-  background:#22c55e;
-  color:black;
-  box-shadow:0 0 20px #22c55e;
-}
-
-/* CONTAINER */
-
-.game-container{
-  max-width:1200px;
-  margin:auto;
-  padding:40px 20px;
-}
-
-/* BOXES */
-
-.info-box,
-.content-box{
-  background:#0b1120;
-  border:1px solid rgba(34,197,94,.2);
-  border-radius:18px;
-  padding:35px;
-  margin-bottom:35px;
-  box-shadow:0 0 25px rgba(0,0,0,.4);
-}
-
-.info-box h2,
-.content-box h2{
-  color:#22c55e;
-  margin-top:0;
-  font-size:38px;
-}
-
-.content-box p{
-  line-height:1.9;
-  font-size:18px;
-  color:#ddd;
-}
-
-/* INFO GRID */
-
-.info-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
-  margin-top:25px;
-}
-
-.info-grid div{
-  background:#05070f;
-  padding:15px;
-  border-radius:12px;
-}
-
-/* IMAGES */
-
-.section-image{
-  width:100%;
-  border-radius:15px;
-  margin:20px 0;
-}
-
-/* VIDEO */
-
-.video-container{
-  margin-top:30px;
-  overflow:hidden;
-  border-radius:16px;
-}
-
-/* CHARACTERS */
-
-.character-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:25px;
-  margin-top:30px;
-}
-
-.character-card{
-  background:#05070f;
-  border-radius:16px;
-  overflow:hidden;
-  transition:.3s;
-  border:1px solid rgba(255,255,255,.08);
-}
-
-.character-card:hover{
-  transform:translateY(-8px);
-  border-color:#22c55e;
-  box-shadow:0 0 20px rgba(34,197,94,.3);
-}
-
-.character-card img{
-  width:100%;
-  height:320px;
-  object-fit:cover;
-}
-
-.character-card h3{
-  color:#22c55e;
-  padding:18px 18px 0;
-}
-
-.character-card p{
-  padding:0 18px 20px;
-  font-size:15px;
-}
-
-/* BOSSES */
-
-.boss-list{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-}
-
-.boss{
-  background:#05070f;
-  padding:25px;
-  border-radius:14px;
-  border-left:4px solid #22c55e;
-}
-
-.boss h3{
-  margin-top:0;
-  color:#22c55e;
-}
-
-/* OST */
-
-.ost-list{
-  margin-top:20px;
-  padding-left:20px;
-}
-
-.ost-list li{
-  margin-bottom:12px;
-  color:#ddd;
-  font-size:18px;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-  .hero-overlay h1{
-    font-size:42px;
-  }
-
-  .hero-overlay p{
-    font-size:18px;
-  }
-
-  .game-hero{
-    height:550px;
-  }
-
-}
-
-<!-- RESIDENT EVIL 4 REMAKE -->
-<section class="game-section juego ps4 pc">
-
-  <div class="game-banner">
-    <img src="images/re4-banner.jpg" alt="Resident Evil 4 Remake Banner" loading="lazy">
-    
-    <div class="game-overlay">
-      <span class="game-category">SURVIVAL HORROR</span>
-      <h2>Resident Evil 4 Remake</h2>
-      <p class="game-subtitle">
-        El regreso de uno de los mejores juegos de terror y acción de la historia.
-      </p>
-
-        <a href="https://www.youtube.com/watch?v=Id2EaldBaWw" target="_blank" class="btn-secondary">
-          Ver Gameplay
-        </a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h2>Bienvenido a Zona Gamer</h2>
+        <p>Descubre historias, personajes, análisis y gameplay de videojuegos icónicos de todas las generaciones.</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="game-content">
+  <main class="container">
+    <section class="intro">
+      <h2>Los mejores videojuegos reunidos en un solo lugar</h2>
+      <p>Zona Gamer es una página creada para fans de los videojuegos clásicos y modernos. Aquí encontrarás información completa de cada juego, incluyendo historia, personajes, plataformas, duración, soundtrack y mucho más.</p>
+    </section>
 
-    <div class="game-main">
-
-      <div class="game-info-grid">
-
-        <div class="info-box">
-          <span>Plataformas</span>
-          <p>PS4, PS5, PC, Xbox Series X/S</p>
+    <!-- METAL GEAR RISING -->
+    <section class="card juego ps3 pc">
+      <div class="card-image">
+        <img src="images/mgr-banner.webp" alt="Metal Gear Rising Revengeance" width="1280" height="720" loading="lazy" />
+      </div>
+      <div class="card-content">
+        <div class="game-tag">ACCIÓN • HACK AND SLASH</div>
+        <h2>Metal Gear Rising: Revengeance</h2>
+        <div class="meta">
+          <span>PS3</span>
+          <span>Xbox 360</span>
+          <span>PC</span>
+          <span>6–8 horas</span>
         </div>
-
-        <div class="info-box">
-          <span>Duración</span>
-          <p>12–16 horas</p>
+        <p>Raiden es un cyborg ninja que trabaja como mercenario en un mundo dominado por guerras privadas y tecnología militar avanzada. Mientras combate organizaciones corruptas y enemigos extremadamente peligrosos, deberá enfrentarse a su pasado y aceptar la violencia que lleva dentro.</p>
+        <p>El juego destaca por su sistema de combate rápido y brutal, sus jefes épicos y una de las bandas sonoras más icónicas de los videojuegos.</p>
+        <div class="buttons">
+          <a href="#mgr-detalles" class="btn btn-primary">Ver más detalles</a>
+          <a href="https://www.youtube.com/embed/WM33Hr94SKw" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Gameplay</a>
         </div>
-
-        <div class="info-box">
-          <span>Desarrollador</span>
-          <p>Capcom</p>
+        <div class="characters">
+          <div class="character">
+            <img src="images/raiden.webp" alt="Raiden" width="300" height="400" loading="lazy" />
+            <h4>Raiden</h4>
+          </div>
+          <div class="character">
+            <img src="images/sam.webp" alt="Jetstream Sam" width="300" height="400" loading="lazy" />
+            <h4>Jetstream Sam</h4>
+          </div>
+          <div class="character">
+            <img src="images/bladewolf.webp" alt="Blade Wolf" width="300" height="400" loading="lazy" />
+            <h4>Blade Wolf</h4>
+          </div>
+          <div class="character">
+            <img src="images/armstrong.webp" alt="Senator Armstrong" width="300" height="400" loading="lazy" />
+            <h4>Armstrong</h4>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="info-box">
-          <span>Lanzamiento</span>
-          <p>2023</p>
+    <section id="mgr-detalles" class="game-page">
+      <div class="game-hero">
+        <img src="images/mgr-banner.webp" alt="Metal Gear Rising Revengeance Banner" width="1280" height="720" fetchpriority="high" />
+        <div class="hero-overlay-2">
+          <div class="hero-copy">
+            <h2>Metal Gear Rising: Revengeance</h2>
+            <p>La guerra se volvió un negocio. Los soldados ahora son armas vivientes. Y Raiden está atrapado entre su humanidad y el monstruo que intentó dejar atrás.</p>
+            <div class="hero-buttons">
+              <a href="#mgr-historia">Historia</a>
+              <a href="#mgr-personajes">Personajes</a>
+              <a href="#mgr-gameplay">Gameplay</a>
+              <a href="#mgr-villanos">Villanos</a>
+              <a href="#mgr-ost">OST</a>
+            </div>
+          </div>
         </div>
-
       </div>
 
-      <div class="story-box">
+      <div class="game-container">
+        <section class="info-box">
+          <h2>Información General</h2>
+          <div class="info-grid">
+            <div><strong>Desarrollador:</strong> PlatinumGames</div>
+            <div><strong>Publisher:</strong> Konami</div>
+            <div><strong>Lanzamiento:</strong> 2013</div>
+            <div><strong>Plataformas:</strong> PS3, Xbox 360, PC</div>
+            <div><strong>Género:</strong> Hack and Slash / Acción</div>
+            <div><strong>Duración:</strong> 6–8 horas</div>
+            <div><strong>Metacritic:</strong> 80/100</div>
+            <div><strong>OpenCritic:</strong> 82/100</div>
+          </div>
+        </section>
 
-        <h3>Historia</h3>
+        <div class="game-main">
+          <div>
+            <section id="mgr-historia" class="content-box story-box">
+              <h2>Historia Completa</h2>
+              <p>La historia ocurre años después de los eventos de Metal Gear Solid 4. El mundo cambió completamente: las guerras ya no son controladas por gobiernos, sino por compañías militares privadas conocidas como PMC.</p>
+              <p>Raiden trabaja protegiendo al primer ministro africano N'mani, pero durante la misión aparece una organización terrorista liderada por el misterioso Samuel Rodrigues, conocido como Jetstream Sam.</p>
+              <p>Raiden es derrotado brutalmente. Pierde un ojo, su brazo izquierdo y casi muere. Luego es reconstruido con un cuerpo cyborg mucho más avanzado.</p>
+              <p>Desde ese momento inicia una misión para descubrir quién controla realmente las guerras. Lo que parecía una simple venganza termina revelando experimentos con niños soldados, manipulación política y un plan para crear una nueva economía basada en conflicto permanente.</p>
+              <p>Durante el viaje, Raiden debe aceptar su pasado como “Jack el Destripador”, la personalidad violenta que intentó reprimir durante años.</p>
+              <p>El juego mezcla acción exagerada, filosofía política, crítica al capitalismo militar y momentos completamente absurdos que terminaron convirtiéndose en memes legendarios.</p>
+            </section>
 
-        <p>
-          Seis años después de la destrucción de Raccoon City, Leon S. Kennedy trabaja como agente especial del gobierno de Estados Unidos. Su nueva misión es rescatar a Ashley Graham, la hija del presidente, quien fue secuestrada y llevada a una remota aldea europea.
-        </p>
+            <section id="mgr-gameplay" class="content-box">
+              <h2>Gameplay</h2>
+              <p>Metal Gear Rising tiene uno de los sistemas de combate más rápidos y violentos de la generación PS3/Xbox 360.</p>
+              <p>El jugador controla a Raiden usando una katana de alta frecuencia capaz de cortar prácticamente cualquier objeto del escenario.</p>
+              <p>La mecánica principal es Blade Mode, un sistema que permite ralentizar el tiempo y cortar enemigos manualmente en cualquier dirección.</p>
+              <p>El combate recompensa reflejos rápidos, parries precisos y agresividad constante. Cada jefe introduce nuevas mecánicas y exige dominar el sistema.</p>
+              <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/WM33Hr94SKw" title="Metal Gear Rising Gameplay" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </section>
 
-        <p>
-          Al llegar, Leon descubre que los habitantes están infectados por un extraño parásito llamado <strong>Las Plagas</strong>, capaz de controlar completamente a las personas y transformarlas en criaturas extremadamente violentas.
-        </p>
+            <section id="mgr-personajes" class="content-box">
+              <h2>Personajes Principales</h2>
+              <div class="character-grid">
+                <article class="character-card">
+                  <img src="images/raiden.webp" alt="Raiden" width="300" height="400" loading="lazy" />
+                  <h3>Raiden</h3>
+                  <p>Ex niño soldado conocido como Jack el Destripador. Intenta dejar atrás su pasado, pero termina aceptando su naturaleza violenta para detener a Desperado.</p>
+                </article>
+                <article class="character-card">
+                  <img src="images/sam.webp" alt="Jetstream Sam" width="300" height="400" loading="lazy" />
+                  <h3>Jetstream Sam</h3>
+                  <p>Espadachín brasileño extremadamente habilidoso. Rival y espejo de Raiden. Su filosofía y estilo lo convierten en uno de los personajes más queridos.</p>
+                </article>
+                <article class="character-card">
+                  <img src="images/bladewolf.webp" alt="Blade Wolf" width="300" height="400" loading="lazy" />
+                  <h3>Blade Wolf</h3>
+                  <p>Inteligencia artificial militar con apariencia de lobo. Cuestiona constantemente qué significa tener libre voluntad.</p>
+                </article>
+                <article class="character-card">
+                  <img src="images/doktor.webp" alt="Doktor" width="300" height="400" loading="lazy" />
+                  <h3>Doktor</h3>
+                  <p>Científico encargado del soporte técnico de Raiden. Aporta humor y explicaciones sobre tecnología cyborg.</p>
+                </article>
+              </div>
+            </section>
 
-        <p>
-          A medida que avanza por aldeas destruidas, castillos gigantes y laboratorios secretos, deberá enfrentarse a cultos religiosos, monstruos mutados y enemigos icónicos como El Gigante, los Garradores, Verdugo y Ramón Salazar.
-        </p>
+            <section id="mgr-villanos" class="content-box">
+              <h2>Villanos y Jefes</h2>
+              <div class="boss-list">
+                <article class="boss">
+                  <h3>Metal Gear RAY</h3>
+                  <p>El primer jefe del juego. Una batalla gigantesca que sirve como introducción al nivel de destrucción que tendrá toda la aventura.</p>
+                </article>
+                <article class="boss">
+                  <h3>Mistral</h3>
+                  <p>Cyborg francesa especialista en armas múltiples y control de pequeños robots.</p>
+                </article>
+                <article class="boss">
+                  <h3>Monsoon</h3>
+                  <p>Uno de los personajes más filosóficos del juego. Puede separar su cuerpo magnéticamente y habla sobre memes e ideologías.</p>
+                </article>
+                <article class="boss">
+                  <h3>Sundowner</h3>
+                  <p>Un monstruo obsesionado con la guerra. Representa la corrupción total de la industria militar.</p>
+                </article>
+                <article class="boss">
+                  <h3>Senator Armstrong</h3>
+                  <p>El antagonista final. Un político absurdamente poderoso físicamente gracias a nanotecnología. Su pelea final es una de las más épicas de los videojuegos.</p>
+                </article>
+              </div>
+            </section>
 
-        <p>
-          El remake reconstruye completamente el clásico original con gráficos modernos, una atmósfera mucho más oscura y un combate más intenso y realista. La tensión nunca desaparece y cada zona presenta nuevos desafíos.
-        </p>
+            <section id="mgr-ost" class="content-box">
+              <h2>Banda Sonora (OST)</h2>
+              <p>La OST de Metal Gear Rising es una de las más icónicas de la historia gaming. Cada jefe tiene una canción propia con letras que representan su personalidad.</p>
+              <p>La música cambia dinámicamente durante las peleas, aumentando la intensidad cuando el combate llega a su punto máximo.</p>
+              <ul style="padding-left: 20px; color:#d6d6d6;">
+                <li>Rules of Nature</li>
+                <li>The Only Thing I Know For Real</li>
+                <li>Red Sun</li>
+                <li>The Stains of Time</li>
+                <li>Collective Consciousness</li>
+                <li>It Has To Be This Way</li>
+              </ul>
+            </section>
+          </div>
 
-        <p>
-          La administración de recursos vuelve a ser clave. Las balas son limitadas, los enemigos son agresivos y muchas veces sobrevivir depende de tomar decisiones rápidas bajo presión.
-        </p>
+          <aside class="game-sidebar">
+            <section class="score-card">
+              <h3>Puntuaciones</h3>
+              <div class="score"><span>Metacritic</span><strong>80/100</strong></div>
+              <div class="score"><span>OpenCritic</span><strong>82/100</strong></div>
+              <div class="score"><span>Usuarios</span><strong>9/10</strong></div>
+            </section>
 
-        <p>
-          Resident Evil 4 Remake logra combinar perfectamente terror, acción y exploración, manteniendo la esencia del juego original mientras moderniza todas sus mecánicas.
-        </p>
+            <section class="characters-card">
+              <h3>Personajes</h3>
+              <ul>
+                <li>Raiden</li>
+                <li>Jetstream Sam</li>
+                <li>Blade Wolf</li>
+                <li>Mistral</li>
+                <li>Monsoon</li>
+                <li>Sundowner</li>
+                <li>Senator Armstrong</li>
+              </ul>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </section>
 
+    <!-- RESIDENT EVIL 4 REMAKE -->
+    <section class="card juego ps4 pc">
+      <div class="card-image">
+        <img src="images/re4-banner.webp" alt="Resident Evil 4 Remake" width="1280" height="720" loading="lazy" />
+      </div>
+      <div class="card-content">
+        <div class="game-tag">SURVIVAL HORROR</div>
+        <h2>Resident Evil 4 Remake</h2>
+        <div class="meta">
+          <span>PS4</span>
+          <span>PS5</span>
+          <span>PC</span>
+          <span>Xbox Series X/S</span>
+          <span>12–16 horas</span>
+        </div>
+        <p>Leon S. Kennedy es enviado a una aldea aislada de Europa para rescatar a Ashley Graham, la hija del presidente de Estados Unidos. Lo que parecía una misión simple rápidamente se convierte en una pesadilla cuando descubre que los habitantes fueron infectados por Las Plagas.</p>
+        <p>Resident Evil 4 Remake reconstruye completamente el clásico de 2005 con gráficos modernos, nuevas mecánicas, mejor exploración y una atmósfera mucho más oscura y terrorífica.</p>
+        <div class="buttons">
+          <a href="#re4-detalles" class="btn btn-primary">Ver más detalles</a>
+          <a href="https://www.youtube.com/watch?v=Id2EaldBaWw" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Gameplay</a>
+        </div>
+        <div class="characters">
+          <div class="character">
+            <img src="images/leon.webp" alt="Leon S. Kennedy" width="300" height="400" loading="lazy" />
+            <h4>Leon S. Kennedy</h4>
+          </div>
+          <div class="character">
+            <img src="images/ashley.webp" alt="Ashley Graham" width="300" height="400" loading="lazy" />
+            <h4>Ashley Graham</h4>
+          </div>
+          <div class="character">
+            <img src="images/ada.webp" alt="Ada Wong" width="300" height="400" loading="lazy" />
+            <h4>Ada Wong</h4>
+          </div>
+          <div class="character">
+            <img src="images/luis.webp" alt="Luis Serra" width="300" height="400" loading="lazy" />
+            <h4>Luis Serra</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RE4 DETAILS -->
+    <section id="re4-detalles" class="game-page">
+      <div class="game-hero">
+        <img src="images/re4-banner.webp" alt="Resident Evil 4 Remake Banner" width="1280" height="720" fetchpriority="high" />
+        <div class="hero-overlay-2">
+          <div class="hero-copy">
+            <h2>Resident Evil 4 Remake</h2>
+            <p>El regreso de uno de los mejores juegos de terror y acción de la historia.</p>
+            <div class="hero-buttons">
+              <a href="#re4-historia">Historia</a>
+              <a href="#re4-personajes">Personajes</a>
+              <a href="#re4-gameplay">Gameplay</a>
+              <a href="#re4-villanos">Villanos</a>
+              <a href="#re4-ost">OST</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-    </div>
+      <div class="game-container">
+        <section class="info-box">
+          <h2>Información General</h2>
+          <div class="info-grid">
+            <div><strong>Desarrollador:</strong> Capcom</div>
+            <div><strong>Lanzamiento:</strong> 2023</div>
+            <div><strong>Plataformas:</strong> PS4, PS5, PC, Xbox Series X/S</div>
+            <div><strong>Género:</strong> Survival Horror / Acción</div>
+            <div><strong>Duración:</strong> 12–16 horas</div>
+            <div><strong>Metacritic:</strong> 93/100</div>
+            <div><strong>OpenCritic:</strong> 92/100</div>
+            <div><strong>Usuarios:</strong> 9.5/10</div>
+          </div>
+        </section>
 
-    <aside class="game-sidebar">
+        <div class="game-main">
+          <div>
+            <section id="re4-historia" class="content-box story-box">
+              <h2>Historia Completa</h2>
+              <p>Seis años después de la destrucción de Raccoon City, Leon S. Kennedy trabaja como agente especial del gobierno de Estados Unidos. Su nueva misión es rescatar a Ashley Graham, la hija del presidente, quien fue secuestrada y llevada a una remota aldea europea.</p>
+              <p>Al llegar, Leon descubre que los habitantes están infectados por un extraño parásito llamado Las Plagas, capaz de controlar completamente a las personas y transformarlas en criaturas extremadamente violentas.</p>
+              <p>A medida que avanza por aldeas destruidas, castillos gigantes y laboratorios secretos, deberá enfrentarse a cultos religiosos, monstruos mutados y enemigos icónicos como El Gigante, los Garradores, Verdugo y Ramón Salazar.</p>
+              <p>El remake reconstruye completamente el clásico original con gráficos modernos, una atmósfera mucho más oscura y un combate más intenso y realista. La tensión nunca desaparece y cada zona presenta nuevos desafíos.</p>
+              <p>La administración de recursos vuelve a ser clave. Las balas son limitadas, los enemigos son agresivos y muchas veces sobrevivir depende de tomar decisiones rápidas bajo presión.</p>
+              <p>Resident Evil 4 Remake logra combinar perfectamente terror, acción y exploración, manteniendo la esencia del juego original mientras moderniza todas sus mecánicas.</p>
+            </section>
 
-      <div class="score-card">
-        <h3>Puntuaciones</h3>
+            <section id="re4-gameplay" class="content-box">
+              <h2>Gameplay</h2>
+              <p>El juego mezcla disparos en tercera persona, gestión de recursos, exploración y momentos de tensión constante. El comerciante regresa como una figura clave para mejorar armas, vender objetos y preparar al jugador para zonas más difíciles.</p>
+              <p>La cámara sobre el hombro, los parries, la movilidad de Leon y la inteligencia de los enemigos hacen que cada combate sea intenso. No se siente como una simple actualización gráfica, sino como una revisión completa de cómo debe jugarse Resident Evil 4 hoy.</p>
+              <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Id2EaldBaWw" title="Resident Evil 4 Remake Gameplay" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </section>
 
-        <div class="score">
-          <span>Metacritic</span>
-          <strong>93/100</strong>
+            <section id="re4-personajes" class="content-box">
+              <h2>Personajes Principales</h2>
+              <div class="character-grid">
+                <article class="character-card">
+                  <img src="images/leon.webp" alt="Leon S. Kennedy" width="300" height="400" loading="lazy" />
+                  <h3>Leon S. Kennedy</h3>
+                  <p>Agente especial del gobierno de Estados Unidos y protagonista del juego.</p>
+                </article>
+                <article class="character-card">
+                  <img src="images/ashley.webp" alt="Ashley Graham" width="300" height="400" loading="lazy" />
+                  <h3>Ashley Graham</h3>
+                  <p>La hija del presidente, secuestrada y llevada a la aldea infectada.</p>
+                </article>
+                <article class="character-card">
+                  <img src="images/ada.webp" alt="Ada Wong" width="300" height="400" loading="lazy" />
+                  <h3>Ada Wong</h3>
+                  <p>Misteriosa agente con objetivos ocultos que reaparece en la historia.</p>
+                </article>
+                <article class="character-card">
+                  <img src="images/luis.webp" alt="Luis Serra" width="300" height="400" loading="lazy" />
+                  <h3>Luis Serra</h3>
+                  <p>Ex investigador con conocimiento sobre Las Plagas y gran peso en la aventura.</p>
+                </article>
+              </div>
+            </section>
+
+            <section id="re4-villanos" class="content-box">
+              <h2>Villanos y Amenazas</h2>
+              <div class="boss-list">
+                <article class="boss">
+                  <h3>Osmund Saddler</h3>
+                  <p>Líder del culto y principal responsable del brote de Las Plagas.</p>
+                </article>
+                <article class="boss">
+                  <h3>Ramón Salazar</h3>
+                  <p>El noble deformado que custodia el castillo y se convierte en una de las amenazas más recordadas.</p>
+                </article>
+                <article class="boss">
+                  <h3>Jack Krauser</h3>
+                  <p>Rival de Leon y uno de los combates más intensos del juego.</p>
+                </article>
+                <article class="boss">
+                  <h3>Las Plagas</h3>
+                  <p>El parásito central de la historia, capaz de controlar cuerpos y crear enemigos impredecibles.</p>
+                </article>
+              </div>
+            </section>
+
+            <section id="re4-ost" class="content-box">
+              <h2>Banda Sonora (OST)</h2>
+              <p>Resident Evil 4 Remake no solo brilla por su combate. Su sonido y música construyen una atmósfera densa, inquietante y perfecta para mantener al jugador en tensión.</p>
+              <p>El silencio en ciertos momentos y la intensidad en los enfrentamientos hacen que la experiencia sea mucho más inmersiva.</p>
+            </section>
+          </div>
+
+          <aside class="game-sidebar">
+            <section class="score-card">
+              <h3>Puntuaciones</h3>
+              <div class="score"><span>Metacritic</span><strong>93/100</strong></div>
+              <div class="score"><span>OpenCritic</span><strong>92/100</strong></div>
+              <div class="score"><span>Usuarios</span><strong>9.5/10</strong></div>
+            </section>
+
+            <section class="characters-card">
+              <h3>Personajes</h3>
+              <ul>
+                <li>Leon S. Kennedy</li>
+                <li>Ashley Graham</li>
+                <li>Ada Wong</li>
+                <li>Luis Serra</li>
+                <li>Osmund Saddler</li>
+                <li>Ramón Salazar</li>
+                <li>Jack Krauser</li>
+              </ul>
+            </section>
+          </aside>
         </div>
+      </div>
+    </section>
 
-        <div class="score">
-          <span>OpenCritic</span>
-          <strong>92/100</strong>
+    <!-- RESIDENT EVIL 2 REMAKE -->
+    <section class="card juego ps4 pc">
+      <div class="card-image">
+        <img src="images/re2remake.webp" alt="Resident Evil 2 Remake" width="900" height="1200" loading="lazy" />
+      </div>
+      <div class="card-content">
+        <div class="game-tag">SURVIVAL HORROR • ZOMBIES</div>
+        <h2>Resident Evil 2 Remake</h2>
+        <div class="meta">
+          <span>PS4</span>
+          <span>PS5</span>
+          <span>PC</span>
+          <span>Xbox One</span>
+          <span>Xbox Series X/S</span>
+          <span>8–12 horas</span>
         </div>
-
-        <div class="score">
-          <span>Usuarios</span>
-          <strong>9.5/10</strong>
+        <p>Leon S. Kennedy llega a Raccoon City en su primer día como policía, pero descubre que toda la ciudad fue devastada por un brote biológico causado por Umbrella Corporation.</p>
+        <p>Mientras intenta sobrevivir junto a Claire Redfield, deberá atravesar calles infestadas de zombies, resolver acertijos y escapar de criaturas extremadamente peligrosas.</p>
+        <div class="buttons">
+          <a href="#re2-detalles" class="btn btn-primary">Ver más detalles</a>
+          <a href="https://www.youtube.com/results?search_query=resident+evil+2+remake+gameplay" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Gameplay</a>
         </div>
+        <div class="characters">
+          <div class="character">
+            <img src="images/leon-re2.webp" alt="Leon S. Kennedy" width="300" height="400" loading="lazy" />
+            <h4>Leon S. Kennedy</h4>
+          </div>
+          <div class="character">
+            <img src="images/claire.webp" alt="Claire Redfield" width="300" height="400" loading="lazy" />
+            <h4>Claire Redfield</h4>
+          </div>
+          <div class="character">
+            <img src="images/ada.webp" alt="Ada Wong" width="300" height="400" loading="lazy" />
+            <h4>Ada Wong</h4>
+          </div>
+          <div class="character">
+            <img src="images/mrx.webp" alt="Mr. X" width="300" height="400" loading="lazy" />
+            <h4>Mr. X</h4>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- RE2 DETAILS -->
+    <section id="re2-detalles" class="game-page">
+      <div class="game-hero">
+        <img src="images/re2-banner.webp" alt="Resident Evil 2 Remake Banner" width="1280" height="720" fetchpriority="high" />
+        <div class="hero-overlay-2">
+          <div class="hero-copy">
+            <h2>Resident Evil 2 Remake</h2>
+            <p>Raccoon City cae en el caos mientras Leon y Claire intentan sobrevivir a un brote imposible de contener.</p>
+            <div class="hero-buttons">
+              <a href="#re2-historia">Historia</a>
+              <a href="#re2-personajes">Personajes</a>
+              <a href="#re2-gameplay">Gameplay</a>
+              <a href="#re2-villanos">Villanos</a>
+              <a href="#re2-ost">OST</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="characters-card">
-
-          </li>Leon S. Kennedy</li>
-          <li>Ashley Graham</li>
-          <li>Ada Wong</li>
-          <li<h3>Personajes Principales</h3>
-
-        <div class="character-grid">
-
-    <div class="character-card">
-      <img src="images/leon.jpg" alt="Leon S. Kennedy" width="800" height="450" loading="lazy" decoding="async">
-      <h3>Leon S. Kennedy</h3>
-      <p>
-        Agente especial del gobierno de Estados Unidos. Es el protagonista del juego y quien debe rescatar a Ashley Graham en la aldea infectada.
-      </p>
-    </div>
-
-    <div class="character-card">
-      <img src="images/ashley.jpg" alt="Ashley Graham" width="800" height="450" loading="lazy" decoding="async">
-      <h3>Ashley Graham</h3>
-      <p>
-        La hija del presidente de Estados Unidos. Su secuestro es el motivo principal de la misión de Leon.
-      </p>
-    </div>
-
-    <div class="character-card">
-      <img src="images/ada.jpg" alt="Ada Wong" width="800" height="450" loading="lazy" decoding="async">
-      <h3>Ada Wong</h3>
-      <p>
-        Misteriosa agente que reaparece en la historia con intereses ocultos. Su papel es clave en varios momentos del juego.
-      </p>
-    </div>
-
-    <div class="character-card">
-      <img src="images/luis.jpg" alt="Luis Serra" width="800" height="450" loading="lazy" decoding="async">
-      <h3>Luis Serra</h3>
-      <p>
-        Ex investigador con conocimiento sobre Las Plagas. Ayuda a Leon en parte de la aventura y aporta mucho al desarrollo de la historia.
-      </p>
-    </div>
-
-    <div class="character-card">
-      <img src="images/saddler.jpg" alt="Osmund Saddler" width="800" height="450" loading="lazy" decoding="async">
-      <h3>Osmund Saddler</h3>
-      <p>
-        Líder del culto responsable del secuestro de Ashley y principal antagonista detrás del brote en la aldea.
-      </p>
-    </div>
-
-    <div class="character-card">
-      <img src="images/salazar.jpg" alt="Ramón Salazar" width="800" height="450" loading="lazy" decoding="async">
-      <h3>Ramón Salazar</h3>
-      <p>
-        El noble deformado que custodia el castillo y sirve como uno de los jefes más recordados del juego.
-      </p>
-
-</div>
-
-</div>
-          
-</aside>
-
-</div>
-
-</section>>
-
-<style>
-
-/* ===== GAME SECTION ===== */
-
-.game-section{
-  margin:50px auto;
-  max-width:1400px;
-  background:#050816;
-  border:1px solid rgba(34,197,94,.18);
-  border-radius:24px;
-  overflow:hidden;
-  box-shadow:0 0 35px rgba(0,0,0,.45);
-}
-
-/* ===== BANNER ===== */
-
-.game-banner{
-  position:relative;
-  width:100%;
-  height:650px;
-  overflow:hidden;
-}
-
-.game-banner img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-/* OSCURECER IMAGEN */
-
-.game-banner::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:
-  linear-gradient(to top, #050816 5%, transparent 45%),
-  linear-gradient(to right, rgba(0,0,0,.85) 10%, rgba(0,0,0,.2) 60%);
-}
-
-/* ===== TEXTO ENCIMA ===== */
-
-.game-overlay{
-  position:absolute;
-  top:50%;
-  left:70px;
-  transform:translateY(-50%);
-  z-index:2;
-  max-width:650px;
-}
-
-.game-category{
-  display:inline-block;
-  padding:8px 18px;
-  border:1px solid #22c55e;
-  border-radius:50px;
-  color:#22c55e;
-  font-size:14px;
-  font-weight:bold;
-  margin-bottom:20px;
-  background:rgba(0,0,0,.45);
-  backdrop-filter:blur(4px);
-}
-
-.game-overlay h2{
-  font-size:72px;
-  line-height:1;
-  margin:0 0 20px;
-  color:white;
-  font-weight:900;
-  text-transform:uppercase;
-}
-
-.game-subtitle{
-  font-size:22px;
-  line-height:1.6;
-  color:#ddd;
-  margin-bottom:35px;
-}
-
-/* ===== BOTONES ===== */
-
-.game-buttons{
-  display:flex;
-  gap:18px;
-  flex-wrap:wrap;
-}
-
-.btn-primary,
-.btn-secondary{
-  padding:16px 28px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:.3s;
-  font-size:16px;
-}
-
-.btn-primary{
-  background:#22c55e;
-  color:#000;
-}
-
-.btn-primary:hover{
-  background:#16a34a;
-  transform:translateY(-3px);
-}
-
-.btn-secondary{
-  border:1px solid rgba(255,255,255,.25);
-  color:white;
-  background:rgba(255,255,255,.05);
-  backdrop-filter:blur(6px);
-}
-
-.btn-secondary:hover{
-  background:rgba(255,255,255,.12);
-  transform:translateY(-3px);
-}
-
-/* ===== CONTENT ===== */
-
-.game-content{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:30px;
-  padding:40px;
-}
-
-/* ===== INFO GRID ===== */
-
-.game-info-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
-  margin-bottom:30px;
-}
-
-.info-box{
-  background:#0a1020;
-  border:1px solid rgba(255,255,255,.06);
-  border-radius:18px;
-  padding:22px;
-}
-
-.info-box span{
-  color:#22c55e;
-  font-size:14px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  display:block;
-  margin-bottom:10px;
-}
-
-.info-box p{
-  margin:0;
-  color:white;
-  font-size:18px;
-  font-weight:600;
-}
-
-/* ===== STORY ===== */
-
-.story-box{
-  background:#0a1020;
-  border-radius:20px;
-  padding:30px;
-  border:1px solid rgba(255,255,255,.06);
-}
-
-.story-box h3{
-  margin-top:0;
-  color:#22c55e;
-  font-size:30px;
-}
-
-.story-box p{
-  color:#d6d6d6;
-  line-height:1.9;
-  font-size:17px;
-}
-
-/* ===== SIDEBAR ===== */
-
-.game-sidebar{
-  display:flex;
-  flex-direction:column;
-  gap:25px;
-}
-
-/* ===== SCORE ===== */
-
-.score-card,
-.characters-card{
-  background:#0a1020;
-  border-radius:20px;
-  padding:28px;
-  border:1px solid rgba(255,255,255,.06);
-}
-
-.score-card h3,
-.characters-card h3{
-  margin-top:0;
-  margin-bottom:25px;
-  color:#22c55e;
-  font-size:28px;
-}
-
-.score{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 0;
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.score:last-child{
-  border:none;
-}
-
-.score span{
-  color:#ccc;
-  font-size:17px;
-}
-
-.score strong{
-  color:#22c55e;
-  font-size:28px;
-}
-
-/* ===== PERSONAJES ===== */
-
-.characters-card ul{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-
-.characters-card li{
-  padding:14px 0;
-  border-bottom:1px solid rgba(255,255,255,.08);
-  color:#ddd;
-  font-size:17px;
-}
-
-.characters-card li:last-child{
-  border:none;
-}
-
-/* ===== RESPONSIVE ===== */
-
-@media(max-width:1000px){
-
-  .game-content{
-    grid-template-columns:1fr;
-  }
-
-  .game-overlay{
-    left:35px;
-    right:35px;
-    max-width:100%;
-  }
-
-  .game-overlay h2{
-    font-size:48px;
-  }
-
-  .game-subtitle{
-    font-size:18px;
-  }
-
-}
-
-@media(max-width:700px){
-
-  .game-banner{
-    height:520px;
-  }
-
-  .game-overlay h2{
-    font-size:38px;
-  }
-
-  .game-content{
-    padding:20px;
-  }
-
-  .game-info-grid{
-    grid-template-columns:1fr;
-  }
-
-  .btn-primary,
-  .btn-secondary{
-    width:100%;
-    text-align:center;
-  }
-
-}
-
-<!-- RESIDENT EVIL 2 REMAKE -->
-
-<div class="card juego ps4 pc">
-
-<div class="card-image">
-<img 
-src="images/re2remake.webp" 
-alt="Resident Evil 2 Remake"
-loading="lazy"
-width="900"
-height="1200">
-</div>
-
-<div class="card-content">
-
-<div class="game-tag">SURVIVAL HORROR • ZOMBIES</div>
-
-<h2>Resident Evil 2 Remake</h2>
-
-<div class="meta">
-<span>PS4</span>
-<span>PS5</span>
-<span>Xbox One</span>
-<span>Xbox Series</span>
-<span>PC</span>
-<span>8–12 horas</span>
-</div>
-
-<p>
-Leon S. Kennedy llega a Raccoon City en su primer día como policía, pero descubre que toda la ciudad fue devastada por un brote biológico causado por Umbrella Corporation. 
-Mientras intenta sobrevivir junto a Claire Redfield, deberá atravesar calles infestadas de zombies, resolver acertijos y escapar de criaturas extremadamente peligrosas.
-</p>
-
-<p>
-Resident Evil 2 Remake reconstruye completamente el clásico de 1998 con gráficos modernos, sonido inmersivo y una atmósfera mucho más terrorífica. 
-La iluminación oscura, la escasez de recursos y la constante persecución de Mr. X convierten cada momento en una experiencia intensa y desesperante.
-</p>
-
-<div class="buttons">
-<a href="#" class="btn btn-primary">Ver más detalles</a>
-
-<a href="https://www.youtube.com/results?search_query=resident+evil+2+remake+gameplay"
-class="btn btn-secondary"
-target="_blank">
-Gameplay
-</a>
-</div>
-
-<!-- PERSONAJES -->
-
-<div class="characters">
-
-<div class="character">
-<img 
-src="images/leon-re2.webp" 
-alt="Leon S. Kennedy"
-loading="lazy"
-width="300"
-height="400">
-<h4>Leon S. Kennedy</h4>
-</div>
-
-<div class="character">
-<img 
-src="images/claire.webp" 
-alt="Claire Redfield"
-loading="lazy"
-width="300"
-height="400">
-<h4>Claire Redfield</h4>
-</div>
-
-<div class="character">
-<img 
-src="images/ada.webp" 
-alt="Ada Wong"
-loading="lazy"
-width="300"
-height="400">
-<h4>Ada Wong</h4>
-</div>
-
-<div class="character">
-<img 
-src="images/mrx.webp" 
-alt="Mr X"
-loading="lazy"
-width="300"
-height="400">
-<h4>Mr. X</h4>
-</div>
-
-</div>
-
-<!-- EXTRA INFO -->
-
-<div style="
-margin-top:30px;
-padding:20px;
-background:#101010;
-border-radius:16px;
-border:1px solid rgba(255,255,255,.07);
-">
-
-<h3 style="
-color:#22c55e;
-margin-bottom:14px;
-font-size:22px;
-">
-¿Por qué Resident Evil 2 Remake es tan importante?
-</h3>
-
-<p style="margin-bottom:12px;">
-El juego es considerado uno de los mejores remakes de la historia por modernizar completamente el original sin perder su esencia clásica.
-</p>
-
-<p style="margin-bottom:12px;">
-La comisaría de Raccoon City funciona como un enorme laberinto lleno de secretos, puertas bloqueadas y zonas conectadas entre sí, creando exploración constante.
-</p>
-
-<p>
-Además, Mr. X revolucionó la tensión en los survival horror modernos gracias a su inteligencia artificial y persecución dinámica.
-</p>
-
-</div>
-
-</section>
-
-.game-section{
-  margin:50px auto;
-  max-width:1400px;
-  background:#050816;
-  border:1px solid rgba(34,197,94,.18);
-  border-radius:24px;
-  overflow:hidden;
-  box-shadow:0 0 35px rgba(0,0,0,.45);
-}
-
-.game-banner{
-  position:relative;
-  width:100%;
-  height:650px;
-  overflow:hidden;
-}
-
-.game-banner img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-.game-banner::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:
-  linear-gradient(to top, #050816 5%, transparent 45%),
-  linear-gradient(to right, rgba(0,0,0,.85) 10%, rgba(0,0,0,.2) 60%);
-}
-
-.game-overlay{
-  position:absolute;
-  top:50%;
-  left:70px;
-  transform:translateY(-50%);
-  z-index:2;
-  max-width:650px;
-}
-
-.game-category{
-  display:inline-block;
-  padding:8px 18px;
-  border:1px solid #22c55e;
-  border-radius:50px;
-  color:#22c55e;
-  font-size:14px;
-  font-weight:bold;
-  margin-bottom:20px;
-  background:rgba(0,0,0,.45);
-  backdrop-filter:blur(4px);
-}
-
-.game-overlay h2{
-  font-size:72px;
-  line-height:1;
-  margin:0 0 20px;
-  color:white;
-  font-weight:900;
-  text-transform:uppercase;
-}
-
-.game-subtitle{
-  font-size:22px;
-  line-height:1.6;
-  color:#ddd;
-  margin-bottom:35px;
-}
-
-.game-buttons{
-  display:flex;
-  gap:18px;
-  flex-wrap:wrap;
-}
-
-.btn-primary,
-.btn-secondary{
-  padding:16px 28px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:.3s;
-  font-size:16px;
-}
-
-.btn-primary{
-  background:#22c55e;
-  color:#000;
-}
-
-.btn-primary:hover{
-  background:#16a34a;
-  transform:translateY(-3px);
-}
-
-.btn-secondary{
-  border:1px solid rgba(255,255,255,.25);
-  color:white;
-  background:rgba(255,255,255,.05);
-  backdrop-filter:blur(6px);
-}
-
-.btn-secondary:hover{
-  background:rgba(255,255,255,.12);
-  transform:translateY(-3px);
-}
-
-.game-content{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:30px;
-  padding:40px;
-}
-
-.game-info-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
-  margin-bottom:30px;
-}
-
-.info-box{
-  background:#0a1020;
-  border:1px solid rgba(255,255,255,.06);
-  border-radius:18px;
-  padding:22px;
-}
-
-.info-box span{
-  color:#22c55e;
-  font-size:14px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  display:block;
-  margin-bottom:10px;
-}
-
-.info-box p{
-  margin:0;
-  color:white;
-  font-size:18px;
-  font-weight:600;
-}
-
-.story-box,
-.content-box{
-  background:#0a1020;
-  border-radius:20px;
-  padding:30px;
-  border:1px solid rgba(255,255,255,.06);
-  margin-bottom:25px;
-}
-
-.story-box h3,
-.content-box h2{
-  margin-top:0;
-  color:#22c55e;
-  font-size:30px;
-}
-
-.story-box p,
-.content-box p{
-  color:#d6d6d6;
-  line-height:1.9;
-  font-size:17px;
-}
-
-.game-sidebar{
-  display:flex;
-  flex-direction:column;
-  gap:25px;
-}
-
-.score-card,
-.characters-card{
-  background:#0a1020;
-  border-radius:20px;
-  padding:28px;
-  border:1px solid rgba(255,255,255,.06);
-}
-
-.score-card h3,
-.characters-card h3{
-  margin-top:0;
-  margin-bottom:25px;
-  color:#22c55e;
-  font-size:28px;
-}
-
-.score{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 0;
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.score:last-child{
-  border:none;
-}
-
-.score span{
-  color:#ccc;
-  font-size:17px;
-}
-
-.score strong{
-  color:#22c55e;
-  font-size:28px;
-}
-
-.characters-card ul{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-
-.characters-card li{
-  padding:14px 0;
-  border-bottom:1px solid rgba(255,255,255,.08);
-  color:#ddd;
-  font-size:17px;
-}
-
-.characters-card li:last-child{
-  border:none;
-}
-
-.character-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:25px;
-  margin-top:30px;
-}
-
-.character-card{
-  background:#05070f;
-  border-radius:16px;
-  overflow:hidden;
-  transition:.3s;
-  border:1px solid rgba(255,255,255,.08);
-}
-
-.character-card:hover{
-  transform:translateY(-8px);
-  border-color:#22c55e;
-  box-shadow:0 0 20px rgba(34,197,94,.3);
-}
-
-.character-card img{
-  width:100%;
-  height:320px;
-  object-fit:cover;
-}
-
-.character-card h3{
-  color:#22c55e;
-  padding:18px 18px 0;
-  margin:0;
-}
-
-.character-card p{
-  padding:0 18px 20px;
-  font-size:15px;
-  color:#ddd;
-}
-
-.boss-list{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-}
-
-.boss{
-  background:#05070f;
-  padding:25px;
-  border-radius:14px;
-  border-left:4px solid #22c55e;
-}
-
-.boss h3{
-  margin-top:0;
-  color:#22c55e;
-}
-
-.video-container{
-  margin-top:30px;
-  overflow:hidden;
-  border-radius:16px;
-}
-
-@media(max-width:1000px){
-  .game-content{
-    grid-template-columns:1fr;
-  }
-
-  .game-overlay{
-    left:35px;
-    right:35px;
-    max-width:100%;
-  }
-
-  .game-overlay h2{
-    font-size:48px;
-  }
-
-  .game-subtitle{
-    font-size:18px;
-  }
-}
-
-@media(max-width:700px){
-  .game-banner{
-    height:520px;
-  }
-
-  .game-overlay h2{
-    font-size:38px;
-  }
-
-  .game-content{
-    padding:20px;
-  }
-
-  .game-info-grid{
-    grid-template-columns:1fr;
-  }
-
-  .btn-primary,
-  .btn-secondary{
-    width:100%;
-    text-align:center;
-  }
-}
-
-</style>
-
-</div>
-
-</div>
-
-<footer>
-© 2026 Zona Gamer |
-<a href="privacidad.html">Política de Privacidad</a> |
-<a href="contacto.html">Contacto</a>
-<a href="terminos-y-condiciones.html">Términos y Condiciones</a>
-<a href="politica-de-cookies.html">Política de Cookies</a>
-<a href="sobre-nosotros.html">Sobre Nosotros</a>
-</footer>
-
+      <div class="game-container">
+        <section class="info-box">
+          <h2>Información General</h2>
+          <div class="info-grid">
+            <div><strong>Desarrollador:</strong> Capcom</div>
+            <div><strong>Lanzamiento:</strong> 2019</div>
+            <div><strong>Plataformas:</strong> PS4, PS5, PC, Xbox One, Xbox Series X/S</div>
+            <div><strong>Género:</strong> Survival Horror / Zombies</div>
+            <div><strong>Duración:</strong> 8–12 horas</div>
+            <div><strong>Metacritic:</strong> 91/100</div>
+            <div><strong>OpenCritic:</strong> 92/100</div>
+            <div><strong>Usuarios:</strong> 9.4/10</div>
+          </div>
+        </section>
+
+        <div class="game-main">
+          <div>
+            <section id="re2-historia" class="content-box story-box">
+              <h2>Historia Completa</h2>
+              <p>Leon S. Kennedy llega a Raccoon City en su primer día como policía, pero descubre que toda la ciudad fue devastada por un brote biológico causado por Umbrella Corporation.</p>
+              <p>Mientras intenta sobrevivir junto a Claire Redfield, deberá atravesar calles infestadas de zombies, resolver acertijos y escapar de criaturas extremadamente peligrosas.</p>
+              <p>La comisaría de Raccoon City se convierte en un enorme laberinto lleno de secretos, puertas bloqueadas y zonas conectadas entre sí, creando exploración constante.</p>
+              <p>Uno de los elementos más recordados es Mr. X, una amenaza imparable que persigue al jugador por la comisaría y eleva la tensión al máximo.</p>
+              <p>Resident Evil 2 Remake reconstruye completamente el clásico de 1998 con gráficos modernos, sonido inmersivo y una atmósfera mucho más terrorífica.</p>
+              <p>Es considerado uno de los mejores remakes de la historia por modernizar completamente el original sin perder su esencia clásica.</p>
+            </section>
+
+            <section id="re2-gameplay" class="content-box">
+              <h2>Gameplay</h2>
+              <p>El juego combina exploración, disparos en tercera persona, administración de recursos y resolución de puzzles. Cada bala cuenta, cada cura importa y cada paso en la comisaría puede ser peligroso.</p>
+              <p>La cámara sobre el hombro moderniza la experiencia y hace que cada combate se sienta más tenso. Apuntar lleva tiempo, moverse es arriesgado y muchas veces conviene escapar antes que enfrentar todo de frente.</p>
+              <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/u3wS-Q2KBpk" title="Resident Evil 2 Remake Gameplay" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </section>
+
+            <section id="re2-personajes" class="content-box">
+              <h2>Personajes Principales</h2>
+              <div class="character-grid">
+                <article class="character-card">
+                  <img src="images/leon-re2.webp" alt="Leon S. Kennedy" width="300" height="400" loading="lazy" />
+                  <h3>Leon S. Kennedy</h3>
+                  <p>Joven oficial de policía que llega a Raccoon City justo cuando todo se descontrola.</p>
+                </article>
+                <article class="character-card">
+                  <img src="images/claire.webp" alt="Claire Redfield" width="300" height="400" loading="lazy" />
+                  <h3>Claire Redfield</h3>
+                  <p>Busca a su hermano Chris y termina luchando por sobrevivir en la ciudad infectada.</p>
+                </article>
+                <article class="character-card">
+                  <img src="images/ada.webp" alt="Ada Wong" width="300" height="400" loading="lazy" />
+                  <h3>Ada Wong</h3>
+                  <p>Misteriosa agente con objetivos ocultos dentro del brote.</p>
+                </article>
+                <article class="character-card">
+                  <img src="images/mrx.webp" alt="Mr. X" width="300" height="400" loading="lazy" />
+                  <h3>Mr. X</h3>
+                  <p>El perseguidor más temido del juego y una de sus mayores amenazas.</p>
+                </article>
+              </div>
+            </section>
+
+            <section id="re2-villanos" class="content-box">
+              <h2>Villanos y Amenazas</h2>
+              <div class="boss-list">
+                <article class="boss">
+                  <h3>Mr. X</h3>
+                  <p>Una bioarma diseñada para perseguir y eliminar objetivos específicos. Su presencia genera tensión constante.</p>
+                </article>
+                <article class="boss">
+                  <h3>William Birkin</h3>
+                  <p>Científico de Umbrella convertido en una criatura mutante tras inyectarse el G-Virus.</p>
+                </article>
+                <article class="boss">
+                  <h3>G Adults</h3>
+                  <p>Mutaciones horribles creadas por el virus G que aparecen en las alcantarillas y laboratorios.</p>
+                </article>
+                <article class="boss">
+                  <h3>Umbrella Corporation</h3>
+                  <p>La compañía responsable del desastre que destruye Raccoon City y arrasa con todo a su paso.</p>
+                </article>
+              </div>
+            </section>
+
+            <section id="re2-ost" class="content-box">
+              <h2>Banda Sonora y Ambiente</h2>
+              <p>La música de Resident Evil 2 Remake no busca sonar épica todo el tiempo, sino aumentar la tensión cuando hace falta. El silencio también juega un papel importante, porque hace que cada paso, cada ruido y cada aparición repentina se sientan más fuertes.</p>
+              <p>El diseño sonoro es una de sus mayores virtudes. Los sonidos de los zombis, los golpes de las puertas, los pasillos vacíos y la respiración de los personajes crean una atmósfera inquietante de principio a fin.</p>
+            </section>
+          </div>
+
+          <aside class="game-sidebar">
+            <section class="score-card">
+              <h3>Puntuaciones</h3>
+              <div class="score"><span>Metacritic</span><strong>91/100</strong></div>
+              <div class="score"><span>OpenCritic</span><strong>92/100</strong></div>
+              <div class="score"><span>Usuarios</span><strong>9.4/10</strong></div>
+            </section>
+
+            <section class="characters-card">
+              <h3>Personajes</h3>
+              <ul>
+                <li>Leon S. Kennedy</li>
+                <li>Claire Redfield</li>
+                <li>Ada Wong</li>
+                <li>Mr. X</li>
+                <li>William Birkin</li>
+                <li>Sherry Birkin</li>
+              </ul>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Zona Gamer | <a href="privacidad.html">Política de Privacidad</a> | <a href="contacto.html">Contacto</a> | <a href="terminos-y-condiciones.html">Términos y Condiciones</a> | <a href="politica-de-cookies.html">Política de Cookies</a> | <a href="sobre-nosotros.html">Sobre Nosotros</a></p>
+  </footer>
+
+  <script>
+    function filtrar(categoria) {
+      const juegos = document.querySelectorAll('.juego');
+      juegos.forEach((juego) => {
+        juego.style.display = (categoria === 'all' || juego.classList.contains(categoria)) ? 'flex' : 'none';
+      });
+    }
+  </script>
 </body>
 </html>
