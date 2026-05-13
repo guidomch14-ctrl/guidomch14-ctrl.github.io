@@ -1881,13 +1881,27 @@
     <p>© 2026 Zona Gamer | <a href="privacidad.html">Política de Privacidad</a> | <a href="contacto.html">Contacto</a> | <a href="terminos-y-condiciones.html">Términos y Condiciones</a> | <a href="politica-de-cookies.html">Política de Cookies</a> | <a href="sobre-nosotros.html">Sobre Nosotros</a></p>
   </footer>
 
-  <script>
-    function filtrar(categoria) {
-      const juegos = document.querySelectorAll('.juego');
-      juegos.forEach((juego) => {
-        juego.style.display = (categoria === 'all' || juego.classList.contains(categoria)) ? 'flex' : 'none';
-      });
+  <<script>
+function filtrar(categoria){
+
+  const juegos = document.querySelectorAll('.juego');
+
+  juegos.forEach(juego => {
+
+    if(categoria === 'all'){
+      juego.style.display = 'flex';
+      return;
     }
-  </script>
+
+    if(juego.classList.contains(categoria)){
+      juego.style.display = 'flex';
+    } else {
+      juego.style.display = 'none';
+    }
+
+  });
+
+}
+</script>
 </body>
 </html>
